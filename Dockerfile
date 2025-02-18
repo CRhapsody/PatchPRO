@@ -41,8 +41,8 @@ RUN conda run -n pytorch_env python -c "import torch; print(torch.__version__)"
 # Set the default shell to bash
 CMD ["/bin/bash"]
 
-# clone PatchPRO
-RUN git clone https://github.com/CRhapsody/PatchPRO.git
+# # clone PatchPRO
+# RUN git clone https://github.com/CRhapsody/PatchPRO.git
 
-# Set the working directory
-WORKDIR /home/docker/PatchPRO
+# # Set the working directory
+# WORKDIR /home/docker/PatchPRO

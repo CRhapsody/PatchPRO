@@ -25,7 +25,7 @@ The corresponding result have been stored in table.csv.
 We provide a docker environment for running the experiments. You can use the following command to build the docker image:
 ```
 docker build -t patchpro:latest .
-docker run -it --rm --gpus all -v /path/to/data_and_model.zip:/home/docker/PatchPRO/data_and_model.zip patchpro:latest
+docker run -it --rm --gpus all -v /path/to/PatchPRO:/home/docker/PatchPRO -v /path/to/data_and_model.zip:/home/docker/PatchPRO/data_and_model.zip patchpro:latest
 ```
 
 Unzip the data_and_model.zip file in the docker container. Then you can run the experiments as described above.
