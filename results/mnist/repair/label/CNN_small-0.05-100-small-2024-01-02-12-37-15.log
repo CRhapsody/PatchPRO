@@ -1,0 +1,82 @@
+[2024-01-02 12:37:15,300][INFO] 
+===== CNN_small-0.05-100-small-2024-01-02-12-37-15 configuration =====
+  exp_fn: test_goal_repair
+  seed: None
+  dom: deeppoly
+  start_abs_cnt: 500
+  max_abs_cnt: 1000
+  refine_top_k: 50
+  tiny_width: 5e-06
+  lr: 10
+  batch_size: 50
+  min_epochs: 15
+  max_epochs: 100
+  use_scheduler: True
+  no_pts: False
+  no_abs: False
+  no_refine: True
+  quiet: False
+  debug: False
+  net: CNN_small
+  no_repair: False
+  repair_number: 100
+  repair_batchsize: 1
+  patch_size: small
+  repair_radius: 0.05
+  divided_repair: 1
+  accuracy_loss: <function MnistArgParser.setup_rest.<locals>.ce_loss at 0x7f8cad87d310>
+  reset_params: False
+  train_datasize: 10000
+  test_datasize: 1000
+  max_verifier_sec: 300
+  verifier_timeout_as_safe: True
+  repair_batch_size: 100
+  scheduler_fn: <function ExpArgParser.setup_rest.<locals>.<lambda> at 0x7f8cb5aec4c0>
+===== end of CNN_small-0.05-100-small-2024-01-02-12-37-15 configuration =====
+
+[2024-01-02 12:37:15,300][INFO] ===== start repair ======
+[2024-01-02 12:37:15,301][INFO] For pgd attack net
+[2024-01-02 12:37:15,452][INFO] --Test repair set accuracy 0.0
+[2024-01-02 12:37:15,453][INFO] --Test original set accuracy 0.98
+[2024-01-02 12:37:15,454][INFO] --Test test set accuracy 0.9827
+[2024-01-02 12:37:15,455][INFO] --Test attack test set accuracy 0.0
+[2024-01-02 12:37:15,456][INFO] --Test train set accuracy 0.9927
+[2024-01-02 12:37:16,382][INFO] --small patch network: --- PatchNet ---
+Name: small patch network 9
+--- End of PatchNet ---
+[2024-01-02 12:37:16,524][INFO] [0m 0s (0.141 seconds)] Start repair part 0: 0
+[2024-01-02 12:37:16,524][INFO] [0m 0s (0.141 seconds)] After epoch 0:
+[2024-01-02 12:37:16,524][INFO] Loaded 100 points for repair.
+[2024-01-02 12:37:16,524][INFO] Loaded 1000 points for attack test.
+[2024-01-02 12:37:16,524][INFO] Loaded 10000 points for training.
+[2024-01-02 12:37:16,524][INFO] Loaded 100 abstractions for training.
+[2024-01-02 12:37:16,714][INFO] min loss 934.981201171875, max loss 1812.85595703125.
+[2024-01-02 12:37:16,714][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 1], device='cuda:3', dtype=torch.uint8).
+[2024-01-02 12:37:16,724][INFO] Test set accuracy 0.9827.
+[2024-01-02 12:37:16,724][INFO] repair set accuracy 0.01.
+[2024-01-02 12:37:16,724][INFO] attacked test set accuracy 0.018.
+[2024-01-02 12:37:16,724][INFO] 
+[0m 0s (0.341 seconds)] Starting epoch 1:
+[2024-01-02 12:37:16,827][INFO] [0m 0s (0.444 seconds)] After epoch 1:
+[2024-01-02 12:37:16,827][INFO] Loaded 100 points for repair.
+[2024-01-02 12:37:16,827][INFO] Loaded 1000 points for attack test.
+[2024-01-02 12:37:16,827][INFO] Loaded 10000 points for training.
+[2024-01-02 12:37:16,827][INFO] Loaded 100 abstractions for training.
+[2024-01-02 12:37:17,013][INFO] min loss 744.095458984375, max loss 1613.26953125.
+[2024-01-02 12:37:17,014][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 1], device='cuda:3', dtype=torch.uint8).
+[2024-01-02 12:37:17,025][INFO] Test set accuracy 0.9827.
+[2024-01-02 12:37:17,025][INFO] repair set accuracy 1.0.
+[2024-01-02 12:37:17,025][INFO] attacked test set accuracy 1.0.
+[2024-01-02 12:37:17,033][INFO] Accuracy at every epoch: [0.9827, 0.9827]
+[2024-01-02 12:37:17,033][INFO] After 1 epochs / 0m 0s (0.642 seconds), eventually the trained network got certified? False, with 0.9827 accuracy on test set,with 1.0000 accuracy on repair set,with 1.0000 accuracy on attack test set.
+[2024-01-02 12:37:17,033][INFO] final test
+[2024-01-02 12:37:17,035][INFO] --Test set accuracy 0.9827
+[2024-01-02 12:37:17,039][INFO] --Test repair set accuracy 1.0
+[2024-01-02 12:37:17,042][INFO] --Test attack test set accuracy 1.0
+[2024-01-02 12:37:17,042][INFO] training time 0.6594842225313187s
+[2024-01-02 12:37:17,044][INFO] === Avg <epochs, train_time, certified, accuracy> for pgd attack networks:
+[2024-01-02 12:37:17,044][INFO] tensor([1.0000, 0.6424, 0.0000, 0.9827])
+[2024-01-02 12:37:17,045][INFO] Total Cost Time: 1.7445111237466335s.
+
+
+

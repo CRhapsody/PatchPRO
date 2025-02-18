@@ -1,0 +1,52 @@
+[2025-01-17 06:56:20,972][INFO] 
+===== FNN_small-0.05-100-small-2025-01-17-06-56-20 configuration =====
+  exp_fn: test_goal_test
+  seed: None
+  dom: deeppoly
+  start_abs_cnt: 500
+  max_abs_cnt: 1000
+  refine_top_k: 800
+  tiny_width: 0.001
+  lr: 0.001
+  batch_size: 50
+  min_epochs: 25
+  max_epochs: 45
+  use_scheduler: True
+  no_pts: False
+  no_abs: False
+  no_refine: False
+  quiet: False
+  debug: False
+  net: FNN_small
+  no_repair: False
+  repair_number: 100
+  repair_batchsize: 1
+  patch_size: small
+  label_repaired: False
+  repair_radius: 0.05
+  divided_repair: 1
+  accuracy_loss: <function MnistArgParser.setup_rest.<locals>.ce_loss at 0x76b8cfec7ee0>
+  sample_amount: 5000
+  reset_params: False
+  train_datasize: 10000
+  test_datasize: 10000
+  repair_batch_size: 100
+  scheduler_fn: <function ExpArgParser.setup_rest.<locals>.<lambda> at 0x76b8cfec7f70>
+===== end of FNN_small-0.05-100-small-2025-01-17-06-56-20 configuration =====
+
+[2025-01-17 06:56:20,972][INFO] ===== start repair ======
+[2025-01-17 06:56:20,972][INFO] For pgd attack net
+[2025-01-17 06:56:21,061][INFO] --small patch network: Mnist_patch_model_small(
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (classifier): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+  )
+)
+[2025-01-17 06:56:21,240][INFO] --load the trainset and testset as testing set
+[2025-01-17 06:56:21,276][INFO] --evaluate the original net on testset
+[2025-01-17 06:56:21,278][INFO] --For testset, out of 10000 items, ratio 0.9658
+[2025-01-17 06:56:21,278][INFO] --evaluate the repaired net on testset and get the bitmap
+[2025-01-17 06:56:21,279][INFO] --For testset, out of 10000 items, ratio 0.9658
+[2025-01-17 06:56:21,340][INFO] --test the defense against autoattack
+[2025-01-17 06:57:30,542][INFO] correct2 982
+[2025-01-17 06:58:38,203][INFO] correct2 976

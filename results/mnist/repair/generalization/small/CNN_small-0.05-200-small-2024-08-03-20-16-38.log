@@ -1,0 +1,67 @@
+[2024-08-03 20:16:38,956][INFO] 
+===== CNN_small-0.05-200-small-2024-08-03-20-16-38 configuration =====
+  exp_fn: test_goal_test
+  seed: None
+  dom: deeppoly
+  start_abs_cnt: 500
+  max_abs_cnt: 1000
+  refine_top_k: 800
+  tiny_width: 0.001
+  lr: 0.001
+  batch_size: 50
+  min_epochs: 25
+  max_epochs: 45
+  use_scheduler: True
+  no_pts: False
+  no_abs: False
+  no_refine: False
+  quiet: False
+  debug: False
+  net: CNN_small
+  no_repair: False
+  repair_number: 200
+  repair_batchsize: 1
+  patch_size: small
+  label_repaired: False
+  repair_radius: 0.05
+  divided_repair: 1
+  accuracy_loss: <function MnistArgParser.setup_rest.<locals>.ce_loss at 0x7f2a8d4cbe50>
+  sample_amount: 5000
+  reset_params: False
+  train_datasize: 10000
+  test_datasize: 10000
+  repair_batch_size: 200
+  scheduler_fn: <function ExpArgParser.setup_rest.<locals>.<lambda> at 0x7f2a8d4cb8b0>
+===== end of CNN_small-0.05-200-small-2024-08-03-20-16-38 configuration =====
+
+[2024-08-03 20:16:38,956][INFO] ===== start repair ======
+[2024-08-03 20:16:38,956][INFO] For pgd attack net
+[2024-08-03 20:16:39,027][INFO] --small patch network: Mnist_patch_model_small(
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (classifier): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+  )
+)
+[2024-08-03 20:16:39,179][INFO] --load the trainset and testset as testing set
+[2024-08-03 20:16:39,187][INFO] --evaluate the original net on testset
+[2024-08-03 20:16:39,189][INFO] --For testset, out of 10000 items, ratio 0.9827
+[2024-08-03 20:16:39,189][INFO] --evaluate the repaired net on testset and get the bitmap
+[2024-08-03 20:16:39,191][INFO] --For testset, out of 10000 items, ratio 0.9827
+[2024-08-03 20:16:39,191][INFO] --adv training
+[2024-08-03 20:16:39,232][INFO] --test the defense against autoattack
+[2024-08-03 20:17:18,275][INFO] correct2 939
+[2024-08-03 20:17:53,978][INFO] correct2 920
+[2024-08-03 20:18:46,994][INFO] correct2 925
+[2024-08-03 20:19:42,131][INFO] correct2 926
+[2024-08-03 20:20:22,699][INFO] correct2 936
+[2024-08-03 20:21:07,649][INFO] correct2 956
+[2024-08-03 20:21:58,654][INFO] correct2 954
+[2024-08-03 20:22:45,166][INFO] correct2 937
+[2024-08-03 20:23:21,349][INFO] correct2 935
+[2024-08-03 20:24:02,555][INFO] correct2 713
+[2024-08-03 20:24:02,556][INFO] --For testset, out of 10000 items, repaired net ratio 0.9141
+[2024-08-03 20:24:02,557][INFO] --For testset, out of 10000 items, original net ratio 0.0
+[2024-08-03 20:24:02,563][INFO] Total Cost Time: 443.6077268049121s.
+
+
+

@@ -1,0 +1,542 @@
+[2023-12-23 03:24:11,089][INFO] 
+===== vgg19-4-feature-200-2023-12-23-03-24-11 configuration =====
+  exp_fn: test_goal_repair
+  seed: None
+  dom: deeppoly
+  start_abs_cnt: 500
+  max_abs_cnt: 1000
+  refine_top_k: 50
+  tiny_width: 0.0004
+  lr: 10
+  batch_size: 50
+  min_epochs: 15
+  max_epochs: 100
+  use_scheduler: True
+  no_pts: True
+  no_abs: False
+  no_refine: True
+  quiet: False
+  debug: False
+  net: vgg19
+  no_repair: False
+  repair_number: 200
+  repair_batchsize: 1
+  repair_location: feature
+  repair_radius: 4
+  loose_bound: 0.0314
+  divided_repair: 2
+  weight_decay: 0.0
+  k_coeff: 0.001
+  accuracy_loss: <function CifarArgParser.setup_rest.<locals>.ce_loss at 0x7f6ed9586700>
+  support_loss: MSELoss()
+  sample_amount: 1000
+  reset_params: False
+  train_datasize: 10000
+  test_datasize: 2000
+  max_verifier_sec: 300
+  verifier_timeout_as_safe: True
+  repair_batch_size: 200
+  scheduler_fn: <function ExpArgParser.setup_rest.<locals>.<lambda> at 0x7f6ed9598790>
+===== end of vgg19-4-feature-200-2023-12-23-03-24-11 configuration =====
+
+[2023-12-23 03:24:11,089][INFO] ===== start repair ======
+[2023-12-23 03:24:11,089][INFO] For pgd attack net
+[2023-12-23 03:24:11,779][INFO] --Test repair set accuracy 0.0
+[2023-12-23 03:24:11,791][INFO] --Test original set accuracy 1.0
+[2023-12-23 03:24:12,187][INFO] --Test test set accuracy 0.9342
+[2023-12-23 03:24:12,283][INFO] --Test attack test set accuracy 0.0
+[2023-12-23 03:24:12,679][INFO] --Test train set accuracy 1.0
+[2023-12-23 03:24:12,679][INFO] get the feature of the repairset, testset and trainset
+[2023-12-23 03:24:13,734][INFO] sample the datas from the radius of the original data with pgd attack
+[2023-12-23 03:24:13,735][INFO] --sample the 0 part of the originalset
+[2023-12-23 03:24:13,735][INFO] --FGSM sample 1 image
+[2023-12-23 03:24:14,148][INFO] --PGD sample 1 image
+[2023-12-23 03:24:18,206][INFO] --FGSM sample 2 image
+[2023-12-23 03:24:18,618][INFO] --PGD sample 2 image
+[2023-12-23 03:24:23,001][INFO] --FGSM sample 3 image
+[2023-12-23 03:24:23,443][INFO] --PGD sample 3 image
+[2023-12-23 03:24:28,050][INFO] --FGSM sample 4 image
+[2023-12-23 03:24:28,478][INFO] --PGD sample 4 image
+[2023-12-23 03:24:32,481][INFO] --FGSM sample 5 image
+[2023-12-23 03:24:32,873][INFO] --PGD sample 5 image
+[2023-12-23 03:24:36,868][INFO] --FGSM sample 6 image
+[2023-12-23 03:24:37,282][INFO] --PGD sample 6 image
+[2023-12-23 03:24:41,416][INFO] --FGSM sample 7 image
+[2023-12-23 03:24:41,836][INFO] --PGD sample 7 image
+[2023-12-23 03:24:45,911][INFO] --FGSM sample 8 image
+[2023-12-23 03:24:46,318][INFO] --PGD sample 8 image
+[2023-12-23 03:24:50,380][INFO] --FGSM sample 9 image
+[2023-12-23 03:24:52,635][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2023-12-23 03:24:52,635][INFO] --PGD sample 9 image
+[2023-12-23 03:24:56,600][INFO] --FGSM sample 10 image
+[2023-12-23 03:24:57,018][INFO] --PGD sample 10 image
+[2023-12-23 03:25:01,091][INFO] --FGSM sample 11 image
+[2023-12-23 03:25:01,505][INFO] --PGD sample 11 image
+[2023-12-23 03:25:05,506][INFO] --FGSM sample 12 image
+[2023-12-23 03:25:05,911][INFO] --PGD sample 12 image
+[2023-12-23 03:25:09,819][INFO] --FGSM sample 13 image
+[2023-12-23 03:25:10,210][INFO] --PGD sample 13 image
+[2023-12-23 03:25:14,251][INFO] --FGSM sample 14 image
+[2023-12-23 03:25:14,669][INFO] --PGD sample 14 image
+[2023-12-23 03:25:18,770][INFO] --FGSM sample 15 image
+[2023-12-23 03:25:19,181][INFO] --PGD sample 15 image
+[2023-12-23 03:25:23,398][INFO] --FGSM sample 16 image
+[2023-12-23 03:25:23,812][INFO] --PGD sample 16 image
+[2023-12-23 03:25:27,926][INFO] --FGSM sample 17 image
+[2023-12-23 03:25:28,403][INFO] --PGD sample 17 image
+[2023-12-23 03:25:32,515][INFO] --FGSM sample 18 image
+[2023-12-23 03:25:32,918][INFO] --PGD sample 18 image
+[2023-12-23 03:25:36,848][INFO] --FGSM sample 19 image
+[2023-12-23 03:25:37,263][INFO] --PGD sample 19 image
+[2023-12-23 03:25:41,087][INFO] --FGSM sample 20 image
+[2023-12-23 03:25:41,475][INFO] --PGD sample 20 image
+[2023-12-23 03:25:45,292][INFO] --FGSM sample 21 image
+[2023-12-23 03:25:45,677][INFO] --PGD sample 21 image
+[2023-12-23 03:25:49,442][INFO] --FGSM sample 22 image
+[2023-12-23 03:25:49,812][INFO] --PGD sample 22 image
+[2023-12-23 03:25:53,701][INFO] --FGSM sample 23 image
+[2023-12-23 03:25:54,105][INFO] --PGD sample 23 image
+[2023-12-23 03:25:58,009][INFO] --FGSM sample 24 image
+[2023-12-23 03:25:58,408][INFO] --PGD sample 24 image
+[2023-12-23 03:26:02,308][INFO] --FGSM sample 25 image
+[2023-12-23 03:26:02,705][INFO] --PGD sample 25 image
+[2023-12-23 03:26:06,684][INFO] --FGSM sample 26 image
+[2023-12-23 03:26:07,081][INFO] --PGD sample 26 image
+[2023-12-23 03:26:10,978][INFO] --FGSM sample 27 image
+[2023-12-23 03:26:11,381][INFO] --PGD sample 27 image
+[2023-12-23 03:26:15,281][INFO] --FGSM sample 28 image
+[2023-12-23 03:26:15,680][INFO] --PGD sample 28 image
+[2023-12-23 03:26:20,137][INFO] --FGSM sample 29 image
+[2023-12-23 03:26:20,548][INFO] --PGD sample 29 image
+[2023-12-23 03:26:24,997][INFO] --FGSM sample 30 image
+[2023-12-23 03:26:25,498][INFO] --PGD sample 30 image
+[2023-12-23 03:26:29,672][INFO] --FGSM sample 31 image
+[2023-12-23 03:26:30,103][INFO] --PGD sample 31 image
+[2023-12-23 03:26:33,977][INFO] --FGSM sample 32 image
+[2023-12-23 03:26:36,295][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2023-12-23 03:26:36,295][INFO] --PGD sample 32 image
+[2023-12-23 03:26:40,175][INFO] --FGSM sample 33 image
+[2023-12-23 03:26:40,570][INFO] --PGD sample 33 image
+[2023-12-23 03:26:44,406][INFO] --FGSM sample 34 image
+[2023-12-23 03:26:44,802][INFO] --PGD sample 34 image
+[2023-12-23 03:26:48,761][INFO] --FGSM sample 35 image
+[2023-12-23 03:26:49,191][INFO] --PGD sample 35 image
+[2023-12-23 03:26:53,217][INFO] --FGSM sample 36 image
+[2023-12-23 03:26:53,622][INFO] --PGD sample 36 image
+[2023-12-23 03:26:57,703][INFO] --FGSM sample 37 image
+[2023-12-23 03:26:58,111][INFO] --PGD sample 37 image
+[2023-12-23 03:27:02,060][INFO] --FGSM sample 38 image
+[2023-12-23 03:27:02,458][INFO] --PGD sample 38 image
+[2023-12-23 03:27:06,331][INFO] --FGSM sample 39 image
+[2023-12-23 03:27:06,723][INFO] --PGD sample 39 image
+[2023-12-23 03:27:10,668][INFO] --FGSM sample 40 image
+[2023-12-23 03:27:11,088][INFO] --PGD sample 40 image
+[2023-12-23 03:27:15,016][INFO] --FGSM sample 41 image
+[2023-12-23 03:27:17,304][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2023-12-23 03:27:17,304][INFO] --PGD sample 41 image
+[2023-12-23 03:27:21,292][INFO] --FGSM sample 42 image
+[2023-12-23 03:27:21,687][INFO] --PGD sample 42 image
+[2023-12-23 03:27:25,565][INFO] --FGSM sample 43 image
+[2023-12-23 03:27:25,966][INFO] --PGD sample 43 image
+[2023-12-23 03:27:29,904][INFO] --FGSM sample 44 image
+[2023-12-23 03:27:30,301][INFO] --PGD sample 44 image
+[2023-12-23 03:27:34,361][INFO] --FGSM sample 45 image
+[2023-12-23 03:27:34,825][INFO] --PGD sample 45 image
+[2023-12-23 03:27:39,006][INFO] --FGSM sample 46 image
+[2023-12-23 03:27:39,388][INFO] --PGD sample 46 image
+[2023-12-23 03:27:43,199][INFO] --FGSM sample 47 image
+[2023-12-23 03:27:43,588][INFO] --PGD sample 47 image
+[2023-12-23 03:27:47,410][INFO] --FGSM sample 48 image
+[2023-12-23 03:27:47,805][INFO] --PGD sample 48 image
+[2023-12-23 03:27:51,663][INFO] --FGSM sample 49 image
+[2023-12-23 03:27:52,061][INFO] --PGD sample 49 image
+[2023-12-23 03:27:55,913][INFO] --FGSM sample 50 image
+[2023-12-23 03:27:56,299][INFO] --PGD sample 50 image
+[2023-12-23 03:28:00,332][INFO] --FGSM sample 51 image
+[2023-12-23 03:28:00,752][INFO] --PGD sample 51 image
+[2023-12-23 03:28:04,836][INFO] --FGSM sample 52 image
+[2023-12-23 03:28:05,246][INFO] --PGD sample 52 image
+[2023-12-23 03:28:09,183][INFO] --FGSM sample 53 image
+[2023-12-23 03:28:10,362][INFO] --PGD sample 53 image
+[2023-12-23 03:28:14,205][INFO] --FGSM sample 54 image
+[2023-12-23 03:28:14,596][INFO] --PGD sample 54 image
+[2023-12-23 03:28:18,731][INFO] --FGSM sample 55 image
+[2023-12-23 03:28:19,136][INFO] --PGD sample 55 image
+[2023-12-23 03:28:23,038][INFO] --FGSM sample 56 image
+[2023-12-23 03:28:23,436][INFO] --PGD sample 56 image
+[2023-12-23 03:28:27,314][INFO] --FGSM sample 57 image
+[2023-12-23 03:28:27,755][INFO] --PGD sample 57 image
+[2023-12-23 03:28:32,060][INFO] --FGSM sample 58 image
+[2023-12-23 03:28:32,502][INFO] --PGD sample 58 image
+[2023-12-23 03:28:36,604][INFO] --FGSM sample 59 image
+[2023-12-23 03:28:36,996][INFO] --PGD sample 59 image
+[2023-12-23 03:28:40,934][INFO] --FGSM sample 60 image
+[2023-12-23 03:28:41,367][INFO] --PGD sample 60 image
+[2023-12-23 03:28:45,446][INFO] --FGSM sample 61 image
+[2023-12-23 03:28:47,799][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2023-12-23 03:28:47,799][INFO] --PGD sample 61 image
+[2023-12-23 03:28:51,701][INFO] --FGSM sample 62 image
+[2023-12-23 03:28:54,061][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2023-12-23 03:28:54,061][INFO] --PGD sample 62 image
+[2023-12-23 03:28:57,983][INFO] --FGSM sample 63 image
+[2023-12-23 03:29:00,385][INFO] --PGD sample 63 image
+[2023-12-23 03:29:04,427][INFO] --FGSM sample 64 image
+[2023-12-23 03:29:04,819][INFO] --PGD sample 64 image
+[2023-12-23 03:29:08,717][INFO] --FGSM sample 65 image
+[2023-12-23 03:29:09,098][INFO] --PGD sample 65 image
+[2023-12-23 03:29:12,928][INFO] --FGSM sample 66 image
+[2023-12-23 03:29:13,326][INFO] --PGD sample 66 image
+[2023-12-23 03:29:17,202][INFO] --FGSM sample 67 image
+[2023-12-23 03:29:17,594][INFO] --PGD sample 67 image
+[2023-12-23 03:29:21,526][INFO] --FGSM sample 68 image
+[2023-12-23 03:29:21,929][INFO] --PGD sample 68 image
+[2023-12-23 03:29:25,834][INFO] --FGSM sample 69 image
+[2023-12-23 03:29:26,237][INFO] --PGD sample 69 image
+[2023-12-23 03:29:30,144][INFO] --FGSM sample 70 image
+[2023-12-23 03:29:30,534][INFO] --PGD sample 70 image
+[2023-12-23 03:29:34,417][INFO] --FGSM sample 71 image
+[2023-12-23 03:29:34,813][INFO] --PGD sample 71 image
+[2023-12-23 03:29:38,730][INFO] --FGSM sample 72 image
+[2023-12-23 03:29:41,262][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2023-12-23 03:29:41,262][INFO] --PGD sample 72 image
+[2023-12-23 03:29:45,346][INFO] --FGSM sample 73 image
+[2023-12-23 03:29:45,776][INFO] --PGD sample 73 image
+[2023-12-23 03:29:50,122][INFO] --FGSM sample 74 image
+[2023-12-23 03:29:50,536][INFO] --PGD sample 74 image
+[2023-12-23 03:29:54,397][INFO] --FGSM sample 75 image
+[2023-12-23 03:29:54,788][INFO] --PGD sample 75 image
+[2023-12-23 03:29:59,060][INFO] --FGSM sample 76 image
+[2023-12-23 03:29:59,449][INFO] --PGD sample 76 image
+[2023-12-23 03:30:03,373][INFO] --FGSM sample 77 image
+[2023-12-23 03:30:03,767][INFO] --PGD sample 77 image
+[2023-12-23 03:30:07,775][INFO] --FGSM sample 78 image
+[2023-12-23 03:30:08,186][INFO] --PGD sample 78 image
+[2023-12-23 03:30:12,270][INFO] --FGSM sample 79 image
+[2023-12-23 03:30:12,688][INFO] --PGD sample 79 image
+[2023-12-23 03:30:16,869][INFO] --FGSM sample 80 image
+[2023-12-23 03:30:17,297][INFO] --PGD sample 80 image
+[2023-12-23 03:30:21,199][INFO] --FGSM sample 81 image
+[2023-12-23 03:30:21,599][INFO] --PGD sample 81 image
+[2023-12-23 03:30:25,471][INFO] --FGSM sample 82 image
+[2023-12-23 03:30:25,875][INFO] --PGD sample 82 image
+[2023-12-23 03:30:29,850][INFO] --FGSM sample 83 image
+[2023-12-23 03:30:30,250][INFO] --PGD sample 83 image
+[2023-12-23 03:30:34,385][INFO] --FGSM sample 84 image
+[2023-12-23 03:30:34,806][INFO] --PGD sample 84 image
+[2023-12-23 03:30:38,882][INFO] --FGSM sample 85 image
+[2023-12-23 03:30:39,300][INFO] --PGD sample 85 image
+[2023-12-23 03:30:43,645][INFO] --FGSM sample 86 image
+[2023-12-23 03:30:44,132][INFO] --PGD sample 86 image
+[2023-12-23 03:30:48,470][INFO] --FGSM sample 87 image
+[2023-12-23 03:30:48,878][INFO] --PGD sample 87 image
+[2023-12-23 03:30:52,889][INFO] --FGSM sample 88 image
+[2023-12-23 03:30:53,297][INFO] --PGD sample 88 image
+[2023-12-23 03:30:57,153][INFO] --FGSM sample 89 image
+[2023-12-23 03:30:57,547][INFO] --PGD sample 89 image
+[2023-12-23 03:31:01,441][INFO] --FGSM sample 90 image
+[2023-12-23 03:31:01,839][INFO] --PGD sample 90 image
+[2023-12-23 03:31:05,740][INFO] --FGSM sample 91 image
+[2023-12-23 03:31:06,132][INFO] --PGD sample 91 image
+[2023-12-23 03:31:09,966][INFO] --FGSM sample 92 image
+[2023-12-23 03:31:10,381][INFO] --PGD sample 92 image
+[2023-12-23 03:31:14,411][INFO] --FGSM sample 93 image
+[2023-12-23 03:31:14,824][INFO] --PGD sample 93 image
+[2023-12-23 03:31:18,764][INFO] --FGSM sample 94 image
+[2023-12-23 03:31:19,162][INFO] --PGD sample 94 image
+[2023-12-23 03:31:23,062][INFO] --FGSM sample 95 image
+[2023-12-23 03:31:23,463][INFO] --PGD sample 95 image
+[2023-12-23 03:31:27,474][INFO] --FGSM sample 96 image
+[2023-12-23 03:31:27,863][INFO] --PGD sample 96 image
+[2023-12-23 03:31:31,801][INFO] --FGSM sample 97 image
+[2023-12-23 03:31:32,203][INFO] --PGD sample 97 image
+[2023-12-23 03:31:36,128][INFO] --FGSM sample 98 image
+[2023-12-23 03:31:36,527][INFO] --PGD sample 98 image
+[2023-12-23 03:31:40,504][INFO] --FGSM sample 99 image
+[2023-12-23 03:31:40,907][INFO] --PGD sample 99 image
+[2023-12-23 03:31:44,819][INFO] --FGSM sample 100 image
+[2023-12-23 03:31:45,229][INFO] --PGD sample 100 image
+[2023-12-23 03:31:51,571][INFO] --get the 0 part of the feature_lb and feature_ub
+[2023-12-23 03:31:51,571][INFO] --sample the 1 part of the originalset
+[2023-12-23 03:31:51,572][INFO] --FGSM sample 1 image
+[2023-12-23 03:31:51,981][INFO] --PGD sample 1 image
+[2023-12-23 03:31:55,932][INFO] --FGSM sample 2 image
+[2023-12-23 03:31:56,346][INFO] --PGD sample 2 image
+[2023-12-23 03:32:00,374][INFO] --FGSM sample 3 image
+[2023-12-23 03:32:00,760][INFO] --PGD sample 3 image
+[2023-12-23 03:32:04,830][INFO] --FGSM sample 4 image
+[2023-12-23 03:32:07,247][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2023-12-23 03:32:07,247][INFO] --PGD sample 4 image
+[2023-12-23 03:32:11,485][INFO] --FGSM sample 5 image
+[2023-12-23 03:32:11,872][INFO] --PGD sample 5 image
+[2023-12-23 03:32:15,846][INFO] --FGSM sample 6 image
+[2023-12-23 03:32:16,251][INFO] --PGD sample 6 image
+[2023-12-23 03:32:20,237][INFO] --FGSM sample 7 image
+[2023-12-23 03:32:20,645][INFO] --PGD sample 7 image
+[2023-12-23 03:32:24,622][INFO] --FGSM sample 8 image
+[2023-12-23 03:32:25,032][INFO] --PGD sample 8 image
+[2023-12-23 03:32:29,223][INFO] --FGSM sample 9 image
+[2023-12-23 03:32:29,706][INFO] --PGD sample 9 image
+[2023-12-23 03:32:33,911][INFO] --FGSM sample 10 image
+[2023-12-23 03:32:34,305][INFO] --PGD sample 10 image
+[2023-12-23 03:32:38,164][INFO] --FGSM sample 11 image
+[2023-12-23 03:32:38,551][INFO] --PGD sample 11 image
+[2023-12-23 03:32:42,542][INFO] --FGSM sample 12 image
+[2023-12-23 03:32:42,958][INFO] --PGD sample 12 image
+[2023-12-23 03:32:47,059][INFO] --FGSM sample 13 image
+[2023-12-23 03:32:47,870][INFO] --PGD sample 13 image
+[2023-12-23 03:32:52,244][INFO] --FGSM sample 14 image
+[2023-12-23 03:32:52,654][INFO] --PGD sample 14 image
+[2023-12-23 03:32:56,555][INFO] --FGSM sample 15 image
+[2023-12-23 03:32:56,941][INFO] --PGD sample 15 image
+[2023-12-23 03:33:00,860][INFO] --FGSM sample 16 image
+[2023-12-23 03:33:01,286][INFO] --PGD sample 16 image
+[2023-12-23 03:33:05,467][INFO] --FGSM sample 17 image
+[2023-12-23 03:33:05,854][INFO] --PGD sample 17 image
+[2023-12-23 03:33:09,754][INFO] --FGSM sample 18 image
+[2023-12-23 03:33:10,178][INFO] --PGD sample 18 image
+[2023-12-23 03:33:14,167][INFO] --FGSM sample 19 image
+[2023-12-23 03:33:14,583][INFO] --PGD sample 19 image
+[2023-12-23 03:33:18,618][INFO] --FGSM sample 20 image
+[2023-12-23 03:33:19,026][INFO] --PGD sample 20 image
+[2023-12-23 03:33:23,013][INFO] --FGSM sample 21 image
+[2023-12-23 03:33:23,408][INFO] --PGD sample 21 image
+[2023-12-23 03:33:27,186][INFO] --FGSM sample 22 image
+[2023-12-23 03:33:27,580][INFO] --PGD sample 22 image
+[2023-12-23 03:33:31,775][INFO] --FGSM sample 23 image
+[2023-12-23 03:33:34,197][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2023-12-23 03:33:34,197][INFO] --PGD sample 23 image
+[2023-12-23 03:33:38,043][INFO] --FGSM sample 24 image
+[2023-12-23 03:33:38,420][INFO] --PGD sample 24 image
+[2023-12-23 03:33:42,676][INFO] --FGSM sample 25 image
+[2023-12-23 03:33:43,080][INFO] --PGD sample 25 image
+[2023-12-23 03:33:47,043][INFO] --FGSM sample 26 image
+[2023-12-23 03:33:47,447][INFO] --PGD sample 26 image
+[2023-12-23 03:33:51,424][INFO] --FGSM sample 27 image
+[2023-12-23 03:33:51,810][INFO] --PGD sample 27 image
+[2023-12-23 03:33:55,885][INFO] --FGSM sample 28 image
+[2023-12-23 03:33:56,297][INFO] --PGD sample 28 image
+[2023-12-23 03:34:00,303][INFO] --FGSM sample 29 image
+[2023-12-23 03:34:00,720][INFO] --PGD sample 29 image
+[2023-12-23 03:34:04,580][INFO] --FGSM sample 30 image
+[2023-12-23 03:34:04,980][INFO] --PGD sample 30 image
+[2023-12-23 03:34:08,887][INFO] --FGSM sample 31 image
+[2023-12-23 03:34:09,285][INFO] --PGD sample 31 image
+[2023-12-23 03:34:13,542][INFO] --FGSM sample 32 image
+[2023-12-23 03:34:13,945][INFO] --PGD sample 32 image
+[2023-12-23 03:34:17,721][INFO] --FGSM sample 33 image
+[2023-12-23 03:34:18,112][INFO] --PGD sample 33 image
+[2023-12-23 03:34:21,797][INFO] --FGSM sample 34 image
+[2023-12-23 03:34:22,171][INFO] --PGD sample 34 image
+[2023-12-23 03:34:26,068][INFO] --FGSM sample 35 image
+[2023-12-23 03:34:26,464][INFO] --PGD sample 35 image
+[2023-12-23 03:34:30,283][INFO] --FGSM sample 36 image
+[2023-12-23 03:34:32,583][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2023-12-23 03:34:32,583][INFO] --PGD sample 36 image
+[2023-12-23 03:34:36,437][INFO] --FGSM sample 37 image
+[2023-12-23 03:34:36,842][INFO] --PGD sample 37 image
+[2023-12-23 03:34:40,736][INFO] --FGSM sample 38 image
+[2023-12-23 03:34:43,074][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2023-12-23 03:34:43,074][INFO] --PGD sample 38 image
+[2023-12-23 03:34:46,932][INFO] --FGSM sample 39 image
+[2023-12-23 03:34:47,334][INFO] --PGD sample 39 image
+[2023-12-23 03:34:51,173][INFO] --FGSM sample 40 image
+[2023-12-23 03:34:51,566][INFO] --PGD sample 40 image
+[2023-12-23 03:34:55,490][INFO] --FGSM sample 41 image
+[2023-12-23 03:34:55,957][INFO] --PGD sample 41 image
+[2023-12-23 03:35:00,317][INFO] --FGSM sample 42 image
+[2023-12-23 03:35:00,735][INFO] --PGD sample 42 image
+[2023-12-23 03:35:04,880][INFO] --FGSM sample 43 image
+[2023-12-23 03:35:05,277][INFO] --PGD sample 43 image
+[2023-12-23 03:35:09,224][INFO] --FGSM sample 44 image
+[2023-12-23 03:35:09,629][INFO] --PGD sample 44 image
+[2023-12-23 03:35:13,533][INFO] --FGSM sample 45 image
+[2023-12-23 03:35:13,922][INFO] --PGD sample 45 image
+[2023-12-23 03:35:17,724][INFO] --FGSM sample 46 image
+[2023-12-23 03:35:18,093][INFO] --PGD sample 46 image
+[2023-12-23 03:35:21,840][INFO] --FGSM sample 47 image
+[2023-12-23 03:35:22,244][INFO] --PGD sample 47 image
+[2023-12-23 03:35:26,239][INFO] --FGSM sample 48 image
+[2023-12-23 03:35:26,703][INFO] --PGD sample 48 image
+[2023-12-23 03:35:30,827][INFO] --FGSM sample 49 image
+[2023-12-23 03:35:31,224][INFO] --PGD sample 49 image
+[2023-12-23 03:35:35,197][INFO] --FGSM sample 50 image
+[2023-12-23 03:35:35,575][INFO] --PGD sample 50 image
+[2023-12-23 03:35:39,425][INFO] --FGSM sample 51 image
+[2023-12-23 03:35:39,817][INFO] --PGD sample 51 image
+[2023-12-23 03:35:43,996][INFO] --FGSM sample 52 image
+[2023-12-23 03:35:44,426][INFO] --PGD sample 52 image
+[2023-12-23 03:35:48,635][INFO] --FGSM sample 53 image
+[2023-12-23 03:35:49,058][INFO] --PGD sample 53 image
+[2023-12-23 03:35:53,362][INFO] --FGSM sample 54 image
+[2023-12-23 03:35:53,819][INFO] --PGD sample 54 image
+[2023-12-23 03:35:57,968][INFO] --FGSM sample 55 image
+[2023-12-23 03:35:58,383][INFO] --PGD sample 55 image
+[2023-12-23 03:36:02,407][INFO] --FGSM sample 56 image
+[2023-12-23 03:36:02,818][INFO] --PGD sample 56 image
+[2023-12-23 03:36:06,850][INFO] --FGSM sample 57 image
+[2023-12-23 03:36:07,263][INFO] --PGD sample 57 image
+[2023-12-23 03:36:11,237][INFO] --FGSM sample 58 image
+[2023-12-23 03:36:11,637][INFO] --PGD sample 58 image
+[2023-12-23 03:36:15,727][INFO] --FGSM sample 59 image
+[2023-12-23 03:36:16,104][INFO] --PGD sample 59 image
+[2023-12-23 03:36:20,021][INFO] --FGSM sample 60 image
+[2023-12-23 03:36:20,415][INFO] --PGD sample 60 image
+[2023-12-23 03:36:24,523][INFO] --FGSM sample 61 image
+[2023-12-23 03:36:24,962][INFO] --PGD sample 61 image
+[2023-12-23 03:36:29,283][INFO] --FGSM sample 62 image
+[2023-12-23 03:36:29,687][INFO] --PGD sample 62 image
+[2023-12-23 03:36:33,615][INFO] --FGSM sample 63 image
+[2023-12-23 03:36:34,013][INFO] --PGD sample 63 image
+[2023-12-23 03:36:38,196][INFO] --FGSM sample 64 image
+[2023-12-23 03:36:38,636][INFO] --PGD sample 64 image
+[2023-12-23 03:36:43,248][INFO] --FGSM sample 65 image
+[2023-12-23 03:36:43,725][INFO] --PGD sample 65 image
+[2023-12-23 03:36:47,751][INFO] --FGSM sample 66 image
+[2023-12-23 03:36:48,147][INFO] --PGD sample 66 image
+[2023-12-23 03:36:52,053][INFO] --FGSM sample 67 image
+[2023-12-23 03:36:52,444][INFO] --PGD sample 67 image
+[2023-12-23 03:36:56,307][INFO] --FGSM sample 68 image
+[2023-12-23 03:36:56,695][INFO] --PGD sample 68 image
+[2023-12-23 03:37:00,860][INFO] --FGSM sample 69 image
+[2023-12-23 03:37:01,334][INFO] --PGD sample 69 image
+[2023-12-23 03:37:05,505][INFO] --FGSM sample 70 image
+[2023-12-23 03:37:08,368][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2023-12-23 03:37:08,368][INFO] --PGD sample 70 image
+[2023-12-23 03:37:12,575][INFO] --FGSM sample 71 image
+[2023-12-23 03:37:13,023][INFO] --PGD sample 71 image
+[2023-12-23 03:37:17,011][INFO] --FGSM sample 72 image
+[2023-12-23 03:37:17,391][INFO] --PGD sample 72 image
+[2023-12-23 03:37:21,306][INFO] --FGSM sample 73 image
+[2023-12-23 03:37:23,692][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2023-12-23 03:37:23,692][INFO] --PGD sample 73 image
+[2023-12-23 03:37:27,513][INFO] --FGSM sample 74 image
+[2023-12-23 03:37:27,911][INFO] --PGD sample 74 image
+[2023-12-23 03:37:31,865][INFO] --FGSM sample 75 image
+[2023-12-23 03:37:32,262][INFO] --PGD sample 75 image
+[2023-12-23 03:37:36,172][INFO] --FGSM sample 76 image
+[2023-12-23 03:37:36,566][INFO] --PGD sample 76 image
+[2023-12-23 03:37:40,704][INFO] --FGSM sample 77 image
+[2023-12-23 03:37:41,094][INFO] --PGD sample 77 image
+[2023-12-23 03:37:44,894][INFO] --FGSM sample 78 image
+[2023-12-23 03:37:45,306][INFO] --PGD sample 78 image
+[2023-12-23 03:37:49,842][INFO] --FGSM sample 79 image
+[2023-12-23 03:37:50,342][INFO] --PGD sample 79 image
+[2023-12-23 03:37:54,504][INFO] --FGSM sample 80 image
+[2023-12-23 03:37:54,909][INFO] --PGD sample 80 image
+[2023-12-23 03:37:59,160][INFO] --FGSM sample 81 image
+[2023-12-23 03:37:59,622][INFO] --PGD sample 81 image
+[2023-12-23 03:38:03,886][INFO] --FGSM sample 82 image
+[2023-12-23 03:38:04,303][INFO] --PGD sample 82 image
+[2023-12-23 03:38:08,493][INFO] --FGSM sample 83 image
+[2023-12-23 03:38:08,911][INFO] --PGD sample 83 image
+[2023-12-23 03:38:12,935][INFO] --FGSM sample 84 image
+[2023-12-23 03:38:13,327][INFO] --PGD sample 84 image
+[2023-12-23 03:38:17,432][INFO] --FGSM sample 85 image
+[2023-12-23 03:38:17,873][INFO] --PGD sample 85 image
+[2023-12-23 03:38:22,144][INFO] --FGSM sample 86 image
+[2023-12-23 03:38:22,558][INFO] --PGD sample 86 image
+[2023-12-23 03:38:26,597][INFO] --FGSM sample 87 image
+[2023-12-23 03:38:26,972][INFO] --PGD sample 87 image
+[2023-12-23 03:38:31,112][INFO] --FGSM sample 88 image
+[2023-12-23 03:38:33,531][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2023-12-23 03:38:33,532][INFO] --PGD sample 88 image
+[2023-12-23 03:38:37,551][INFO] --FGSM sample 89 image
+[2023-12-23 03:38:37,969][INFO] --PGD sample 89 image
+[2023-12-23 03:38:42,050][INFO] --FGSM sample 90 image
+[2023-12-23 03:38:42,462][INFO] --PGD sample 90 image
+[2023-12-23 03:38:46,543][INFO] --FGSM sample 91 image
+[2023-12-23 03:38:46,958][INFO] --PGD sample 91 image
+[2023-12-23 03:38:51,133][INFO] --FGSM sample 92 image
+[2023-12-23 03:38:51,560][INFO] --PGD sample 92 image
+[2023-12-23 03:38:55,587][INFO] --FGSM sample 93 image
+[2023-12-23 03:38:55,987][INFO] --PGD sample 93 image
+[2023-12-23 03:39:00,134][INFO] --FGSM sample 94 image
+[2023-12-23 03:39:02,666][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2023-12-23 03:39:02,666][INFO] --PGD sample 94 image
+[2023-12-23 03:39:07,049][INFO] --FGSM sample 95 image
+[2023-12-23 03:39:07,483][INFO] --PGD sample 95 image
+[2023-12-23 03:39:11,593][INFO] --FGSM sample 96 image
+[2023-12-23 03:39:12,022][INFO] --PGD sample 96 image
+[2023-12-23 03:39:16,207][INFO] --FGSM sample 97 image
+[2023-12-23 03:39:16,646][INFO] --PGD sample 97 image
+[2023-12-23 03:39:20,918][INFO] --FGSM sample 98 image
+[2023-12-23 03:39:21,363][INFO] --PGD sample 98 image
+[2023-12-23 03:39:25,413][INFO] --FGSM sample 99 image
+[2023-12-23 03:39:26,197][INFO] --PGD sample 99 image
+[2023-12-23 03:39:30,044][INFO] --FGSM sample 100 image
+[2023-12-23 03:39:30,423][INFO] --PGD sample 100 image
+[2023-12-23 03:39:36,729][INFO] --get the 1 part of the feature_lb and feature_ub
+[2023-12-23 03:40:12,290][INFO] --Test repair set accuracy 0.0
+[2023-12-23 03:40:12,331][INFO] --Patch network: --- feature PatchNet ---
+Name: feature patch network 199
+--- End of feature PatchNet ---
+[2023-12-23 03:40:12,334][INFO] [0m 0s (0.001 seconds)] Start repair part 0: 0
+[2023-12-23 03:40:12,334][INFO] [0m 0s (0.001 seconds)] After epoch 0:
+[2023-12-23 03:40:12,334][INFO] Loaded 100 abstractions for training.
+[2023-12-23 03:40:12,456][INFO] min loss 1.2968378067016602, max loss 39.08789825439453.
+[2023-12-23 03:40:12,458][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1', dtype=torch.uint8).
+[2023-12-23 03:40:12,539][INFO] Test set accuracy 0.9342.
+[2023-12-23 03:40:12,539][INFO] repair set accuracy 0.01.
+[2023-12-23 03:40:12,539][INFO] train set accuracy 1.0.
+[2023-12-23 03:40:12,539][INFO] attacked test set accuracy 0.011.
+[2023-12-23 03:40:12,539][INFO] 
+[0m 0s (0.206 seconds)] Starting epoch 1:
+[2023-12-23 03:40:12,898][INFO] [0m 0s (0.565 seconds)] After epoch 1:
+[2023-12-23 03:40:12,898][INFO] Loaded 100 abstractions for training.
+[2023-12-23 03:40:13,027][INFO] min loss 0.0, max loss 0.0.
+[2023-12-23 03:40:13,027][INFO] All 100 abstractions certified.
+[2023-12-23 03:40:13,096][INFO] Test set accuracy 0.9342.
+[2023-12-23 03:40:13,096][INFO] repair set accuracy 1.0.
+[2023-12-23 03:40:13,096][INFO] train set accuracy 1.0.
+[2023-12-23 03:40:13,096][INFO] attacked test set accuracy 1.0.
+[2023-12-23 03:40:13,132][INFO] Accuracy at every epoch: [0.9342, 0.9342]
+[2023-12-23 03:40:13,132][INFO] After 1 epochs / 0m 0s (0.763 seconds), eventually the trained network got certified? True, with 0.9342 accuracy on test set,with 1.0000 accuracy on repair set,with 1.0000 accuracy on train set,with 1.0000 accuracy on attack test set.
+[2023-12-23 03:40:13,133][INFO] [0m 0s (0.800 seconds)] Start repair part 1: 100
+[2023-12-23 03:40:13,133][INFO] [0m 0s (0.800 seconds)] After epoch 0:
+[2023-12-23 03:40:13,134][INFO] Loaded 100 abstractions for training.
+[2023-12-23 03:40:13,262][INFO] min loss 1.306464672088623, max loss 105.7182388305664.
+[2023-12-23 03:40:13,264][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1', dtype=torch.uint8).
+[2023-12-23 03:40:13,337][INFO] Test set accuracy 0.9342.
+[2023-12-23 03:40:13,337][INFO] repair set accuracy 0.02.
+[2023-12-23 03:40:13,337][INFO] train set accuracy 1.0.
+[2023-12-23 03:40:13,337][INFO] attacked test set accuracy 0.022.
+[2023-12-23 03:40:13,338][INFO] 
+[0m 1s (1.004 seconds)] Starting epoch 1:
+[2023-12-23 03:40:13,692][INFO] [0m 1s (1.359 seconds)] After epoch 1:
+[2023-12-23 03:40:13,692][INFO] Loaded 100 abstractions for training.
+[2023-12-23 03:40:13,814][INFO] min loss 0.0, max loss 0.0.
+[2023-12-23 03:40:13,814][INFO] All 100 abstractions certified.
+[2023-12-23 03:40:13,897][INFO] Test set accuracy 0.9342.
+[2023-12-23 03:40:13,897][INFO] repair set accuracy 1.0.
+[2023-12-23 03:40:13,897][INFO] train set accuracy 1.0.
+[2023-12-23 03:40:13,897][INFO] attacked test set accuracy 1.0.
+[2023-12-23 03:40:13,931][INFO] Accuracy at every epoch: [0.9342, 0.9342]
+[2023-12-23 03:40:13,932][INFO] After 1 epochs / 0m 1s (1.563 seconds), eventually the trained network got certified? True, with 0.9342 accuracy on test set,with 1.0000 accuracy on repair set,with 1.0000 accuracy on train set,with 1.0000 accuracy on attack test set.
+[2023-12-23 03:40:13,932][INFO] final test
+[2023-12-23 03:40:13,937][INFO] --Test set accuracy 0.9342
+[2023-12-23 03:40:13,966][INFO] --Test repair set accuracy 1.0
+[2023-12-23 03:40:13,998][INFO] --Test train set accuracy 1.0
+[2023-12-23 03:40:14,035][INFO] --Test attack test set accuracy 1.0
+[2023-12-23 03:40:14,035][INFO] traing time 1.701940331608057s
+[2023-12-23 03:40:14,044][INFO] === Avg <epochs, train_time, certified, accuracy> for pgd attack networks:
+[2023-12-23 03:40:14,044][INFO] tensor([1.0000, 1.5633, 1.0000, 0.9342])
+[2023-12-23 03:40:14,045][INFO] Total Cost Time: 962.9562075920403s.
+
+
+

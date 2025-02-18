@@ -1,0 +1,74 @@
+####################################################################################################
+Namespace(cexnum=500, num1=4, num2=9)
+start run: acas_4_9!
+network loaded!
+start syrenn transform_planes!
+Size of repair set: 500
+start do_repair!
+Using license file /opt/gurobi/gurobi.lic
+Changed value of parameter Crossover to 0
+   Prev: -1  Min: -1  Max: 5  Default: -1
+Changed value of parameter Method to 2
+   Prev: -1  Min: -1  Max: 5  Default: -1
+Gurobi Optimizer version 9.0.3 build v9.0.3rc0 (linux64)
+Optimize a model with 123292 rows, 512 columns and 560336 nonzeros
+Model fingerprint: 0xb5b240be
+Coefficient statistics:
+  Matrix range     [6e-08, 6e+00]
+  Objective range  [4e-03, 1e+00]
+  Bounds range     [2e+00, 3e+00]
+  RHS range        [2e-07, 4e-02]
+Presolve removed 0 rows and 96285 columns
+Presolve time: 0.14s
+Presolved: 512 rows, 27519 columns, 213571 nonzeros
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 9.550e+02
+ Factor NZ  : 2.541e+03 (roughly 11 MBytes of memory)
+ Factor Ops : 3.203e+04 (less than 1 second per iteration)
+ Threads    : 32
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   4.92077705e+03  7.53798570e-01  2.60e+03 1.52e-02  2.11e-01     0s
+   1   5.48777446e+00  3.31762473e+00  1.25e+01 1.03e+00  2.04e-03     0s
+   2   1.26170500e+00  2.35425265e+00  1.81e+00 4.18e-01  3.58e-04     0s
+   3   1.02208795e+00  1.62877966e+00  1.21e+00 2.38e-01  2.29e-04     0s
+   4   5.16219690e-01  1.30433580e+00  5.54e-01 1.65e-01  1.32e-04     0s
+   5   2.20055462e-01  1.01463058e+00  1.66e-01 1.16e-01  6.54e-05     0s
+   6   6.98364955e-02  5.49073025e-01  5.57e-02 5.71e-02  3.08e-05     0s
+   7   1.06880184e-02  4.87492161e-01  8.45e-03 4.71e-02  2.30e-05     0s
+   8  -1.62817600e-03  3.87818151e-02  1.84e-05 3.27e-03  1.80e-06     0s
+   9   1.04326696e-03  9.29320940e-03  2.19e-14 7.17e-04  3.81e-07     0s
+  10   2.33097886e-03  1.19049643e-02  4.49e-14 6.13e-04  4.17e-07     0s
+  11   3.65300835e-03  7.58693248e-03  2.23e-14 2.07e-04  1.68e-07     0s
+  12   4.58997520e-03  6.57216296e-03  5.08e-14 1.17e-04  7.82e-08     0s
+  13   4.82278332e-03  6.13916751e-03  4.45e-14 7.54e-05  5.20e-08     0s
+  14   5.05320164e-03  5.85331892e-03  2.09e-13 4.69e-05  3.17e-08     0s
+  15   5.08356074e-03  5.80852229e-03  1.96e-13 4.02e-05  2.86e-08     0s
+  16   5.15008199e-03  5.67891014e-03  7.10e-13 2.93e-05  2.08e-08     0s
+  17   5.19270705e-03  5.51730975e-03  1.73e-13 1.50e-05  1.26e-08     0s
+  18   5.29335706e-03  5.41518025e-03  1.17e-11 6.07e-06  4.77e-09     0s
+  19   5.32005455e-03  5.41317594e-03  6.31e-12 4.76e-06  3.65e-09     0s
+  20   5.33354496e-03  5.37654984e-03  2.19e-12 2.10e-06  1.68e-09     0s
+  21   5.34309081e-03  5.37358581e-03  9.21e-13 1.86e-06  1.22e-09     0s
+  22   5.35299666e-03  5.35765249e-03  1.27e-13 2.52e-07  1.84e-10     0s
+  23   5.35477998e-03  5.35501551e-03  3.60e-12 9.19e-09  9.04e-12     0s
+  24   5.35469645e-03  5.35495635e-03  2.74e-11 5.61e-09  9.67e-12     0s
+  25   5.35474764e-03  5.35492014e-03  1.86e-11 2.72e-09  6.35e-12     0s
+  26   5.35476908e-03  5.35491847e-03  1.59e-11 2.61e-09  5.51e-12     0s
+  27   5.35478491e-03  5.35489771e-03  1.41e-11 1.58e-09  4.14e-12     0s
+  28   5.35486569e-03  5.35489027e-03  3.04e-12 1.14e-09  9.68e-13     0s
+
+Barrier solved model in 28 iterations and 0.34 seconds
+Optimal objective 5.35486569e-03
+
+Size of repair set: 500
+Time (seconds): {'jacobian': 0.5856052219169214, 'solver': 0.38928471005056053, 'did_timeout': False, 'total': 5.049023529980332, 'syrenn': 2.299775906954892}
+Polytope accuracy in the repair set after repair (should be 1.0 = 100%): 1.0
+Size of our generalization sets: 5000
+Generalization-set counterexamples after repair: (248, 5000) 4.96%
+ori acc: 100.0, num: 5000, bzd: 1.6400000000000001
+
+

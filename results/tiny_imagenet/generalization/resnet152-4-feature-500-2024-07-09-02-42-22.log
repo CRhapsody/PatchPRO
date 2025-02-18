@@ -1,0 +1,58 @@
+[2024-07-09 02:42:22,205][INFO] 
+===== resnet152-4-feature-500-2024-07-09-02-42-22 configuration =====
+  exp_fn: test_goal_test
+  seed: None
+  dom: deeppoly
+  start_abs_cnt: 500
+  max_abs_cnt: 1000
+  refine_top_k: 800
+  tiny_width: 0.001
+  lr: 0.001
+  batch_size: 50
+  min_epochs: 25
+  max_epochs: 45
+  use_scheduler: True
+  no_pts: False
+  no_abs: False
+  no_refine: False
+  quiet: False
+  debug: False
+  net: resnet152
+  no_repair: False
+  repair_number: 500
+  repair_batchsize: 1
+  repair_location: feature
+  label_repaired: False
+  repair_radius: 4
+  loose_bound: 0.1
+  divided_repair: 1
+  accuracy_loss: <function TinyImagenetArgParser.setup_rest.<locals>.ce_loss at 0x7f775134bee0>
+  reset_params: False
+  train_datasize: 10000
+  test_datasize: 10000
+  patch_size: big
+  repair_batch_size: 500
+  scheduler_fn: <function ExpArgParser.setup_rest.<locals>.<lambda> at 0x7f775134bf70>
+===== end of resnet152-4-feature-500-2024-07-09-02-42-22 configuration =====
+
+[2024-07-09 02:42:22,205][INFO] ===== start repair ======
+[2024-07-09 02:42:22,205][INFO] For pgd attack net
+[2024-07-09 02:42:27,256][INFO] --feature patch network: --- feature PatchNet ---
+Name: property patch network 499
+--- End of feature PatchNet ---
+[2024-07-09 02:42:29,837][INFO] --load the testset as testing set
+[2024-07-09 02:42:30,135][INFO] --evaluate the original net on testset
+[2024-07-09 02:42:31,964][INFO] --For testset, out of 10000 items, ratio 0.6825
+[2024-07-09 02:42:33,795][INFO] --evaluate the repaired net on testset and get the bitmap
+[2024-07-09 02:42:35,632][INFO] --For testset, out of 10000 items, ratio 0.6825
+[2024-07-09 02:42:36,025][INFO] --test the defense against autoattack
+[2024-07-09 02:42:36,026][INFO] attack net2 
+[2024-07-09 02:42:53,057][INFO] correct2 10
+[2024-07-09 02:42:53,841][INFO] correct3 0
+[2024-07-09 02:42:53,841][INFO] attack net2 
+[2024-07-09 02:43:00,796][INFO] correct2 3
+[2024-07-09 02:43:01,558][INFO] correct3 0
+[2024-07-09 02:43:01,559][INFO] attack net2 
+[2024-07-09 02:43:14,501][INFO] correct2 2
+[2024-07-09 02:43:15,264][INFO] correct3 0
+[2024-07-09 02:43:15,264][INFO] attack net2 

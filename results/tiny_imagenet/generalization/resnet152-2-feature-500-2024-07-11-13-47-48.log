@@ -1,0 +1,54 @@
+[2024-07-11 13:47:48,618][INFO] 
+===== resnet152-2-feature-500-2024-07-11-13-47-48 configuration =====
+  exp_fn: test_goal_test
+  seed: None
+  dom: deeppoly
+  start_abs_cnt: 500
+  max_abs_cnt: 1000
+  refine_top_k: 800
+  tiny_width: 0.001
+  lr: 0.001
+  batch_size: 50
+  min_epochs: 25
+  max_epochs: 45
+  use_scheduler: True
+  no_pts: False
+  no_abs: False
+  no_refine: False
+  quiet: False
+  debug: False
+  net: resnet152
+  no_repair: False
+  repair_number: 500
+  repair_batchsize: 1
+  repair_location: feature
+  label_repaired: False
+  repair_radius: 2
+  loose_bound: 0.1
+  divided_repair: 1
+  accuracy_loss: <function TinyImagenetArgParser.setup_rest.<locals>.ce_loss at 0x7f7052b4c700>
+  reset_params: False
+  train_datasize: 10000
+  test_datasize: 10000
+  patch_size: big
+  repair_batch_size: 500
+  scheduler_fn: <function ExpArgParser.setup_rest.<locals>.<lambda> at 0x7f7059d5fb80>
+===== end of resnet152-2-feature-500-2024-07-11-13-47-48 configuration =====
+
+[2024-07-11 13:47:48,618][INFO] ===== start repair ======
+[2024-07-11 13:47:48,619][INFO] For pgd attack net
+[2024-07-11 13:47:53,630][INFO] --feature patch network: --- feature PatchNet ---
+Name: property patch network 499
+--- End of feature PatchNet ---
+[2024-07-11 13:47:55,879][INFO] --load the testset as testing set
+[2024-07-11 13:47:56,180][INFO] --evaluate the original net on testset
+[2024-07-11 13:47:58,008][INFO] --For testset, out of 10000 items, ratio 0.6825
+[2024-07-11 13:47:58,299][INFO] --evaluate the repaired net on testset and get the bitmap
+[2024-07-11 13:48:00,105][INFO] --For testset, out of 9843 items, ratio 0.000203190084323885
+[2024-07-11 13:48:00,501][INFO] --test the defense against autoattack
+[2024-07-11 13:48:00,502][INFO] attack net2 
+[2024-07-11 13:48:00,753][INFO] correct2 18
+[2024-07-11 13:48:08,670][INFO] correct2 18
+[2024-07-11 13:48:08,828][INFO] correct3 0
+[2024-07-11 13:48:08,829][INFO] attack net2 
+[2024-07-11 13:48:08,954][INFO] correct2 25

@@ -1,0 +1,552 @@
+[2024-11-25 03:14:36,744][INFO] 
+===== resnet18-8-feature-200-2024-11-25-03-14-36 configuration =====
+  exp_fn: test_goal_repair
+  seed: None
+  dom: deeppoly
+  start_abs_cnt: 500
+  max_abs_cnt: 1000
+  refine_top_k: 50
+  tiny_width: 0.0008
+  lr: 1
+  batch_size: 50
+  min_epochs: 15
+  max_epochs: 100
+  use_scheduler: True
+  no_pts: True
+  no_abs: False
+  no_refine: True
+  quiet: False
+  debug: False
+  net: resnet18
+  no_repair: False
+  repair_number: 200
+  repair_batchsize: 1
+  repair_location: feature
+  repair_radius: 8
+  loose_bound: 0.0314
+  divided_repair: 2
+  accuracy_loss: <function CifarArgParser.setup_rest.<locals>.ce_loss at 0x7327a3a69f70>
+  reset_params: False
+  train_datasize: 10000
+  test_datasize: 2000
+  max_verifier_sec: 300
+  verifier_timeout_as_safe: True
+  sample_amount: 1000
+  repair_batch_size: 200
+  scheduler_fn: <function ExpArgParser.setup_rest.<locals>.<lambda> at 0x7327a29c5550>
+===== end of resnet18-8-feature-200-2024-11-25-03-14-36 configuration =====
+
+[2024-11-25 03:14:36,744][INFO] ===== start repair ======
+[2024-11-25 03:14:36,744][INFO] For pgd attack net
+[2024-11-25 03:14:37,430][INFO] --Test repair set accuracy 0.0
+[2024-11-25 03:14:37,432][INFO] --Test original set accuracy 0.995
+[2024-11-25 03:14:37,487][INFO] --Test test set accuracy 0.8832
+[2024-11-25 03:14:37,496][INFO] --Test attack test set accuracy 0.001
+[2024-11-25 03:14:37,551][INFO] --Test train set accuracy 0.9988
+[2024-11-25 03:14:37,551][INFO] get the feature of the repairset, testset and trainset
+[2024-11-25 03:14:37,872][INFO] sample the datas from the radius of the original data with pgd attack
+[2024-11-25 03:14:37,872][INFO] --sample the 0 part of the originalset
+[2024-11-25 03:14:37,872][INFO] --FGSM sample 1 image
+[2024-11-25 03:14:38,725][INFO] --FGSM sample 2 image
+[2024-11-25 03:14:39,812][INFO] --FGSM sample 3 image
+[2024-11-25 03:14:40,902][INFO] --FGSM sample 4 image
+[2024-11-25 03:14:42,015][INFO] --FGSM sample 5 image
+[2024-11-25 03:14:43,107][INFO] --FGSM sample 6 image
+[2024-11-25 03:14:44,191][INFO] --FGSM sample 7 image
+[2024-11-25 03:14:45,280][INFO] --FGSM sample 8 image
+[2024-11-25 03:14:46,369][INFO] --FGSM sample 9 image
+[2024-11-25 03:14:47,457][INFO] --FGSM sample 10 image
+[2024-11-25 03:14:48,546][INFO] --FGSM sample 11 image
+[2024-11-25 03:14:49,653][INFO] --FGSM sample 12 image
+[2024-11-25 03:14:50,744][INFO] --FGSM sample 13 image
+[2024-11-25 03:14:51,834][INFO] --FGSM sample 14 image
+[2024-11-25 03:14:52,924][INFO] --FGSM sample 15 image
+[2024-11-25 03:14:54,013][INFO] --FGSM sample 16 image
+[2024-11-25 03:14:55,103][INFO] --FGSM sample 17 image
+[2024-11-25 03:14:56,194][INFO] --FGSM sample 18 image
+[2024-11-25 03:14:57,288][INFO] --FGSM sample 19 image
+[2024-11-25 03:14:58,377][INFO] --FGSM sample 20 image
+[2024-11-25 03:14:59,470][INFO] --FGSM sample 21 image
+[2024-11-25 03:15:00,563][INFO] --FGSM sample 22 image
+[2024-11-25 03:15:01,655][INFO] --FGSM sample 23 image
+[2024-11-25 03:15:02,749][INFO] --FGSM sample 24 image
+[2024-11-25 03:15:03,842][INFO] --FGSM sample 25 image
+[2024-11-25 03:15:04,931][INFO] --FGSM sample 26 image
+[2024-11-25 03:15:06,021][INFO] --FGSM sample 27 image
+[2024-11-25 03:15:07,111][INFO] --FGSM sample 28 image
+[2024-11-25 03:15:08,202][INFO] --FGSM sample 29 image
+[2024-11-25 03:15:09,290][INFO] --FGSM sample 30 image
+[2024-11-25 03:15:10,381][INFO] --FGSM sample 31 image
+[2024-11-25 03:15:11,472][INFO] --FGSM sample 32 image
+[2024-11-25 03:15:12,563][INFO] --FGSM sample 33 image
+[2024-11-25 03:15:13,654][INFO] --FGSM sample 34 image
+[2024-11-25 03:15:14,742][INFO] --FGSM sample 35 image
+[2024-11-25 03:15:21,252][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 03:15:21,252][INFO] --FGSM sample 36 image
+[2024-11-25 03:15:22,347][INFO] --FGSM sample 37 image
+[2024-11-25 03:15:24,523][INFO] --FGSM sample 38 image
+[2024-11-25 03:15:29,961][INFO] --FGSM sample 39 image
+[2024-11-25 03:15:36,483][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 03:15:36,484][INFO] --FGSM sample 40 image
+[2024-11-25 03:15:37,577][INFO] --FGSM sample 41 image
+[2024-11-25 03:15:38,666][INFO] --FGSM sample 42 image
+[2024-11-25 03:15:39,761][INFO] --FGSM sample 43 image
+[2024-11-25 03:15:46,300][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 03:15:46,300][INFO] --FGSM sample 44 image
+[2024-11-25 03:15:47,398][INFO] --FGSM sample 45 image
+[2024-11-25 03:15:48,491][INFO] --FGSM sample 46 image
+[2024-11-25 03:15:49,570][INFO] --FGSM sample 47 image
+[2024-11-25 03:15:50,664][INFO] --FGSM sample 48 image
+[2024-11-25 03:15:51,773][INFO] --FGSM sample 49 image
+[2024-11-25 03:15:52,891][INFO] --FGSM sample 50 image
+[2024-11-25 03:15:53,994][INFO] --FGSM sample 51 image
+[2024-11-25 03:15:55,115][INFO] --FGSM sample 52 image
+[2024-11-25 03:15:56,161][INFO] --FGSM sample 53 image
+[2024-11-25 03:15:57,206][INFO] --FGSM sample 54 image
+[2024-11-25 03:15:58,259][INFO] --FGSM sample 55 image
+[2024-11-25 03:15:59,322][INFO] --FGSM sample 56 image
+[2024-11-25 03:16:00,365][INFO] --FGSM sample 57 image
+[2024-11-25 03:16:07,002][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 03:16:07,002][INFO] --FGSM sample 58 image
+[2024-11-25 03:16:08,141][INFO] --FGSM sample 59 image
+[2024-11-25 03:16:09,242][INFO] --FGSM sample 60 image
+[2024-11-25 03:16:10,374][INFO] --FGSM sample 61 image
+[2024-11-25 03:16:11,499][INFO] --FGSM sample 62 image
+[2024-11-25 03:16:13,695][INFO] --FGSM sample 63 image
+[2024-11-25 03:16:20,444][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 03:16:20,444][INFO] --FGSM sample 64 image
+[2024-11-25 03:16:21,587][INFO] --FGSM sample 65 image
+[2024-11-25 03:16:22,687][INFO] --FGSM sample 66 image
+[2024-11-25 03:16:23,799][INFO] --FGSM sample 67 image
+[2024-11-25 03:16:24,904][INFO] --FGSM sample 68 image
+[2024-11-25 03:16:26,002][INFO] --FGSM sample 69 image
+[2024-11-25 03:16:27,125][INFO] --FGSM sample 70 image
+[2024-11-25 03:16:28,228][INFO] --FGSM sample 71 image
+[2024-11-25 03:16:35,014][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 03:16:35,014][INFO] --FGSM sample 72 image
+[2024-11-25 03:16:36,157][INFO] --FGSM sample 73 image
+[2024-11-25 03:16:37,260][INFO] --FGSM sample 74 image
+[2024-11-25 03:16:38,358][INFO] --FGSM sample 75 image
+[2024-11-25 03:16:39,455][INFO] --FGSM sample 76 image
+[2024-11-25 03:16:40,555][INFO] --FGSM sample 77 image
+[2024-11-25 03:16:41,679][INFO] --FGSM sample 78 image
+[2024-11-25 03:16:42,798][INFO] --FGSM sample 79 image
+[2024-11-25 03:16:43,903][INFO] --FGSM sample 80 image
+[2024-11-25 03:16:45,026][INFO] --FGSM sample 81 image
+[2024-11-25 03:16:46,129][INFO] --FGSM sample 82 image
+[2024-11-25 03:16:47,233][INFO] --FGSM sample 83 image
+[2024-11-25 03:16:48,334][INFO] --FGSM sample 84 image
+[2024-11-25 03:16:49,455][INFO] --FGSM sample 85 image
+[2024-11-25 03:16:50,570][INFO] --FGSM sample 86 image
+[2024-11-25 03:16:51,677][INFO] --FGSM sample 87 image
+[2024-11-25 03:16:52,796][INFO] --FGSM sample 88 image
+[2024-11-25 03:16:53,917][INFO] --FGSM sample 89 image
+[2024-11-25 03:16:55,049][INFO] --FGSM sample 90 image
+[2024-11-25 03:16:56,152][INFO] --FGSM sample 91 image
+[2024-11-25 03:16:57,253][INFO] --FGSM sample 92 image
+[2024-11-25 03:16:58,357][INFO] --FGSM sample 93 image
+[2024-11-25 03:16:59,459][INFO] --FGSM sample 94 image
+[2024-11-25 03:17:00,582][INFO] --FGSM sample 95 image
+[2024-11-25 03:17:01,685][INFO] --FGSM sample 96 image
+[2024-11-25 03:17:02,789][INFO] --FGSM sample 97 image
+[2024-11-25 03:17:03,915][INFO] --FGSM sample 98 image
+[2024-11-25 03:17:05,032][INFO] --FGSM sample 99 image
+[2024-11-25 03:17:06,159][INFO] --FGSM sample 100 image
+[2024-11-25 03:17:07,609][INFO] --get the 0 part of the feature_lb and feature_ub
+[2024-11-25 03:17:07,610][INFO] --sample the 1 part of the originalset
+[2024-11-25 03:17:07,610][INFO] --FGSM sample 1 image
+[2024-11-25 03:17:08,633][INFO] --FGSM sample 2 image
+[2024-11-25 03:17:09,726][INFO] --FGSM sample 3 image
+[2024-11-25 03:17:10,820][INFO] --FGSM sample 4 image
+[2024-11-25 03:17:11,910][INFO] --FGSM sample 5 image
+[2024-11-25 03:17:12,999][INFO] --FGSM sample 6 image
+[2024-11-25 03:17:14,105][INFO] --FGSM sample 7 image
+[2024-11-25 03:17:15,203][INFO] --FGSM sample 8 image
+[2024-11-25 03:17:21,822][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 03:17:21,823][INFO] --FGSM sample 9 image
+[2024-11-25 03:17:22,937][INFO] --FGSM sample 10 image
+[2024-11-25 03:17:24,041][INFO] --FGSM sample 11 image
+[2024-11-25 03:17:25,128][INFO] --FGSM sample 12 image
+[2024-11-25 03:17:26,221][INFO] --FGSM sample 13 image
+[2024-11-25 03:17:27,330][INFO] --FGSM sample 14 image
+[2024-11-25 03:17:28,435][INFO] --FGSM sample 15 image
+[2024-11-25 03:17:29,538][INFO] --FGSM sample 16 image
+[2024-11-25 03:17:30,615][INFO] --FGSM sample 17 image
+[2024-11-25 03:17:31,717][INFO] --FGSM sample 18 image
+[2024-11-25 03:17:32,822][INFO] --FGSM sample 19 image
+[2024-11-25 03:17:33,927][INFO] --FGSM sample 20 image
+[2024-11-25 03:17:35,029][INFO] --FGSM sample 21 image
+[2024-11-25 03:17:36,130][INFO] --FGSM sample 22 image
+[2024-11-25 03:17:37,237][INFO] --FGSM sample 23 image
+[2024-11-25 03:17:38,356][INFO] --FGSM sample 24 image
+[2024-11-25 03:17:39,454][INFO] --FGSM sample 25 image
+[2024-11-25 03:17:40,558][INFO] --FGSM sample 26 image
+[2024-11-25 03:17:43,872][INFO] --FGSM sample 27 image
+[2024-11-25 03:17:44,975][INFO] --FGSM sample 28 image
+[2024-11-25 03:17:46,073][INFO] --FGSM sample 29 image
+[2024-11-25 03:17:47,168][INFO] --FGSM sample 30 image
+[2024-11-25 03:17:48,275][INFO] --FGSM sample 31 image
+[2024-11-25 03:17:49,376][INFO] --FGSM sample 32 image
+[2024-11-25 03:17:50,481][INFO] --FGSM sample 33 image
+[2024-11-25 03:17:51,581][INFO] --FGSM sample 34 image
+[2024-11-25 03:17:52,683][INFO] --FGSM sample 35 image
+[2024-11-25 03:17:53,782][INFO] --FGSM sample 36 image
+[2024-11-25 03:17:54,888][INFO] --FGSM sample 37 image
+[2024-11-25 03:17:55,989][INFO] --FGSM sample 38 image
+[2024-11-25 03:17:57,088][INFO] --FGSM sample 39 image
+[2024-11-25 03:17:58,186][INFO] --FGSM sample 40 image
+[2024-11-25 03:17:59,291][INFO] --FGSM sample 41 image
+[2024-11-25 03:18:00,392][INFO] --FGSM sample 42 image
+[2024-11-25 03:18:01,499][INFO] --FGSM sample 43 image
+[2024-11-25 03:18:02,591][INFO] --FGSM sample 44 image
+[2024-11-25 03:18:03,692][INFO] --FGSM sample 45 image
+[2024-11-25 03:18:04,800][INFO] --FGSM sample 46 image
+[2024-11-25 03:18:05,902][INFO] --FGSM sample 47 image
+[2024-11-25 03:18:06,998][INFO] --FGSM sample 48 image
+[2024-11-25 03:18:08,103][INFO] --FGSM sample 49 image
+[2024-11-25 03:18:09,212][INFO] --FGSM sample 50 image
+[2024-11-25 03:18:10,318][INFO] --FGSM sample 51 image
+[2024-11-25 03:18:11,421][INFO] --FGSM sample 52 image
+[2024-11-25 03:18:12,527][INFO] --FGSM sample 53 image
+[2024-11-25 03:18:13,631][INFO] --FGSM sample 54 image
+[2024-11-25 03:18:14,730][INFO] --FGSM sample 55 image
+[2024-11-25 03:18:15,827][INFO] --FGSM sample 56 image
+[2024-11-25 03:18:16,936][INFO] --FGSM sample 57 image
+[2024-11-25 03:18:18,044][INFO] --FGSM sample 58 image
+[2024-11-25 03:18:19,152][INFO] --FGSM sample 59 image
+[2024-11-25 03:18:20,250][INFO] --FGSM sample 60 image
+[2024-11-25 03:18:21,351][INFO] --FGSM sample 61 image
+[2024-11-25 03:18:22,455][INFO] --FGSM sample 62 image
+[2024-11-25 03:18:23,567][INFO] --FGSM sample 63 image
+[2024-11-25 03:18:24,664][INFO] --FGSM sample 64 image
+[2024-11-25 03:18:25,764][INFO] --FGSM sample 65 image
+[2024-11-25 03:18:26,863][INFO] --FGSM sample 66 image
+[2024-11-25 03:18:27,963][INFO] --FGSM sample 67 image
+[2024-11-25 03:18:34,611][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 03:18:34,611][INFO] --FGSM sample 68 image
+[2024-11-25 03:18:41,280][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 03:18:41,280][INFO] --FGSM sample 69 image
+[2024-11-25 03:18:42,395][INFO] --FGSM sample 70 image
+[2024-11-25 03:18:43,498][INFO] --FGSM sample 71 image
+[2024-11-25 03:18:44,603][INFO] --FGSM sample 72 image
+[2024-11-25 03:18:45,711][INFO] --FGSM sample 73 image
+[2024-11-25 03:18:46,803][INFO] --FGSM sample 74 image
+[2024-11-25 03:18:47,903][INFO] --FGSM sample 75 image
+[2024-11-25 03:18:49,010][INFO] --FGSM sample 76 image
+[2024-11-25 03:18:50,110][INFO] --FGSM sample 77 image
+[2024-11-25 03:18:51,210][INFO] --FGSM sample 78 image
+[2024-11-25 03:18:52,315][INFO] --FGSM sample 79 image
+[2024-11-25 03:18:53,413][INFO] --FGSM sample 80 image
+[2024-11-25 03:19:00,065][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 03:19:00,066][INFO] --FGSM sample 81 image
+[2024-11-25 03:19:01,181][INFO] --FGSM sample 82 image
+[2024-11-25 03:19:02,289][INFO] --FGSM sample 83 image
+[2024-11-25 03:19:03,369][INFO] --FGSM sample 84 image
+[2024-11-25 03:19:04,463][INFO] --FGSM sample 85 image
+[2024-11-25 03:19:05,570][INFO] --FGSM sample 86 image
+[2024-11-25 03:19:06,664][INFO] --FGSM sample 87 image
+[2024-11-25 03:19:07,766][INFO] --FGSM sample 88 image
+[2024-11-25 03:19:08,869][INFO] --FGSM sample 89 image
+[2024-11-25 03:19:15,515][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 03:19:15,516][INFO] --FGSM sample 90 image
+[2024-11-25 03:19:16,633][INFO] --FGSM sample 91 image
+[2024-11-25 03:19:17,725][INFO] --FGSM sample 92 image
+[2024-11-25 03:19:18,831][INFO] --FGSM sample 93 image
+[2024-11-25 03:19:19,936][INFO] --FGSM sample 94 image
+[2024-11-25 03:19:21,040][INFO] --FGSM sample 95 image
+[2024-11-25 03:19:22,147][INFO] --FGSM sample 96 image
+[2024-11-25 03:19:23,255][INFO] --FGSM sample 97 image
+[2024-11-25 03:19:24,364][INFO] --FGSM sample 98 image
+[2024-11-25 03:19:25,466][INFO] --FGSM sample 99 image
+[2024-11-25 03:19:26,572][INFO] --FGSM sample 100 image
+[2024-11-25 03:19:33,227][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 03:19:33,580][INFO] --get the 1 part of the feature_lb and feature_ub
+[2024-11-25 03:19:47,229][INFO] --Test repair set accuracy 0.0
+[2024-11-25 03:19:47,547][INFO] --Patch network: --- feature PatchNet ---
+Name: feature patch network 199
+--- End of feature PatchNet ---
+[2024-11-25 03:19:47,559][INFO] [0m 0s (0.004 seconds)] Start repair part 0: 0
+[2024-11-25 03:19:47,560][INFO] [0m 0s (0.004 seconds)] After epoch 0:
+[2024-11-25 03:19:47,560][INFO] Loaded 100 abstractions for training.
+[2024-11-25 03:19:48,114][INFO] min loss 1.7046607732772827, max loss 483.46435546875.
+[2024-11-25 03:19:48,116][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1', dtype=torch.uint8).
+[2024-11-25 03:19:48,172][INFO] Test set accuracy 0.8832.
+[2024-11-25 03:19:48,172][INFO] repair set accuracy 0.01.
+[2024-11-25 03:19:48,173][INFO] attacked test set accuracy 0.012.
+[2024-11-25 03:19:48,173][INFO] 
+[0m 0s (0.617 seconds)] Starting epoch 1:
+[2024-11-25 03:19:49,994][INFO] [0m 2s (2.438 seconds)] After epoch 1:
+[2024-11-25 03:19:49,994][INFO] Loaded 100 abstractions for training.
+[2024-11-25 03:19:50,557][INFO] min loss 0.0, max loss 40.93629455566406.
+[2024-11-25 03:19:50,560][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1', dtype=torch.uint8).
+[2024-11-25 03:19:50,617][INFO] Test set accuracy 0.8832.
+[2024-11-25 03:19:50,617][INFO] repair set accuracy 0.16.
+[2024-11-25 03:19:50,617][INFO] attacked test set accuracy 0.248.
+[2024-11-25 03:19:50,617][INFO] 
+[0m 3s (3.062 seconds)] Starting epoch 2:
+[2024-11-25 03:19:51,989][INFO] [0m 4s (4.433 seconds)] After epoch 2:
+[2024-11-25 03:19:51,989][INFO] Loaded 100 abstractions for training.
+[2024-11-25 03:19:52,553][INFO] min loss 0.0, max loss 28.521217346191406.
+[2024-11-25 03:19:52,555][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1', dtype=torch.uint8).
+[2024-11-25 03:19:52,613][INFO] Test set accuracy 0.8832.
+[2024-11-25 03:19:52,613][INFO] repair set accuracy 0.42.
+[2024-11-25 03:19:52,613][INFO] attacked test set accuracy 0.475.
+[2024-11-25 03:19:52,613][INFO] 
+[0m 5s (5.057 seconds)] Starting epoch 3:
+[2024-11-25 03:19:53,730][INFO] [0m 6s (6.175 seconds)] After epoch 3:
+[2024-11-25 03:19:53,731][INFO] Loaded 100 abstractions for training.
+[2024-11-25 03:19:54,294][INFO] min loss 0.0, max loss 19.317285537719727.
+[2024-11-25 03:19:54,296][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1', dtype=torch.uint8).
+[2024-11-25 03:19:54,353][INFO] Test set accuracy 0.8832.
+[2024-11-25 03:19:54,353][INFO] repair set accuracy 0.6.
+[2024-11-25 03:19:54,353][INFO] attacked test set accuracy 0.672.
+[2024-11-25 03:19:54,353][INFO] 
+[0m 6s (6.798 seconds)] Starting epoch 4:
+[2024-11-25 03:19:55,496][INFO] [0m 7s (7.940 seconds)] After epoch 4:
+[2024-11-25 03:19:55,496][INFO] Loaded 100 abstractions for training.
+[2024-11-25 03:19:56,061][INFO] min loss 0.0, max loss 15.75291633605957.
+[2024-11-25 03:19:56,063][INFO] Max loss at rule: tensor([0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1', dtype=torch.uint8).
+[2024-11-25 03:19:56,121][INFO] Test set accuracy 0.8832.
+[2024-11-25 03:19:56,121][INFO] repair set accuracy 0.77.
+[2024-11-25 03:19:56,121][INFO] attacked test set accuracy 0.822.
+[2024-11-25 03:19:56,121][INFO] 
+[0m 8s (8.565 seconds)] Starting epoch 5:
+[2024-11-25 03:19:57,243][INFO] [0m 9s (9.687 seconds)] After epoch 5:
+[2024-11-25 03:19:57,243][INFO] Loaded 100 abstractions for training.
+[2024-11-25 03:19:57,807][INFO] min loss 0.0, max loss 14.035896301269531.
+[2024-11-25 03:19:57,809][INFO] Max loss at rule: tensor([0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1', dtype=torch.uint8).
+[2024-11-25 03:19:57,867][INFO] Test set accuracy 0.8832.
+[2024-11-25 03:19:57,867][INFO] repair set accuracy 0.91.
+[2024-11-25 03:19:57,867][INFO] attacked test set accuracy 0.944.
+[2024-11-25 03:19:57,867][INFO] 
+[0m 10s (10.311 seconds)] Starting epoch 6:
+[2024-11-25 03:19:58,992][INFO] [0m 11s (11.436 seconds)] After epoch 6:
+[2024-11-25 03:19:58,992][INFO] Loaded 100 abstractions for training.
+[2024-11-25 03:19:59,556][INFO] min loss 0.0, max loss 12.380742073059082.
+[2024-11-25 03:19:59,558][INFO] Max loss at rule: tensor([0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1', dtype=torch.uint8).
+[2024-11-25 03:19:59,615][INFO] Test set accuracy 0.8832.
+[2024-11-25 03:19:59,615][INFO] repair set accuracy 0.99.
+[2024-11-25 03:19:59,615][INFO] attacked test set accuracy 0.992.
+[2024-11-25 03:19:59,615][INFO] 
+[0m 12s (12.060 seconds)] Starting epoch 7:
+[2024-11-25 03:20:00,767][INFO] [0m 13s (13.211 seconds)] After epoch 7:
+[2024-11-25 03:20:00,767][INFO] Loaded 100 abstractions for training.
+[2024-11-25 03:20:01,329][INFO] min loss 0.0, max loss 10.772541046142578.
+[2024-11-25 03:20:01,331][INFO] Max loss at rule: tensor([0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1', dtype=torch.uint8).
+[2024-11-25 03:20:01,388][INFO] Test set accuracy 0.8832.
+[2024-11-25 03:20:01,388][INFO] repair set accuracy 1.0.
+[2024-11-25 03:20:01,388][INFO] attacked test set accuracy 1.0.
+[2024-11-25 03:20:01,610][INFO] Accuracy at every epoch: [0.8832, 0.8832, 0.8832, 0.8832, 0.8832, 0.8832, 0.8832, 0.8832]
+[2024-11-25 03:20:01,610][INFO] After 7 epochs / 0m 13s (13.833 seconds), eventually the trained network got certified? False, with 0.8832 accuracy on test set,with 1.0000 accuracy on repair set,with 1.0000 accuracy on attack test set.
+[2024-11-25 03:20:01,617][INFO] [0m 14s (14.061 seconds)] Start repair part 1: 100
+[2024-11-25 03:20:01,617][INFO] [0m 14s (14.061 seconds)] After epoch 0:
+[2024-11-25 03:20:01,617][INFO] Loaded 100 abstractions for training.
+[2024-11-25 03:20:02,180][INFO] min loss 3.514075756072998, max loss 842.9000854492188.
+[2024-11-25 03:20:02,183][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1', dtype=torch.uint8).
+[2024-11-25 03:20:02,239][INFO] Test set accuracy 0.8832.
+[2024-11-25 03:20:02,239][INFO] repair set accuracy 0.0.
+[2024-11-25 03:20:02,239][INFO] attacked test set accuracy 0.002.
+[2024-11-25 03:20:02,239][INFO] 
+[0m 14s (14.684 seconds)] Starting epoch 1:
+[2024-11-25 03:20:03,425][INFO] [0m 15s (15.869 seconds)] After epoch 1:
+[2024-11-25 03:20:03,425][INFO] Loaded 100 abstractions for training.
+[2024-11-25 03:20:03,994][INFO] min loss 0.0, max loss 100.01982879638672.
+[2024-11-25 03:20:03,997][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1', dtype=torch.uint8).
+[2024-11-25 03:20:04,054][INFO] Test set accuracy 0.8832.
+[2024-11-25 03:20:04,055][INFO] repair set accuracy 0.16.
+[2024-11-25 03:20:04,055][INFO] attacked test set accuracy 0.22.
+[2024-11-25 03:20:04,055][INFO] 
+[0m 16s (16.499 seconds)] Starting epoch 2:
+[2024-11-25 03:20:05,268][INFO] [0m 17s (17.713 seconds)] After epoch 2:
+[2024-11-25 03:20:05,269][INFO] Loaded 100 abstractions for training.
+[2024-11-25 03:20:05,833][INFO] min loss 0.0, max loss 82.01983642578125.
+[2024-11-25 03:20:05,835][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1', dtype=torch.uint8).
+[2024-11-25 03:20:05,892][INFO] Test set accuracy 0.8832.
+[2024-11-25 03:20:05,892][INFO] repair set accuracy 0.36.
+[2024-11-25 03:20:05,892][INFO] attacked test set accuracy 0.414.
+[2024-11-25 03:20:05,892][INFO] 
+[0m 18s (18.337 seconds)] Starting epoch 3:
+[2024-11-25 03:20:07,077][INFO] [0m 19s (19.521 seconds)] After epoch 3:
+[2024-11-25 03:20:07,077][INFO] Loaded 100 abstractions for training.
+[2024-11-25 03:20:07,643][INFO] min loss 0.0, max loss 64.01985168457031.
+[2024-11-25 03:20:07,645][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1', dtype=torch.uint8).
+[2024-11-25 03:20:07,703][INFO] Test set accuracy 0.8832.
+[2024-11-25 03:20:07,703][INFO] repair set accuracy 0.57.
+[2024-11-25 03:20:07,703][INFO] attacked test set accuracy 0.631.
+[2024-11-25 03:20:07,703][INFO] 
+[0m 20s (20.147 seconds)] Starting epoch 4:
+[2024-11-25 03:20:08,883][INFO] [0m 21s (21.327 seconds)] After epoch 4:
+[2024-11-25 03:20:08,883][INFO] Loaded 100 abstractions for training.
+[2024-11-25 03:20:09,448][INFO] min loss 0.0, max loss 47.271507263183594.
+[2024-11-25 03:20:09,450][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1', dtype=torch.uint8).
+[2024-11-25 03:20:09,508][INFO] Test set accuracy 0.8832.
+[2024-11-25 03:20:09,508][INFO] repair set accuracy 0.69.
+[2024-11-25 03:20:09,508][INFO] attacked test set accuracy 0.76.
+[2024-11-25 03:20:09,508][INFO] 
+[0m 21s (21.952 seconds)] Starting epoch 5:
+[2024-11-25 03:20:10,683][INFO] [0m 23s (23.127 seconds)] After epoch 5:
+[2024-11-25 03:20:10,684][INFO] Loaded 100 abstractions for training.
+[2024-11-25 03:20:11,249][INFO] min loss 0.0, max loss 35.133995056152344.
+[2024-11-25 03:20:11,251][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1', dtype=torch.uint8).
+[2024-11-25 03:20:11,309][INFO] Test set accuracy 0.8832.
+[2024-11-25 03:20:11,309][INFO] repair set accuracy 0.89.
+[2024-11-25 03:20:11,309][INFO] attacked test set accuracy 0.91.
+[2024-11-25 03:20:11,309][INFO] 
+[0m 23s (23.753 seconds)] Starting epoch 6:
+[2024-11-25 03:20:12,510][INFO] [0m 24s (24.954 seconds)] After epoch 6:
+[2024-11-25 03:20:12,511][INFO] Loaded 100 abstractions for training.
+[2024-11-25 03:20:13,074][INFO] min loss 0.0, max loss 26.477027893066406.
+[2024-11-25 03:20:13,076][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1', dtype=torch.uint8).
+[2024-11-25 03:20:13,133][INFO] Test set accuracy 0.8832.
+[2024-11-25 03:20:13,134][INFO] repair set accuracy 0.99.
+[2024-11-25 03:20:13,134][INFO] attacked test set accuracy 0.996.
+[2024-11-25 03:20:13,134][INFO] 
+[0m 25s (25.578 seconds)] Starting epoch 7:
+[2024-11-25 03:20:14,307][INFO] [0m 26s (26.751 seconds)] After epoch 7:
+[2024-11-25 03:20:14,307][INFO] Loaded 100 abstractions for training.
+[2024-11-25 03:20:14,871][INFO] min loss 0.0, max loss 20.971351623535156.
+[2024-11-25 03:20:14,873][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1', dtype=torch.uint8).
+[2024-11-25 03:20:14,931][INFO] Test set accuracy 0.8832.
+[2024-11-25 03:20:14,931][INFO] repair set accuracy 1.0.
+[2024-11-25 03:20:14,931][INFO] attacked test set accuracy 1.0.
+[2024-11-25 03:20:15,234][INFO] Accuracy at every epoch: [0.8832, 0.8832, 0.8832, 0.8832, 0.8832, 0.8832, 0.8832, 0.8832]
+[2024-11-25 03:20:15,235][INFO] After 7 epochs / 0m 27s (27.375 seconds), eventually the trained network got certified? False, with 0.8832 accuracy on test set,with 1.0000 accuracy on repair set,with 1.0000 accuracy on attack test set.
+[2024-11-25 03:20:15,235][INFO] final test
+[2024-11-25 03:20:15,240][INFO] --Test set accuracy 0.8832
+[2024-11-25 03:20:15,291][INFO] --Test repair set accuracy 1.0
+[2024-11-25 03:20:15,341][INFO] --Test attack test set accuracy 1.0
+[2024-11-25 03:20:15,341][INFO] traing time 27.785675524995895s
+[2024-11-25 03:20:15,368][INFO] === Avg <epochs, train_time, certified, accuracy> for pgd attack networks:
+[2024-11-25 03:20:15,369][INFO] tensor([ 7.0000, 27.3753,  0.0000,  0.8832])
+[2024-11-25 03:20:15,370][INFO] Total Cost Time: 338.6265365750005s.
+
+
+

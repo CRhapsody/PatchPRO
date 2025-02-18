@@ -1,0 +1,97 @@
+[2024-08-03 10:17:17,748][INFO] 
+===== FNN_small-0.05-50-small-2024-08-03-10-17-17 configuration =====
+  exp_fn: test_goal_test
+  seed: None
+  dom: deeppoly
+  start_abs_cnt: 500
+  max_abs_cnt: 1000
+  refine_top_k: 800
+  tiny_width: 0.001
+  lr: 0.001
+  batch_size: 50
+  min_epochs: 25
+  max_epochs: 45
+  use_scheduler: True
+  no_pts: False
+  no_abs: False
+  no_refine: False
+  quiet: False
+  debug: False
+  net: FNN_small
+  no_repair: False
+  repair_number: 50
+  repair_batchsize: 1
+  patch_size: small
+  label_repaired: False
+  repair_radius: 0.05
+  divided_repair: 1
+  accuracy_loss: <function MnistArgParser.setup_rest.<locals>.ce_loss at 0x7f4003f6edc0>
+  sample_amount: 5000
+  reset_params: False
+  train_datasize: 10000
+  test_datasize: 10000
+  repair_batch_size: 50
+  scheduler_fn: <function ExpArgParser.setup_rest.<locals>.<lambda> at 0x7f400b1e40d0>
+===== end of FNN_small-0.05-50-small-2024-08-03-10-17-17 configuration =====
+
+[2024-08-03 10:17:17,748][INFO] ===== start repair ======
+[2024-08-03 10:17:17,748][INFO] For pgd attack net
+[2024-08-03 10:17:19,476][INFO] --small patch network: Mnist_patch_model_small(
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (classifier): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+  )
+)
+[2024-08-03 10:17:20,935][INFO] --load the trainset and testset as testing set
+[2024-08-03 10:17:20,957][INFO] --evaluate the original net on testset
+[2024-08-03 10:17:20,958][INFO] --For testset, out of 10000 items, ratio 0.9658
+[2024-08-03 10:17:20,958][INFO] --evaluate the repaired net on testset and get the bitmap
+[2024-08-03 10:17:20,959][INFO] --For testset, out of 10000 items, ratio 0.9658
+[2024-08-03 10:17:20,959][INFO] --adv training
+[2024-08-03 10:17:21,331][INFO] --test the defense against autoattack
+[2024-08-03 10:17:41,874][INFO] correct2 238
+[2024-08-03 10:17:59,526][INFO] correct2 229
+[2024-08-03 10:18:21,537][INFO] correct2 223
+[2024-08-03 10:18:37,909][INFO] correct2 234
+[2024-08-03 10:18:52,063][INFO] correct2 228
+[2024-08-03 10:19:07,029][INFO] correct2 230
+[2024-08-03 10:19:21,893][INFO] correct2 224
+[2024-08-03 10:19:34,103][INFO] correct2 234
+[2024-08-03 10:19:47,971][INFO] correct2 230
+[2024-08-03 10:19:59,600][INFO] correct2 229
+[2024-08-03 10:20:13,795][INFO] correct2 227
+[2024-08-03 10:20:26,502][INFO] correct2 230
+[2024-08-03 10:20:42,600][INFO] correct2 232
+[2024-08-03 10:21:00,183][INFO] correct2 228
+[2024-08-03 10:21:17,187][INFO] correct2 232
+[2024-08-03 10:21:33,843][INFO] correct2 226
+[2024-08-03 10:21:53,437][INFO] correct2 230
+[2024-08-03 10:22:10,490][INFO] correct2 229
+[2024-08-03 10:22:27,989][INFO] correct2 234
+[2024-08-03 10:22:51,667][INFO] correct2 238
+[2024-08-03 10:23:12,698][INFO] correct2 244
+[2024-08-03 10:23:31,204][INFO] correct2 241
+[2024-08-03 10:23:50,023][INFO] correct2 233
+[2024-08-03 10:24:05,203][INFO] correct2 234
+[2024-08-03 10:24:28,197][INFO] correct2 246
+[2024-08-03 10:24:48,450][INFO] correct2 221
+[2024-08-03 10:25:04,506][INFO] correct2 245
+[2024-08-03 10:25:20,331][INFO] correct2 237
+[2024-08-03 10:25:35,081][INFO] correct2 244
+[2024-08-03 10:25:50,670][INFO] correct2 239
+[2024-08-03 10:26:07,114][INFO] correct2 239
+[2024-08-03 10:26:22,900][INFO] correct2 240
+[2024-08-03 10:26:43,833][INFO] correct2 230
+[2024-08-03 10:27:05,630][INFO] correct2 243
+[2024-08-03 10:27:28,373][INFO] correct2 244
+[2024-08-03 10:27:51,446][INFO] correct2 239
+[2024-08-03 10:28:07,093][INFO] correct2 237
+[2024-08-03 10:28:22,007][INFO] correct2 230
+[2024-08-03 10:28:40,093][INFO] correct2 225
+[2024-08-03 10:28:59,131][INFO] correct2 15
+[2024-08-03 10:28:59,132][INFO] --For testset, out of 10000 items, repaired net ratio 0.9131
+[2024-08-03 10:28:59,132][INFO] --For testset, out of 10000 items, original net ratio 0.0
+[2024-08-03 10:28:59,137][INFO] Total Cost Time: 701.3895869459957s.
+
+
+

@@ -1,0 +1,1279 @@
+[2024-04-12 01:58:09,347][INFO] 
+===== wide_resnet101_2-2-feature-500-2024-04-12-01-58-09 configuration =====
+  exp_fn: test_goal_repair
+  seed: None
+  dom: deeppoly
+  start_abs_cnt: 500
+  max_abs_cnt: 1000
+  refine_top_k: 50
+  tiny_width: 0.0002
+  lr: 10
+  batch_size: 50
+  min_epochs: 15
+  max_epochs: 100
+  use_scheduler: True
+  no_pts: True
+  no_abs: False
+  no_refine: True
+  quiet: False
+  debug: False
+  net: wide_resnet101_2
+  no_repair: False
+  repair_number: 500
+  repair_batchsize: 1
+  repair_location: feature
+  repair_radius: 2
+  loose_bound: 0.0314
+  divided_repair: 5
+  accuracy_loss: <function TinyImagenetArgParser.setup_rest.<locals>.ce_loss at 0x7f4a191b8af0>
+  reset_params: False
+  train_datasize: 10000
+  test_datasize: 5000
+  label_repaired: False
+  max_verifier_sec: 300
+  verifier_timeout_as_safe: True
+  sample_amount: 1000
+  repair_batch_size: 500
+  scheduler_fn: <function ExpArgParser.setup_rest.<locals>.<lambda> at 0x7f4a191b8a60>
+===== end of wide_resnet101_2-2-feature-500-2024-04-12-01-58-09 configuration =====
+
+[2024-04-12 01:58:09,348][INFO] ===== start repair ======
+[2024-04-12 01:58:09,348][INFO] For pgd attack net
+[2024-04-12 01:58:17,885][INFO] --Test repair set accuracy 0.0
+[2024-04-12 01:58:18,013][INFO] --Test original set accuracy 1.0
+[2024-04-12 01:58:20,278][INFO] --Test test set accuracy 0.6436
+[2024-04-12 01:58:21,390][INFO] --Test attack test set accuracy 0.0
+[2024-04-12 01:58:23,664][INFO] --Test train set accuracy 0.9999
+[2024-04-12 01:58:23,664][INFO] get the feature of the repairset and testset
+[2024-04-12 01:58:27,219][INFO] sample the datas from the radius of the original data with pgd attack
+[2024-04-12 01:58:27,220][INFO] --sample the 0 part of the originalset
+[2024-04-12 01:58:27,220][INFO] --FGSM sample 1 image
+[2024-04-12 01:58:27,822][INFO] --PGD sample 1 image
+[2024-04-12 01:58:30,947][INFO] --FGSM sample 2 image
+[2024-04-12 01:58:32,241][INFO] --PGD sample 2 image
+[2024-04-12 01:58:35,401][INFO] --FGSM sample 3 image
+[2024-04-12 01:58:36,059][INFO] --PGD sample 3 image
+[2024-04-12 01:58:39,214][INFO] --FGSM sample 4 image
+[2024-04-12 01:58:39,866][INFO] --PGD sample 4 image
+[2024-04-12 01:58:43,036][INFO] --FGSM sample 5 image
+[2024-04-12 01:58:43,703][INFO] --PGD sample 5 image
+[2024-04-12 01:58:46,789][INFO] --FGSM sample 6 image
+[2024-04-12 01:58:47,453][INFO] --PGD sample 6 image
+[2024-04-12 01:58:50,615][INFO] --FGSM sample 7 image
+[2024-04-12 01:58:51,275][INFO] --PGD sample 7 image
+[2024-04-12 01:58:54,446][INFO] --FGSM sample 8 image
+[2024-04-12 01:58:55,085][INFO] --PGD sample 8 image
+[2024-04-12 01:58:58,244][INFO] --FGSM sample 9 image
+[2024-04-12 01:58:58,898][INFO] --PGD sample 9 image
+[2024-04-12 01:59:02,067][INFO] --FGSM sample 10 image
+[2024-04-12 01:59:02,731][INFO] --PGD sample 10 image
+[2024-04-12 01:59:05,907][INFO] --FGSM sample 11 image
+[2024-04-12 01:59:06,573][INFO] --PGD sample 11 image
+[2024-04-12 01:59:09,743][INFO] --FGSM sample 12 image
+[2024-04-12 01:59:10,402][INFO] --PGD sample 12 image
+[2024-04-12 01:59:13,576][INFO] --FGSM sample 13 image
+[2024-04-12 01:59:14,238][INFO] --PGD sample 13 image
+[2024-04-12 01:59:17,410][INFO] --FGSM sample 14 image
+[2024-04-12 01:59:18,065][INFO] --PGD sample 14 image
+[2024-04-12 01:59:21,240][INFO] --FGSM sample 15 image
+[2024-04-12 01:59:21,900][INFO] --PGD sample 15 image
+[2024-04-12 01:59:25,074][INFO] --FGSM sample 16 image
+[2024-04-12 01:59:25,732][INFO] --PGD sample 16 image
+[2024-04-12 01:59:28,918][INFO] --FGSM sample 17 image
+[2024-04-12 01:59:29,586][INFO] --PGD sample 17 image
+[2024-04-12 01:59:32,756][INFO] --FGSM sample 18 image
+[2024-04-12 01:59:33,407][INFO] --PGD sample 18 image
+[2024-04-12 01:59:36,575][INFO] --FGSM sample 19 image
+[2024-04-12 01:59:37,237][INFO] --PGD sample 19 image
+[2024-04-12 01:59:40,412][INFO] --FGSM sample 20 image
+[2024-04-12 01:59:41,067][INFO] --PGD sample 20 image
+[2024-04-12 01:59:44,249][INFO] --FGSM sample 21 image
+[2024-04-12 01:59:44,907][INFO] --PGD sample 21 image
+[2024-04-12 01:59:48,085][INFO] --FGSM sample 22 image
+[2024-04-12 01:59:48,745][INFO] --PGD sample 22 image
+[2024-04-12 01:59:51,924][INFO] --FGSM sample 23 image
+[2024-04-12 01:59:52,585][INFO] --PGD sample 23 image
+[2024-04-12 01:59:55,765][INFO] --FGSM sample 24 image
+[2024-04-12 01:59:56,428][INFO] --PGD sample 24 image
+[2024-04-12 01:59:59,605][INFO] --FGSM sample 25 image
+[2024-04-12 02:00:03,460][INFO] --PGD sample 25 image
+[2024-04-12 02:00:06,635][INFO] --FGSM sample 26 image
+[2024-04-12 02:00:07,295][INFO] --PGD sample 26 image
+[2024-04-12 02:00:10,478][INFO] --FGSM sample 27 image
+[2024-04-12 02:00:11,143][INFO] --PGD sample 27 image
+[2024-04-12 02:00:14,331][INFO] --FGSM sample 28 image
+[2024-04-12 02:00:14,998][INFO] --PGD sample 28 image
+[2024-04-12 02:00:18,191][INFO] --FGSM sample 29 image
+[2024-04-12 02:00:18,853][INFO] --PGD sample 29 image
+[2024-04-12 02:00:22,047][INFO] --FGSM sample 30 image
+[2024-04-12 02:00:22,718][INFO] --PGD sample 30 image
+[2024-04-12 02:00:25,914][INFO] --FGSM sample 31 image
+[2024-04-12 02:00:26,583][INFO] --PGD sample 31 image
+[2024-04-12 02:00:29,779][INFO] --FGSM sample 32 image
+[2024-04-12 02:00:30,448][INFO] --PGD sample 32 image
+[2024-04-12 02:00:33,647][INFO] --FGSM sample 33 image
+[2024-04-12 02:00:34,309][INFO] --PGD sample 33 image
+[2024-04-12 02:00:37,513][INFO] --FGSM sample 34 image
+[2024-04-12 02:00:41,363][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-04-12 02:00:41,364][INFO] --PGD sample 34 image
+[2024-04-12 02:00:44,563][INFO] --FGSM sample 35 image
+[2024-04-12 02:00:45,230][INFO] --PGD sample 35 image
+[2024-04-12 02:00:48,423][INFO] --FGSM sample 36 image
+[2024-04-12 02:00:49,070][INFO] --PGD sample 36 image
+[2024-04-12 02:00:52,274][INFO] --FGSM sample 37 image
+[2024-04-12 02:00:52,949][INFO] --PGD sample 37 image
+[2024-04-12 02:00:56,152][INFO] --FGSM sample 38 image
+[2024-04-12 02:00:56,820][INFO] --PGD sample 38 image
+[2024-04-12 02:01:00,029][INFO] --FGSM sample 39 image
+[2024-04-12 02:01:00,692][INFO] --PGD sample 39 image
+[2024-04-12 02:01:03,886][INFO] --FGSM sample 40 image
+[2024-04-12 02:01:04,542][INFO] --PGD sample 40 image
+[2024-04-12 02:01:07,738][INFO] --FGSM sample 41 image
+[2024-04-12 02:01:08,397][INFO] --PGD sample 41 image
+[2024-04-12 02:01:11,595][INFO] --FGSM sample 42 image
+[2024-04-12 02:01:12,254][INFO] --PGD sample 42 image
+[2024-04-12 02:01:15,451][INFO] --FGSM sample 43 image
+[2024-04-12 02:01:16,108][INFO] --PGD sample 43 image
+[2024-04-12 02:01:19,306][INFO] --FGSM sample 44 image
+[2024-04-12 02:01:19,963][INFO] --PGD sample 44 image
+[2024-04-12 02:01:23,148][INFO] --FGSM sample 45 image
+[2024-04-12 02:01:23,807][INFO] --PGD sample 45 image
+[2024-04-12 02:01:27,015][INFO] --FGSM sample 46 image
+[2024-04-12 02:01:27,677][INFO] --PGD sample 46 image
+[2024-04-12 02:01:30,879][INFO] --FGSM sample 47 image
+[2024-04-12 02:01:31,541][INFO] --PGD sample 47 image
+[2024-04-12 02:01:34,737][INFO] --FGSM sample 48 image
+[2024-04-12 02:01:35,409][INFO] --PGD sample 48 image
+[2024-04-12 02:01:38,605][INFO] --FGSM sample 49 image
+[2024-04-12 02:01:39,271][INFO] --PGD sample 49 image
+[2024-04-12 02:01:42,462][INFO] --FGSM sample 50 image
+[2024-04-12 02:01:43,129][INFO] --PGD sample 50 image
+[2024-04-12 02:01:46,342][INFO] --FGSM sample 51 image
+[2024-04-12 02:01:47,005][INFO] --PGD sample 51 image
+[2024-04-12 02:01:50,210][INFO] --FGSM sample 52 image
+[2024-04-12 02:01:50,867][INFO] --PGD sample 52 image
+[2024-04-12 02:01:54,061][INFO] --FGSM sample 53 image
+[2024-04-12 02:01:54,707][INFO] --PGD sample 53 image
+[2024-04-12 02:01:57,902][INFO] --FGSM sample 54 image
+[2024-04-12 02:01:58,561][INFO] --PGD sample 54 image
+[2024-04-12 02:02:01,748][INFO] --FGSM sample 55 image
+[2024-04-12 02:02:02,414][INFO] --PGD sample 55 image
+[2024-04-12 02:02:05,614][INFO] --FGSM sample 56 image
+[2024-04-12 02:02:06,275][INFO] --PGD sample 56 image
+[2024-04-12 02:02:09,466][INFO] --FGSM sample 57 image
+[2024-04-12 02:02:10,130][INFO] --PGD sample 57 image
+[2024-04-12 02:02:13,329][INFO] --FGSM sample 58 image
+[2024-04-12 02:02:13,999][INFO] --PGD sample 58 image
+[2024-04-12 02:02:17,197][INFO] --FGSM sample 59 image
+[2024-04-12 02:02:17,869][INFO] --PGD sample 59 image
+[2024-04-12 02:02:21,063][INFO] --FGSM sample 60 image
+[2024-04-12 02:02:21,725][INFO] --PGD sample 60 image
+[2024-04-12 02:02:24,926][INFO] --FGSM sample 61 image
+[2024-04-12 02:02:25,595][INFO] --PGD sample 61 image
+[2024-04-12 02:02:28,792][INFO] --FGSM sample 62 image
+[2024-04-12 02:02:29,453][INFO] --PGD sample 62 image
+[2024-04-12 02:02:32,650][INFO] --FGSM sample 63 image
+[2024-04-12 02:02:33,319][INFO] --PGD sample 63 image
+[2024-04-12 02:02:36,525][INFO] --FGSM sample 64 image
+[2024-04-12 02:02:37,185][INFO] --PGD sample 64 image
+[2024-04-12 02:02:40,374][INFO] --FGSM sample 65 image
+[2024-04-12 02:02:41,044][INFO] --PGD sample 65 image
+[2024-04-12 02:02:44,231][INFO] --FGSM sample 66 image
+[2024-04-12 02:02:44,901][INFO] --PGD sample 66 image
+[2024-04-12 02:02:48,097][INFO] --FGSM sample 67 image
+[2024-04-12 02:02:48,756][INFO] --PGD sample 67 image
+[2024-04-12 02:02:51,948][INFO] --FGSM sample 68 image
+[2024-04-12 02:02:52,608][INFO] --PGD sample 68 image
+[2024-04-12 02:02:55,805][INFO] --FGSM sample 69 image
+[2024-04-12 02:02:56,466][INFO] --PGD sample 69 image
+[2024-04-12 02:02:59,652][INFO] --FGSM sample 70 image
+[2024-04-12 02:03:00,317][INFO] --PGD sample 70 image
+[2024-04-12 02:03:03,498][INFO] --FGSM sample 71 image
+[2024-04-12 02:03:04,175][INFO] --PGD sample 71 image
+[2024-04-12 02:03:07,365][INFO] --FGSM sample 72 image
+[2024-04-12 02:03:08,032][INFO] --PGD sample 72 image
+[2024-04-12 02:03:11,227][INFO] --FGSM sample 73 image
+[2024-04-12 02:03:11,898][INFO] --PGD sample 73 image
+[2024-04-12 02:03:15,097][INFO] --FGSM sample 74 image
+[2024-04-12 02:03:15,765][INFO] --PGD sample 74 image
+[2024-04-12 02:03:18,964][INFO] --FGSM sample 75 image
+[2024-04-12 02:03:19,625][INFO] --PGD sample 75 image
+[2024-04-12 02:03:22,801][INFO] --FGSM sample 76 image
+[2024-04-12 02:03:23,467][INFO] --PGD sample 76 image
+[2024-04-12 02:03:26,667][INFO] --FGSM sample 77 image
+[2024-04-12 02:03:27,329][INFO] --PGD sample 77 image
+[2024-04-12 02:03:30,527][INFO] --FGSM sample 78 image
+[2024-04-12 02:03:31,188][INFO] --PGD sample 78 image
+[2024-04-12 02:03:34,388][INFO] --FGSM sample 79 image
+[2024-04-12 02:03:35,058][INFO] --PGD sample 79 image
+[2024-04-12 02:03:38,247][INFO] --FGSM sample 80 image
+[2024-04-12 02:03:42,078][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-04-12 02:03:42,078][INFO] --PGD sample 80 image
+[2024-04-12 02:03:45,266][INFO] --FGSM sample 81 image
+[2024-04-12 02:03:47,852][INFO] --PGD sample 81 image
+[2024-04-12 02:03:51,045][INFO] --FGSM sample 82 image
+[2024-04-12 02:03:51,702][INFO] --PGD sample 82 image
+[2024-04-12 02:03:54,895][INFO] --FGSM sample 83 image
+[2024-04-12 02:03:55,557][INFO] --PGD sample 83 image
+[2024-04-12 02:03:58,765][INFO] --FGSM sample 84 image
+[2024-04-12 02:03:59,432][INFO] --PGD sample 84 image
+[2024-04-12 02:04:02,641][INFO] --FGSM sample 85 image
+[2024-04-12 02:04:03,306][INFO] --PGD sample 85 image
+[2024-04-12 02:04:06,507][INFO] --FGSM sample 86 image
+[2024-04-12 02:04:07,171][INFO] --PGD sample 86 image
+[2024-04-12 02:04:10,380][INFO] --FGSM sample 87 image
+[2024-04-12 02:04:11,045][INFO] --PGD sample 87 image
+[2024-04-12 02:04:14,246][INFO] --FGSM sample 88 image
+[2024-04-12 02:04:14,908][INFO] --PGD sample 88 image
+[2024-04-12 02:04:18,106][INFO] --FGSM sample 89 image
+[2024-04-12 02:04:18,769][INFO] --PGD sample 89 image
+[2024-04-12 02:04:21,975][INFO] --FGSM sample 90 image
+[2024-04-12 02:04:22,643][INFO] --PGD sample 90 image
+[2024-04-12 02:04:25,850][INFO] --FGSM sample 91 image
+[2024-04-12 02:04:26,523][INFO] --PGD sample 91 image
+[2024-04-12 02:04:29,727][INFO] --FGSM sample 92 image
+[2024-04-12 02:04:30,399][INFO] --PGD sample 92 image
+[2024-04-12 02:04:33,603][INFO] --FGSM sample 93 image
+[2024-04-12 02:04:34,268][INFO] --PGD sample 93 image
+[2024-04-12 02:04:37,480][INFO] --FGSM sample 94 image
+[2024-04-12 02:04:38,153][INFO] --PGD sample 94 image
+[2024-04-12 02:04:41,358][INFO] --FGSM sample 95 image
+[2024-04-12 02:04:42,026][INFO] --PGD sample 95 image
+[2024-04-12 02:04:45,241][INFO] --FGSM sample 96 image
+[2024-04-12 02:04:45,902][INFO] --PGD sample 96 image
+[2024-04-12 02:04:49,122][INFO] --FGSM sample 97 image
+[2024-04-12 02:04:49,788][INFO] --PGD sample 97 image
+[2024-04-12 02:04:53,004][INFO] --FGSM sample 98 image
+[2024-04-12 02:04:53,669][INFO] --PGD sample 98 image
+[2024-04-12 02:04:56,891][INFO] --FGSM sample 99 image
+[2024-04-12 02:04:57,556][INFO] --PGD sample 99 image
+[2024-04-12 02:05:00,767][INFO] --FGSM sample 100 image
+[2024-04-12 02:05:01,434][INFO] --PGD sample 100 image
+[2024-04-12 02:05:06,710][INFO] --get the 0 part of the feature_lb and feature_ub
+[2024-04-12 02:05:06,711][INFO] --sample the 1 part of the originalset
+[2024-04-12 02:05:06,711][INFO] --FGSM sample 1 image
+[2024-04-12 02:05:07,365][INFO] --PGD sample 1 image
+[2024-04-12 02:05:10,552][INFO] --FGSM sample 2 image
+[2024-04-12 02:05:11,204][INFO] --PGD sample 2 image
+[2024-04-12 02:05:14,366][INFO] --FGSM sample 3 image
+[2024-04-12 02:05:15,037][INFO] --PGD sample 3 image
+[2024-04-12 02:05:18,215][INFO] --FGSM sample 4 image
+[2024-04-12 02:05:18,881][INFO] --PGD sample 4 image
+[2024-04-12 02:05:22,057][INFO] --FGSM sample 5 image
+[2024-04-12 02:05:22,699][INFO] --PGD sample 5 image
+[2024-04-12 02:05:25,883][INFO] --FGSM sample 6 image
+[2024-04-12 02:05:26,548][INFO] --PGD sample 6 image
+[2024-04-12 02:05:29,720][INFO] --FGSM sample 7 image
+[2024-04-12 02:05:30,378][INFO] --PGD sample 7 image
+[2024-04-12 02:05:33,554][INFO] --FGSM sample 8 image
+[2024-04-12 02:05:34,217][INFO] --PGD sample 8 image
+[2024-04-12 02:05:37,397][INFO] --FGSM sample 9 image
+[2024-04-12 02:05:38,064][INFO] --PGD sample 9 image
+[2024-04-12 02:05:41,247][INFO] --FGSM sample 10 image
+[2024-04-12 02:05:43,830][INFO] --PGD sample 10 image
+[2024-04-12 02:05:47,016][INFO] --FGSM sample 11 image
+[2024-04-12 02:05:47,675][INFO] --PGD sample 11 image
+[2024-04-12 02:05:50,861][INFO] --FGSM sample 12 image
+[2024-04-12 02:05:51,519][INFO] --PGD sample 12 image
+[2024-04-12 02:05:54,706][INFO] --FGSM sample 13 image
+[2024-04-12 02:05:55,375][INFO] --PGD sample 13 image
+[2024-04-12 02:05:58,560][INFO] --FGSM sample 14 image
+[2024-04-12 02:05:59,222][INFO] --PGD sample 14 image
+[2024-04-12 02:06:02,413][INFO] --FGSM sample 15 image
+[2024-04-12 02:06:03,077][INFO] --PGD sample 15 image
+[2024-04-12 02:06:06,268][INFO] --FGSM sample 16 image
+[2024-04-12 02:06:06,930][INFO] --PGD sample 16 image
+[2024-04-12 02:06:10,125][INFO] --FGSM sample 17 image
+[2024-04-12 02:06:10,790][INFO] --PGD sample 17 image
+[2024-04-12 02:06:13,978][INFO] --FGSM sample 18 image
+[2024-04-12 02:06:14,638][INFO] --PGD sample 18 image
+[2024-04-12 02:06:17,826][INFO] --FGSM sample 19 image
+[2024-04-12 02:06:18,483][INFO] --PGD sample 19 image
+[2024-04-12 02:06:21,682][INFO] --FGSM sample 20 image
+[2024-04-12 02:06:22,345][INFO] --PGD sample 20 image
+[2024-04-12 02:06:25,544][INFO] --FGSM sample 21 image
+[2024-04-12 02:06:26,204][INFO] --PGD sample 21 image
+[2024-04-12 02:06:29,404][INFO] --FGSM sample 22 image
+[2024-04-12 02:06:30,079][INFO] --PGD sample 22 image
+[2024-04-12 02:06:33,281][INFO] --FGSM sample 23 image
+[2024-04-12 02:06:33,957][INFO] --PGD sample 23 image
+[2024-04-12 02:06:37,165][INFO] --FGSM sample 24 image
+[2024-04-12 02:06:37,829][INFO] --PGD sample 24 image
+[2024-04-12 02:06:41,029][INFO] --FGSM sample 25 image
+[2024-04-12 02:06:41,692][INFO] --PGD sample 25 image
+[2024-04-12 02:06:44,896][INFO] --FGSM sample 26 image
+[2024-04-12 02:06:45,555][INFO] --PGD sample 26 image
+[2024-04-12 02:06:48,757][INFO] --FGSM sample 27 image
+[2024-04-12 02:06:49,404][INFO] --PGD sample 27 image
+[2024-04-12 02:06:52,610][INFO] --FGSM sample 28 image
+[2024-04-12 02:06:53,261][INFO] --PGD sample 28 image
+[2024-04-12 02:06:56,466][INFO] --FGSM sample 29 image
+[2024-04-12 02:06:57,127][INFO] --PGD sample 29 image
+[2024-04-12 02:07:00,334][INFO] --FGSM sample 30 image
+[2024-04-12 02:07:00,994][INFO] --PGD sample 30 image
+[2024-04-12 02:07:04,186][INFO] --FGSM sample 31 image
+[2024-04-12 02:07:04,848][INFO] --PGD sample 31 image
+[2024-04-12 02:07:08,052][INFO] --FGSM sample 32 image
+[2024-04-12 02:07:08,716][INFO] --PGD sample 32 image
+[2024-04-12 02:07:11,910][INFO] --FGSM sample 33 image
+[2024-04-12 02:07:12,575][INFO] --PGD sample 33 image
+[2024-04-12 02:07:15,770][INFO] --FGSM sample 34 image
+[2024-04-12 02:07:16,434][INFO] --PGD sample 34 image
+[2024-04-12 02:07:19,624][INFO] --FGSM sample 35 image
+[2024-04-12 02:07:20,298][INFO] --PGD sample 35 image
+[2024-04-12 02:07:23,485][INFO] --FGSM sample 36 image
+[2024-04-12 02:07:24,152][INFO] --PGD sample 36 image
+[2024-04-12 02:07:27,346][INFO] --FGSM sample 37 image
+[2024-04-12 02:07:28,015][INFO] --PGD sample 37 image
+[2024-04-12 02:07:31,207][INFO] --FGSM sample 38 image
+[2024-04-12 02:07:31,866][INFO] --PGD sample 38 image
+[2024-04-12 02:07:35,064][INFO] --FGSM sample 39 image
+[2024-04-12 02:07:35,728][INFO] --PGD sample 39 image
+[2024-04-12 02:07:38,920][INFO] --FGSM sample 40 image
+[2024-04-12 02:07:39,592][INFO] --PGD sample 40 image
+[2024-04-12 02:07:42,790][INFO] --FGSM sample 41 image
+[2024-04-12 02:07:43,455][INFO] --PGD sample 41 image
+[2024-04-12 02:07:46,652][INFO] --FGSM sample 42 image
+[2024-04-12 02:07:47,317][INFO] --PGD sample 42 image
+[2024-04-12 02:07:50,517][INFO] --FGSM sample 43 image
+[2024-04-12 02:07:51,182][INFO] --PGD sample 43 image
+[2024-04-12 02:07:54,379][INFO] --FGSM sample 44 image
+[2024-04-12 02:07:55,043][INFO] --PGD sample 44 image
+[2024-04-12 02:07:58,261][INFO] --FGSM sample 45 image
+[2024-04-12 02:07:58,924][INFO] --PGD sample 45 image
+[2024-04-12 02:08:02,138][INFO] --FGSM sample 46 image
+[2024-04-12 02:08:02,810][INFO] --PGD sample 46 image
+[2024-04-12 02:08:06,030][INFO] --FGSM sample 47 image
+[2024-04-12 02:08:06,696][INFO] --PGD sample 47 image
+[2024-04-12 02:08:09,911][INFO] --FGSM sample 48 image
+[2024-04-12 02:08:10,588][INFO] --PGD sample 48 image
+[2024-04-12 02:08:13,791][INFO] --FGSM sample 49 image
+[2024-04-12 02:08:14,457][INFO] --PGD sample 49 image
+[2024-04-12 02:08:17,661][INFO] --FGSM sample 50 image
+[2024-04-12 02:08:18,317][INFO] --PGD sample 50 image
+[2024-04-12 02:08:21,528][INFO] --FGSM sample 51 image
+[2024-04-12 02:08:22,191][INFO] --PGD sample 51 image
+[2024-04-12 02:08:25,401][INFO] --FGSM sample 52 image
+[2024-04-12 02:08:26,064][INFO] --PGD sample 52 image
+[2024-04-12 02:08:29,280][INFO] --FGSM sample 53 image
+[2024-04-12 02:08:29,957][INFO] --PGD sample 53 image
+[2024-04-12 02:08:33,169][INFO] --FGSM sample 54 image
+[2024-04-12 02:08:33,835][INFO] --PGD sample 54 image
+[2024-04-12 02:08:37,058][INFO] --FGSM sample 55 image
+[2024-04-12 02:08:37,725][INFO] --PGD sample 55 image
+[2024-04-12 02:08:40,947][INFO] --FGSM sample 56 image
+[2024-04-12 02:08:41,622][INFO] --PGD sample 56 image
+[2024-04-12 02:08:44,838][INFO] --FGSM sample 57 image
+[2024-04-12 02:08:45,515][INFO] --PGD sample 57 image
+[2024-04-12 02:08:48,732][INFO] --FGSM sample 58 image
+[2024-04-12 02:08:49,397][INFO] --PGD sample 58 image
+[2024-04-12 02:08:52,611][INFO] --FGSM sample 59 image
+[2024-04-12 02:08:53,277][INFO] --PGD sample 59 image
+[2024-04-12 02:08:56,496][INFO] --FGSM sample 60 image
+[2024-04-12 02:08:57,163][INFO] --PGD sample 60 image
+[2024-04-12 02:09:00,384][INFO] --FGSM sample 61 image
+[2024-04-12 02:09:01,065][INFO] --PGD sample 61 image
+[2024-04-12 02:09:04,278][INFO] --FGSM sample 62 image
+[2024-04-12 02:09:04,935][INFO] --PGD sample 62 image
+[2024-04-12 02:09:08,143][INFO] --FGSM sample 63 image
+[2024-04-12 02:09:08,816][INFO] --PGD sample 63 image
+[2024-04-12 02:09:12,029][INFO] --FGSM sample 64 image
+[2024-04-12 02:09:12,692][INFO] --PGD sample 64 image
+[2024-04-12 02:09:15,904][INFO] --FGSM sample 65 image
+[2024-04-12 02:09:19,803][INFO] --PGD sample 65 image
+[2024-04-12 02:09:23,030][INFO] --FGSM sample 66 image
+[2024-04-12 02:09:23,700][INFO] --PGD sample 66 image
+[2024-04-12 02:09:26,919][INFO] --FGSM sample 67 image
+[2024-04-12 02:09:29,508][INFO] --PGD sample 67 image
+[2024-04-12 02:09:32,738][INFO] --FGSM sample 68 image
+[2024-04-12 02:09:33,405][INFO] --PGD sample 68 image
+[2024-04-12 02:09:36,636][INFO] --FGSM sample 69 image
+[2024-04-12 02:09:37,290][INFO] --PGD sample 69 image
+[2024-04-12 02:09:40,525][INFO] --FGSM sample 70 image
+[2024-04-12 02:09:44,398][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-04-12 02:09:44,398][INFO] --PGD sample 70 image
+[2024-04-12 02:09:47,624][INFO] --FGSM sample 71 image
+[2024-04-12 02:09:48,288][INFO] --PGD sample 71 image
+[2024-04-12 02:09:51,506][INFO] --FGSM sample 72 image
+[2024-04-12 02:09:52,180][INFO] --PGD sample 72 image
+[2024-04-12 02:09:55,395][INFO] --FGSM sample 73 image
+[2024-04-12 02:09:56,076][INFO] --PGD sample 73 image
+[2024-04-12 02:09:59,294][INFO] --FGSM sample 74 image
+[2024-04-12 02:09:59,962][INFO] --PGD sample 74 image
+[2024-04-12 02:10:03,185][INFO] --FGSM sample 75 image
+[2024-04-12 02:10:03,853][INFO] --PGD sample 75 image
+[2024-04-12 02:10:07,070][INFO] --FGSM sample 76 image
+[2024-04-12 02:10:07,734][INFO] --PGD sample 76 image
+[2024-04-12 02:10:10,955][INFO] --FGSM sample 77 image
+[2024-04-12 02:10:11,622][INFO] --PGD sample 77 image
+[2024-04-12 02:10:14,837][INFO] --FGSM sample 78 image
+[2024-04-12 02:10:15,505][INFO] --PGD sample 78 image
+[2024-04-12 02:10:18,728][INFO] --FGSM sample 79 image
+[2024-04-12 02:10:19,392][INFO] --PGD sample 79 image
+[2024-04-12 02:10:22,617][INFO] --FGSM sample 80 image
+[2024-04-12 02:10:23,285][INFO] --PGD sample 80 image
+[2024-04-12 02:10:26,514][INFO] --FGSM sample 81 image
+[2024-04-12 02:10:27,181][INFO] --PGD sample 81 image
+[2024-04-12 02:10:30,400][INFO] --FGSM sample 82 image
+[2024-04-12 02:10:31,075][INFO] --PGD sample 82 image
+[2024-04-12 02:10:34,300][INFO] --FGSM sample 83 image
+[2024-04-12 02:10:34,969][INFO] --PGD sample 83 image
+[2024-04-12 02:10:38,190][INFO] --FGSM sample 84 image
+[2024-04-12 02:10:38,856][INFO] --PGD sample 84 image
+[2024-04-12 02:10:42,093][INFO] --FGSM sample 85 image
+[2024-04-12 02:10:42,763][INFO] --PGD sample 85 image
+[2024-04-12 02:10:45,995][INFO] --FGSM sample 86 image
+[2024-04-12 02:10:46,674][INFO] --PGD sample 86 image
+[2024-04-12 02:10:49,898][INFO] --FGSM sample 87 image
+[2024-04-12 02:10:50,577][INFO] --PGD sample 87 image
+[2024-04-12 02:10:53,810][INFO] --FGSM sample 88 image
+[2024-04-12 02:10:54,486][INFO] --PGD sample 88 image
+[2024-04-12 02:10:57,717][INFO] --FGSM sample 89 image
+[2024-04-12 02:10:58,382][INFO] --PGD sample 89 image
+[2024-04-12 02:11:01,588][INFO] --FGSM sample 90 image
+[2024-04-12 02:11:02,258][INFO] --PGD sample 90 image
+[2024-04-12 02:11:05,488][INFO] --FGSM sample 91 image
+[2024-04-12 02:11:06,153][INFO] --PGD sample 91 image
+[2024-04-12 02:11:09,379][INFO] --FGSM sample 92 image
+[2024-04-12 02:11:10,053][INFO] --PGD sample 92 image
+[2024-04-12 02:11:13,276][INFO] --FGSM sample 93 image
+[2024-04-12 02:11:13,955][INFO] --PGD sample 93 image
+[2024-04-12 02:11:17,174][INFO] --FGSM sample 94 image
+[2024-04-12 02:11:17,851][INFO] --PGD sample 94 image
+[2024-04-12 02:11:21,074][INFO] --FGSM sample 95 image
+[2024-04-12 02:11:24,929][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-04-12 02:11:24,929][INFO] --PGD sample 95 image
+[2024-04-12 02:11:28,151][INFO] --FGSM sample 96 image
+[2024-04-12 02:11:28,819][INFO] --PGD sample 96 image
+[2024-04-12 02:11:32,053][INFO] --FGSM sample 97 image
+[2024-04-12 02:11:32,717][INFO] --PGD sample 97 image
+[2024-04-12 02:11:35,931][INFO] --FGSM sample 98 image
+[2024-04-12 02:11:37,254][INFO] --PGD sample 98 image
+[2024-04-12 02:11:40,477][INFO] --FGSM sample 99 image
+[2024-04-12 02:11:41,151][INFO] --PGD sample 99 image
+[2024-04-12 02:11:44,376][INFO] --FGSM sample 100 image
+[2024-04-12 02:11:45,045][INFO] --PGD sample 100 image
+[2024-04-12 02:11:50,281][INFO] --get the 1 part of the feature_lb and feature_ub
+[2024-04-12 02:11:50,282][INFO] --sample the 2 part of the originalset
+[2024-04-12 02:11:50,282][INFO] --FGSM sample 1 image
+[2024-04-12 02:11:50,935][INFO] --PGD sample 1 image
+[2024-04-12 02:11:54,110][INFO] --FGSM sample 2 image
+[2024-04-12 02:11:54,773][INFO] --PGD sample 2 image
+[2024-04-12 02:11:57,947][INFO] --FGSM sample 3 image
+[2024-04-12 02:11:58,589][INFO] --PGD sample 3 image
+[2024-04-12 02:12:01,765][INFO] --FGSM sample 4 image
+[2024-04-12 02:12:02,422][INFO] --PGD sample 4 image
+[2024-04-12 02:12:05,585][INFO] --FGSM sample 5 image
+[2024-04-12 02:12:06,238][INFO] --PGD sample 5 image
+[2024-04-12 02:12:09,400][INFO] --FGSM sample 6 image
+[2024-04-12 02:12:10,056][INFO] --PGD sample 6 image
+[2024-04-12 02:12:13,217][INFO] --FGSM sample 7 image
+[2024-04-12 02:12:13,867][INFO] --PGD sample 7 image
+[2024-04-12 02:12:17,032][INFO] --FGSM sample 8 image
+[2024-04-12 02:12:17,695][INFO] --PGD sample 8 image
+[2024-04-12 02:12:20,864][INFO] --FGSM sample 9 image
+[2024-04-12 02:12:21,523][INFO] --PGD sample 9 image
+[2024-04-12 02:12:24,689][INFO] --FGSM sample 10 image
+[2024-04-12 02:12:25,347][INFO] --PGD sample 10 image
+[2024-04-12 02:12:28,520][INFO] --FGSM sample 11 image
+[2024-04-12 02:12:29,183][INFO] --PGD sample 11 image
+[2024-04-12 02:12:32,360][INFO] --FGSM sample 12 image
+[2024-04-12 02:12:33,017][INFO] --PGD sample 12 image
+[2024-04-12 02:12:36,214][INFO] --FGSM sample 13 image
+[2024-04-12 02:12:36,882][INFO] --PGD sample 13 image
+[2024-04-12 02:12:40,091][INFO] --FGSM sample 14 image
+[2024-04-12 02:12:42,022][INFO] --PGD sample 14 image
+[2024-04-12 02:12:45,237][INFO] --FGSM sample 15 image
+[2024-04-12 02:12:45,906][INFO] --PGD sample 15 image
+[2024-04-12 02:12:49,128][INFO] --FGSM sample 16 image
+[2024-04-12 02:12:49,806][INFO] --PGD sample 16 image
+[2024-04-12 02:12:53,027][INFO] --FGSM sample 17 image
+[2024-04-12 02:12:53,702][INFO] --PGD sample 17 image
+[2024-04-12 02:12:56,931][INFO] --FGSM sample 18 image
+[2024-04-12 02:12:57,609][INFO] --PGD sample 18 image
+[2024-04-12 02:13:00,834][INFO] --FGSM sample 19 image
+[2024-04-12 02:13:01,506][INFO] --PGD sample 19 image
+[2024-04-12 02:13:04,731][INFO] --FGSM sample 20 image
+[2024-04-12 02:13:05,405][INFO] --PGD sample 20 image
+[2024-04-12 02:13:08,630][INFO] --FGSM sample 21 image
+[2024-04-12 02:13:09,299][INFO] --PGD sample 21 image
+[2024-04-12 02:13:12,534][INFO] --FGSM sample 22 image
+[2024-04-12 02:13:13,203][INFO] --PGD sample 22 image
+[2024-04-12 02:13:16,438][INFO] --FGSM sample 23 image
+[2024-04-12 02:13:17,116][INFO] --PGD sample 23 image
+[2024-04-12 02:13:20,356][INFO] --FGSM sample 24 image
+[2024-04-12 02:13:21,026][INFO] --PGD sample 24 image
+[2024-04-12 02:13:24,260][INFO] --FGSM sample 25 image
+[2024-04-12 02:13:24,939][INFO] --PGD sample 25 image
+[2024-04-12 02:13:28,179][INFO] --FGSM sample 26 image
+[2024-04-12 02:13:28,852][INFO] --PGD sample 26 image
+[2024-04-12 02:13:32,064][INFO] --FGSM sample 27 image
+[2024-04-12 02:13:32,736][INFO] --PGD sample 27 image
+[2024-04-12 02:13:35,975][INFO] --FGSM sample 28 image
+[2024-04-12 02:13:36,651][INFO] --PGD sample 28 image
+[2024-04-12 02:13:39,895][INFO] --FGSM sample 29 image
+[2024-04-12 02:13:40,566][INFO] --PGD sample 29 image
+[2024-04-12 02:13:43,807][INFO] --FGSM sample 30 image
+[2024-04-12 02:13:44,471][INFO] --PGD sample 30 image
+[2024-04-12 02:13:47,713][INFO] --FGSM sample 31 image
+[2024-04-12 02:13:48,393][INFO] --PGD sample 31 image
+[2024-04-12 02:13:51,632][INFO] --FGSM sample 32 image
+[2024-04-12 02:13:52,303][INFO] --PGD sample 32 image
+[2024-04-12 02:13:55,543][INFO] --FGSM sample 33 image
+[2024-04-12 02:13:56,215][INFO] --PGD sample 33 image
+[2024-04-12 02:13:59,445][INFO] --FGSM sample 34 image
+[2024-04-12 02:14:00,125][INFO] --PGD sample 34 image
+[2024-04-12 02:14:03,361][INFO] --FGSM sample 35 image
+[2024-04-12 02:14:04,029][INFO] --PGD sample 35 image
+[2024-04-12 02:14:07,264][INFO] --FGSM sample 36 image
+[2024-04-12 02:14:07,943][INFO] --PGD sample 36 image
+[2024-04-12 02:14:11,190][INFO] --FGSM sample 37 image
+[2024-04-12 02:14:11,869][INFO] --PGD sample 37 image
+[2024-04-12 02:14:15,113][INFO] --FGSM sample 38 image
+[2024-04-12 02:14:15,787][INFO] --PGD sample 38 image
+[2024-04-12 02:14:19,031][INFO] --FGSM sample 39 image
+[2024-04-12 02:14:19,701][INFO] --PGD sample 39 image
+[2024-04-12 02:14:22,959][INFO] --FGSM sample 40 image
+[2024-04-12 02:14:23,644][INFO] --PGD sample 40 image
+[2024-04-12 02:14:26,913][INFO] --FGSM sample 41 image
+[2024-04-12 02:14:27,590][INFO] --PGD sample 41 image
+[2024-04-12 02:14:30,868][INFO] --FGSM sample 42 image
+[2024-04-12 02:14:31,543][INFO] --PGD sample 42 image
+[2024-04-12 02:14:34,817][INFO] --FGSM sample 43 image
+[2024-04-12 02:14:35,494][INFO] --PGD sample 43 image
+[2024-04-12 02:14:38,762][INFO] --FGSM sample 44 image
+[2024-04-12 02:14:39,426][INFO] --PGD sample 44 image
+[2024-04-12 02:14:42,696][INFO] --FGSM sample 45 image
+[2024-04-12 02:14:43,369][INFO] --PGD sample 45 image
+[2024-04-12 02:14:46,651][INFO] --FGSM sample 46 image
+[2024-04-12 02:14:47,329][INFO] --PGD sample 46 image
+[2024-04-12 02:14:50,604][INFO] --FGSM sample 47 image
+[2024-04-12 02:14:51,285][INFO] --PGD sample 47 image
+[2024-04-12 02:14:54,556][INFO] --FGSM sample 48 image
+[2024-04-12 02:14:55,241][INFO] --PGD sample 48 image
+[2024-04-12 02:14:58,510][INFO] --FGSM sample 49 image
+[2024-04-12 02:14:59,185][INFO] --PGD sample 49 image
+[2024-04-12 02:15:02,454][INFO] --FGSM sample 50 image
+[2024-04-12 02:15:03,130][INFO] --PGD sample 50 image
+[2024-04-12 02:15:06,393][INFO] --FGSM sample 51 image
+[2024-04-12 02:15:07,077][INFO] --PGD sample 51 image
+[2024-04-12 02:15:10,338][INFO] --FGSM sample 52 image
+[2024-04-12 02:15:11,025][INFO] --PGD sample 52 image
+[2024-04-12 02:15:14,288][INFO] --FGSM sample 53 image
+[2024-04-12 02:15:14,965][INFO] --PGD sample 53 image
+[2024-04-12 02:15:18,229][INFO] --FGSM sample 54 image
+[2024-04-12 02:15:18,914][INFO] --PGD sample 54 image
+[2024-04-12 02:15:22,179][INFO] --FGSM sample 55 image
+[2024-04-12 02:15:22,864][INFO] --PGD sample 55 image
+[2024-04-12 02:15:26,127][INFO] --FGSM sample 56 image
+[2024-04-12 02:15:26,801][INFO] --PGD sample 56 image
+[2024-04-12 02:15:30,060][INFO] --FGSM sample 57 image
+[2024-04-12 02:15:30,740][INFO] --PGD sample 57 image
+[2024-04-12 02:15:34,005][INFO] --FGSM sample 58 image
+[2024-04-12 02:15:34,682][INFO] --PGD sample 58 image
+[2024-04-12 02:15:37,942][INFO] --FGSM sample 59 image
+[2024-04-12 02:15:38,612][INFO] --PGD sample 59 image
+[2024-04-12 02:15:41,883][INFO] --FGSM sample 60 image
+[2024-04-12 02:15:42,568][INFO] --PGD sample 60 image
+[2024-04-12 02:15:45,833][INFO] --FGSM sample 61 image
+[2024-04-12 02:15:46,503][INFO] --PGD sample 61 image
+[2024-04-12 02:15:49,770][INFO] --FGSM sample 62 image
+[2024-04-12 02:15:50,454][INFO] --PGD sample 62 image
+[2024-04-12 02:15:53,713][INFO] --FGSM sample 63 image
+[2024-04-12 02:15:54,390][INFO] --PGD sample 63 image
+[2024-04-12 02:15:57,651][INFO] --FGSM sample 64 image
+[2024-04-12 02:15:58,325][INFO] --PGD sample 64 image
+[2024-04-12 02:16:01,592][INFO] --FGSM sample 65 image
+[2024-04-12 02:16:02,266][INFO] --PGD sample 65 image
+[2024-04-12 02:16:05,541][INFO] --FGSM sample 66 image
+[2024-04-12 02:16:06,216][INFO] --PGD sample 66 image
+[2024-04-12 02:16:09,482][INFO] --FGSM sample 67 image
+[2024-04-12 02:16:10,163][INFO] --PGD sample 67 image
+[2024-04-12 02:16:13,428][INFO] --FGSM sample 68 image
+[2024-04-12 02:16:14,106][INFO] --PGD sample 68 image
+[2024-04-12 02:16:17,372][INFO] --FGSM sample 69 image
+[2024-04-12 02:16:18,051][INFO] --PGD sample 69 image
+[2024-04-12 02:16:21,311][INFO] --FGSM sample 70 image
+[2024-04-12 02:16:21,990][INFO] --PGD sample 70 image
+[2024-04-12 02:16:25,253][INFO] --FGSM sample 71 image
+[2024-04-12 02:16:25,938][INFO] --PGD sample 71 image
+[2024-04-12 02:16:29,200][INFO] --FGSM sample 72 image
+[2024-04-12 02:16:29,878][INFO] --PGD sample 72 image
+[2024-04-12 02:16:33,144][INFO] --FGSM sample 73 image
+[2024-04-12 02:16:33,817][INFO] --PGD sample 73 image
+[2024-04-12 02:16:37,086][INFO] --FGSM sample 74 image
+[2024-04-12 02:16:37,771][INFO] --PGD sample 74 image
+[2024-04-12 02:16:41,035][INFO] --FGSM sample 75 image
+[2024-04-12 02:16:41,719][INFO] --PGD sample 75 image
+[2024-04-12 02:16:44,981][INFO] --FGSM sample 76 image
+[2024-04-12 02:16:45,662][INFO] --PGD sample 76 image
+[2024-04-12 02:16:48,930][INFO] --FGSM sample 77 image
+[2024-04-12 02:16:49,607][INFO] --PGD sample 77 image
+[2024-04-12 02:16:52,867][INFO] --FGSM sample 78 image
+[2024-04-12 02:16:53,554][INFO] --PGD sample 78 image
+[2024-04-12 02:16:56,822][INFO] --FGSM sample 79 image
+[2024-04-12 02:16:58,151][INFO] --PGD sample 79 image
+[2024-04-12 02:17:01,416][INFO] --FGSM sample 80 image
+[2024-04-12 02:17:02,093][INFO] --PGD sample 80 image
+[2024-04-12 02:17:05,352][INFO] --FGSM sample 81 image
+[2024-04-12 02:17:06,032][INFO] --PGD sample 81 image
+[2024-04-12 02:17:09,295][INFO] --FGSM sample 82 image
+[2024-04-12 02:17:09,973][INFO] --PGD sample 82 image
+[2024-04-12 02:17:13,234][INFO] --FGSM sample 83 image
+[2024-04-12 02:17:13,910][INFO] --PGD sample 83 image
+[2024-04-12 02:17:17,175][INFO] --FGSM sample 84 image
+[2024-04-12 02:17:17,847][INFO] --PGD sample 84 image
+[2024-04-12 02:17:21,112][INFO] --FGSM sample 85 image
+[2024-04-12 02:17:21,785][INFO] --PGD sample 85 image
+[2024-04-12 02:17:25,046][INFO] --FGSM sample 86 image
+[2024-04-12 02:17:26,357][INFO] --PGD sample 86 image
+[2024-04-12 02:17:29,617][INFO] --FGSM sample 87 image
+[2024-04-12 02:17:30,293][INFO] --PGD sample 87 image
+[2024-04-12 02:17:33,544][INFO] --FGSM sample 88 image
+[2024-04-12 02:17:34,218][INFO] --PGD sample 88 image
+[2024-04-12 02:17:37,473][INFO] --FGSM sample 89 image
+[2024-04-12 02:17:38,149][INFO] --PGD sample 89 image
+[2024-04-12 02:17:41,409][INFO] --FGSM sample 90 image
+[2024-04-12 02:17:42,090][INFO] --PGD sample 90 image
+[2024-04-12 02:17:45,351][INFO] --FGSM sample 91 image
+[2024-04-12 02:17:46,025][INFO] --PGD sample 91 image
+[2024-04-12 02:17:49,289][INFO] --FGSM sample 92 image
+[2024-04-12 02:17:49,961][INFO] --PGD sample 92 image
+[2024-04-12 02:17:53,221][INFO] --FGSM sample 93 image
+[2024-04-12 02:17:53,894][INFO] --PGD sample 93 image
+[2024-04-12 02:17:57,154][INFO] --FGSM sample 94 image
+[2024-04-12 02:17:57,835][INFO] --PGD sample 94 image
+[2024-04-12 02:18:01,102][INFO] --FGSM sample 95 image
+[2024-04-12 02:18:01,775][INFO] --PGD sample 95 image
+[2024-04-12 02:18:05,045][INFO] --FGSM sample 96 image
+[2024-04-12 02:18:05,721][INFO] --PGD sample 96 image
+[2024-04-12 02:18:08,976][INFO] --FGSM sample 97 image
+[2024-04-12 02:18:09,651][INFO] --PGD sample 97 image
+[2024-04-12 02:18:12,909][INFO] --FGSM sample 98 image
+[2024-04-12 02:18:13,581][INFO] --PGD sample 98 image
+[2024-04-12 02:18:16,842][INFO] --FGSM sample 99 image
+[2024-04-12 02:18:17,518][INFO] --PGD sample 99 image
+[2024-04-12 02:18:20,783][INFO] --FGSM sample 100 image
+[2024-04-12 02:18:21,465][INFO] --PGD sample 100 image
+[2024-04-12 02:18:26,797][INFO] --get the 2 part of the feature_lb and feature_ub
+[2024-04-12 02:18:26,798][INFO] --sample the 3 part of the originalset
+[2024-04-12 02:18:26,798][INFO] --FGSM sample 1 image
+[2024-04-12 02:18:27,460][INFO] --PGD sample 1 image
+[2024-04-12 02:18:30,657][INFO] --FGSM sample 2 image
+[2024-04-12 02:18:31,328][INFO] --PGD sample 2 image
+[2024-04-12 02:18:34,548][INFO] --FGSM sample 3 image
+[2024-04-12 02:18:35,226][INFO] --PGD sample 3 image
+[2024-04-12 02:18:38,448][INFO] --FGSM sample 4 image
+[2024-04-12 02:18:39,116][INFO] --PGD sample 4 image
+[2024-04-12 02:18:42,331][INFO] --FGSM sample 5 image
+[2024-04-12 02:18:42,999][INFO] --PGD sample 5 image
+[2024-04-12 02:18:46,225][INFO] --FGSM sample 6 image
+[2024-04-12 02:18:46,876][INFO] --PGD sample 6 image
+[2024-04-12 02:18:50,099][INFO] --FGSM sample 7 image
+[2024-04-12 02:18:50,769][INFO] --PGD sample 7 image
+[2024-04-12 02:18:54,002][INFO] --FGSM sample 8 image
+[2024-04-12 02:18:54,675][INFO] --PGD sample 8 image
+[2024-04-12 02:18:57,903][INFO] --FGSM sample 9 image
+[2024-04-12 02:18:58,566][INFO] --PGD sample 9 image
+[2024-04-12 02:19:01,788][INFO] --FGSM sample 10 image
+[2024-04-12 02:19:02,455][INFO] --PGD sample 10 image
+[2024-04-12 02:19:05,691][INFO] --FGSM sample 11 image
+[2024-04-12 02:19:06,367][INFO] --PGD sample 11 image
+[2024-04-12 02:19:09,598][INFO] --FGSM sample 12 image
+[2024-04-12 02:19:10,272][INFO] --PGD sample 12 image
+[2024-04-12 02:19:13,502][INFO] --FGSM sample 13 image
+[2024-04-12 02:19:14,172][INFO] --PGD sample 13 image
+[2024-04-12 02:19:17,411][INFO] --FGSM sample 14 image
+[2024-04-12 02:19:18,076][INFO] --PGD sample 14 image
+[2024-04-12 02:19:21,308][INFO] --FGSM sample 15 image
+[2024-04-12 02:19:21,980][INFO] --PGD sample 15 image
+[2024-04-12 02:19:25,225][INFO] --FGSM sample 16 image
+[2024-04-12 02:19:25,895][INFO] --PGD sample 16 image
+[2024-04-12 02:19:29,137][INFO] --FGSM sample 17 image
+[2024-04-12 02:19:29,803][INFO] --PGD sample 17 image
+[2024-04-12 02:19:33,050][INFO] --FGSM sample 18 image
+[2024-04-12 02:19:33,718][INFO] --PGD sample 18 image
+[2024-04-12 02:19:36,961][INFO] --FGSM sample 19 image
+[2024-04-12 02:19:37,637][INFO] --PGD sample 19 image
+[2024-04-12 02:19:40,883][INFO] --FGSM sample 20 image
+[2024-04-12 02:19:41,553][INFO] --PGD sample 20 image
+[2024-04-12 02:19:44,790][INFO] --FGSM sample 21 image
+[2024-04-12 02:19:45,464][INFO] --PGD sample 21 image
+[2024-04-12 02:19:48,702][INFO] --FGSM sample 22 image
+[2024-04-12 02:19:49,367][INFO] --PGD sample 22 image
+[2024-04-12 02:19:52,613][INFO] --FGSM sample 23 image
+[2024-04-12 02:19:53,283][INFO] --PGD sample 23 image
+[2024-04-12 02:19:56,531][INFO] --FGSM sample 24 image
+[2024-04-12 02:19:57,201][INFO] --PGD sample 24 image
+[2024-04-12 02:20:00,438][INFO] --FGSM sample 25 image
+[2024-04-12 02:20:01,118][INFO] --PGD sample 25 image
+[2024-04-12 02:20:04,328][INFO] --FGSM sample 26 image
+[2024-04-12 02:20:04,999][INFO] --PGD sample 26 image
+[2024-04-12 02:20:08,213][INFO] --FGSM sample 27 image
+[2024-04-12 02:20:08,880][INFO] --PGD sample 27 image
+[2024-04-12 02:20:12,104][INFO] --FGSM sample 28 image
+[2024-04-12 02:20:12,772][INFO] --PGD sample 28 image
+[2024-04-12 02:20:15,997][INFO] --FGSM sample 29 image
+[2024-04-12 02:20:16,669][INFO] --PGD sample 29 image
+[2024-04-12 02:20:19,876][INFO] --FGSM sample 30 image
+[2024-04-12 02:20:20,545][INFO] --PGD sample 30 image
+[2024-04-12 02:20:23,741][INFO] --FGSM sample 31 image
+[2024-04-12 02:20:24,413][INFO] --PGD sample 31 image
+[2024-04-12 02:20:27,609][INFO] --FGSM sample 32 image
+[2024-04-12 02:20:28,279][INFO] --PGD sample 32 image
+[2024-04-12 02:20:31,470][INFO] --FGSM sample 33 image
+[2024-04-12 02:20:32,129][INFO] --PGD sample 33 image
+[2024-04-12 02:20:35,320][INFO] --FGSM sample 34 image
+[2024-04-12 02:20:35,988][INFO] --PGD sample 34 image
+[2024-04-12 02:20:39,175][INFO] --FGSM sample 35 image
+[2024-04-12 02:20:39,837][INFO] --PGD sample 35 image
+[2024-04-12 02:20:43,026][INFO] --FGSM sample 36 image
+[2024-04-12 02:20:43,694][INFO] --PGD sample 36 image
+[2024-04-12 02:20:46,886][INFO] --FGSM sample 37 image
+[2024-04-12 02:20:47,555][INFO] --PGD sample 37 image
+[2024-04-12 02:20:50,753][INFO] --FGSM sample 38 image
+[2024-04-12 02:20:51,427][INFO] --PGD sample 38 image
+[2024-04-12 02:20:54,624][INFO] --FGSM sample 39 image
+[2024-04-12 02:20:55,290][INFO] --PGD sample 39 image
+[2024-04-12 02:20:58,483][INFO] --FGSM sample 40 image
+[2024-04-12 02:20:59,152][INFO] --PGD sample 40 image
+[2024-04-12 02:21:02,345][INFO] --FGSM sample 41 image
+[2024-04-12 02:21:03,008][INFO] --PGD sample 41 image
+[2024-04-12 02:21:06,208][INFO] --FGSM sample 42 image
+[2024-04-12 02:21:06,876][INFO] --PGD sample 42 image
+[2024-04-12 02:21:10,072][INFO] --FGSM sample 43 image
+[2024-04-12 02:21:10,734][INFO] --PGD sample 43 image
+[2024-04-12 02:21:13,927][INFO] --FGSM sample 44 image
+[2024-04-12 02:21:14,601][INFO] --PGD sample 44 image
+[2024-04-12 02:21:17,795][INFO] --FGSM sample 45 image
+[2024-04-12 02:21:18,464][INFO] --PGD sample 45 image
+[2024-04-12 02:21:21,674][INFO] --FGSM sample 46 image
+[2024-04-12 02:21:22,336][INFO] --PGD sample 46 image
+[2024-04-12 02:21:25,535][INFO] --FGSM sample 47 image
+[2024-04-12 02:21:26,212][INFO] --PGD sample 47 image
+[2024-04-12 02:21:29,409][INFO] --FGSM sample 48 image
+[2024-04-12 02:21:30,077][INFO] --PGD sample 48 image
+[2024-04-12 02:21:33,285][INFO] --FGSM sample 49 image
+[2024-04-12 02:21:33,966][INFO] --PGD sample 49 image
+[2024-04-12 02:21:37,170][INFO] --FGSM sample 50 image
+[2024-04-12 02:21:37,835][INFO] --PGD sample 50 image
+[2024-04-12 02:21:41,036][INFO] --FGSM sample 51 image
+[2024-04-12 02:21:41,698][INFO] --PGD sample 51 image
+[2024-04-12 02:21:44,901][INFO] --FGSM sample 52 image
+[2024-04-12 02:21:45,573][INFO] --PGD sample 52 image
+[2024-04-12 02:21:48,778][INFO] --FGSM sample 53 image
+[2024-04-12 02:21:49,456][INFO] --PGD sample 53 image
+[2024-04-12 02:21:52,661][INFO] --FGSM sample 54 image
+[2024-04-12 02:21:53,323][INFO] --PGD sample 54 image
+[2024-04-12 02:21:56,547][INFO] --FGSM sample 55 image
+[2024-04-12 02:21:57,214][INFO] --PGD sample 55 image
+[2024-04-12 02:22:00,450][INFO] --FGSM sample 56 image
+[2024-04-12 02:22:01,126][INFO] --PGD sample 56 image
+[2024-04-12 02:22:04,372][INFO] --FGSM sample 57 image
+[2024-04-12 02:22:05,044][INFO] --PGD sample 57 image
+[2024-04-12 02:22:08,284][INFO] --FGSM sample 58 image
+[2024-04-12 02:22:08,953][INFO] --PGD sample 58 image
+[2024-04-12 02:22:12,193][INFO] --FGSM sample 59 image
+[2024-04-12 02:22:12,869][INFO] --PGD sample 59 image
+[2024-04-12 02:22:16,126][INFO] --FGSM sample 60 image
+[2024-04-12 02:22:16,782][INFO] --PGD sample 60 image
+[2024-04-12 02:22:20,026][INFO] --FGSM sample 61 image
+[2024-04-12 02:22:20,697][INFO] --PGD sample 61 image
+[2024-04-12 02:22:23,950][INFO] --FGSM sample 62 image
+[2024-04-12 02:22:24,628][INFO] --PGD sample 62 image
+[2024-04-12 02:22:27,872][INFO] --FGSM sample 63 image
+[2024-04-12 02:22:28,547][INFO] --PGD sample 63 image
+[2024-04-12 02:22:31,785][INFO] --FGSM sample 64 image
+[2024-04-12 02:22:32,455][INFO] --PGD sample 64 image
+[2024-04-12 02:22:35,680][INFO] --FGSM sample 65 image
+[2024-04-12 02:22:36,344][INFO] --PGD sample 65 image
+[2024-04-12 02:22:39,560][INFO] --FGSM sample 66 image
+[2024-04-12 02:22:40,228][INFO] --PGD sample 66 image
+[2024-04-12 02:22:43,461][INFO] --FGSM sample 67 image
+[2024-04-12 02:22:44,122][INFO] --PGD sample 67 image
+[2024-04-12 02:22:47,358][INFO] --FGSM sample 68 image
+[2024-04-12 02:22:48,032][INFO] --PGD sample 68 image
+[2024-04-12 02:22:51,277][INFO] --FGSM sample 69 image
+[2024-04-12 02:22:51,953][INFO] --PGD sample 69 image
+[2024-04-12 02:22:55,178][INFO] --FGSM sample 70 image
+[2024-04-12 02:22:55,843][INFO] --PGD sample 70 image
+[2024-04-12 02:22:59,068][INFO] --FGSM sample 71 image
+[2024-04-12 02:22:59,734][INFO] --PGD sample 71 image
+[2024-04-12 02:23:02,953][INFO] --FGSM sample 72 image
+[2024-04-12 02:23:03,602][INFO] --PGD sample 72 image
+[2024-04-12 02:23:06,833][INFO] --FGSM sample 73 image
+[2024-04-12 02:23:10,731][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-04-12 02:23:10,731][INFO] --PGD sample 73 image
+[2024-04-12 02:23:13,988][INFO] --FGSM sample 74 image
+[2024-04-12 02:23:14,672][INFO] --PGD sample 74 image
+[2024-04-12 02:23:17,933][INFO] --FGSM sample 75 image
+[2024-04-12 02:23:18,609][INFO] --PGD sample 75 image
+[2024-04-12 02:23:21,859][INFO] --FGSM sample 76 image
+[2024-04-12 02:23:22,533][INFO] --PGD sample 76 image
+[2024-04-12 02:23:25,793][INFO] --FGSM sample 77 image
+[2024-04-12 02:23:26,452][INFO] --PGD sample 77 image
+[2024-04-12 02:23:29,719][INFO] --FGSM sample 78 image
+[2024-04-12 02:23:30,404][INFO] --PGD sample 78 image
+[2024-04-12 02:23:33,639][INFO] --FGSM sample 79 image
+[2024-04-12 02:23:34,307][INFO] --PGD sample 79 image
+[2024-04-12 02:23:37,515][INFO] --FGSM sample 80 image
+[2024-04-12 02:23:38,189][INFO] --PGD sample 80 image
+[2024-04-12 02:23:41,389][INFO] --FGSM sample 81 image
+[2024-04-12 02:23:42,063][INFO] --PGD sample 81 image
+[2024-04-12 02:23:45,267][INFO] --FGSM sample 82 image
+[2024-04-12 02:23:45,935][INFO] --PGD sample 82 image
+[2024-04-12 02:23:49,138][INFO] --FGSM sample 83 image
+[2024-04-12 02:23:52,979][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-04-12 02:23:52,979][INFO] --PGD sample 83 image
+[2024-04-12 02:23:56,192][INFO] --FGSM sample 84 image
+[2024-04-12 02:23:56,858][INFO] --PGD sample 84 image
+[2024-04-12 02:24:00,070][INFO] --FGSM sample 85 image
+[2024-04-12 02:24:00,735][INFO] --PGD sample 85 image
+[2024-04-12 02:24:03,932][INFO] --FGSM sample 86 image
+[2024-04-12 02:24:04,595][INFO] --PGD sample 86 image
+[2024-04-12 02:24:07,810][INFO] --FGSM sample 87 image
+[2024-04-12 02:24:08,485][INFO] --PGD sample 87 image
+[2024-04-12 02:24:11,698][INFO] --FGSM sample 88 image
+[2024-04-12 02:24:12,372][INFO] --PGD sample 88 image
+[2024-04-12 02:24:15,574][INFO] --FGSM sample 89 image
+[2024-04-12 02:24:16,246][INFO] --PGD sample 89 image
+[2024-04-12 02:24:19,453][INFO] --FGSM sample 90 image
+[2024-04-12 02:24:20,119][INFO] --PGD sample 90 image
+[2024-04-12 02:24:23,319][INFO] --FGSM sample 91 image
+[2024-04-12 02:24:23,983][INFO] --PGD sample 91 image
+[2024-04-12 02:24:27,188][INFO] --FGSM sample 92 image
+[2024-04-12 02:24:27,851][INFO] --PGD sample 92 image
+[2024-04-12 02:24:31,065][INFO] --FGSM sample 93 image
+[2024-04-12 02:24:31,734][INFO] --PGD sample 93 image
+[2024-04-12 02:24:34,942][INFO] --FGSM sample 94 image
+[2024-04-12 02:24:35,609][INFO] --PGD sample 94 image
+[2024-04-12 02:24:38,817][INFO] --FGSM sample 95 image
+[2024-04-12 02:24:39,489][INFO] --PGD sample 95 image
+[2024-04-12 02:24:42,698][INFO] --FGSM sample 96 image
+[2024-04-12 02:24:43,363][INFO] --PGD sample 96 image
+[2024-04-12 02:24:46,568][INFO] --FGSM sample 97 image
+[2024-04-12 02:24:47,231][INFO] --PGD sample 97 image
+[2024-04-12 02:24:50,442][INFO] --FGSM sample 98 image
+[2024-04-12 02:24:51,116][INFO] --PGD sample 98 image
+[2024-04-12 02:24:54,326][INFO] --FGSM sample 99 image
+[2024-04-12 02:24:54,999][INFO] --PGD sample 99 image
+[2024-04-12 02:24:58,227][INFO] --FGSM sample 100 image
+[2024-04-12 02:24:58,898][INFO] --PGD sample 100 image
+[2024-04-12 02:25:04,210][INFO] --get the 3 part of the feature_lb and feature_ub
+[2024-04-12 02:25:04,210][INFO] --sample the 4 part of the originalset
+[2024-04-12 02:25:04,210][INFO] --FGSM sample 1 image
+[2024-04-12 02:25:05,465][INFO] --PGD sample 1 image
+[2024-04-12 02:25:08,610][INFO] --FGSM sample 2 image
+[2024-04-12 02:25:09,884][INFO] --PGD sample 2 image
+[2024-04-12 02:25:13,036][INFO] --FGSM sample 3 image
+[2024-04-12 02:25:13,697][INFO] --PGD sample 3 image
+[2024-04-12 02:25:16,850][INFO] --FGSM sample 4 image
+[2024-04-12 02:25:17,509][INFO] --PGD sample 4 image
+[2024-04-12 02:25:20,676][INFO] --FGSM sample 5 image
+[2024-04-12 02:25:21,967][INFO] --PGD sample 5 image
+[2024-04-12 02:25:25,141][INFO] --FGSM sample 6 image
+[2024-04-12 02:25:25,813][INFO] --PGD sample 6 image
+[2024-04-12 02:25:28,994][INFO] --FGSM sample 7 image
+[2024-04-12 02:25:29,639][INFO] --PGD sample 7 image
+[2024-04-12 02:25:32,820][INFO] --FGSM sample 8 image
+[2024-04-12 02:25:33,480][INFO] --PGD sample 8 image
+[2024-04-12 02:25:36,658][INFO] --FGSM sample 9 image
+[2024-04-12 02:25:37,318][INFO] --PGD sample 9 image
+[2024-04-12 02:25:40,503][INFO] --FGSM sample 10 image
+[2024-04-12 02:25:41,165][INFO] --PGD sample 10 image
+[2024-04-12 02:25:44,354][INFO] --FGSM sample 11 image
+[2024-04-12 02:25:45,019][INFO] --PGD sample 11 image
+[2024-04-12 02:25:48,214][INFO] --FGSM sample 12 image
+[2024-04-12 02:25:48,877][INFO] --PGD sample 12 image
+[2024-04-12 02:25:52,102][INFO] --FGSM sample 13 image
+[2024-04-12 02:25:52,772][INFO] --PGD sample 13 image
+[2024-04-12 02:25:55,989][INFO] --FGSM sample 14 image
+[2024-04-12 02:25:56,655][INFO] --PGD sample 14 image
+[2024-04-12 02:25:59,873][INFO] --FGSM sample 15 image
+[2024-04-12 02:26:00,543][INFO] --PGD sample 15 image
+[2024-04-12 02:26:03,752][INFO] --FGSM sample 16 image
+[2024-04-12 02:26:04,428][INFO] --PGD sample 16 image
+[2024-04-12 02:26:07,640][INFO] --FGSM sample 17 image
+[2024-04-12 02:26:08,304][INFO] --PGD sample 17 image
+[2024-04-12 02:26:11,519][INFO] --FGSM sample 18 image
+[2024-04-12 02:26:12,189][INFO] --PGD sample 18 image
+[2024-04-12 02:26:15,402][INFO] --FGSM sample 19 image
+[2024-04-12 02:26:16,067][INFO] --PGD sample 19 image
+[2024-04-12 02:26:19,273][INFO] --FGSM sample 20 image
+[2024-04-12 02:26:19,941][INFO] --PGD sample 20 image
+[2024-04-12 02:26:23,152][INFO] --FGSM sample 21 image
+[2024-04-12 02:26:23,816][INFO] --PGD sample 21 image
+[2024-04-12 02:26:27,027][INFO] --FGSM sample 22 image
+[2024-04-12 02:26:27,692][INFO] --PGD sample 22 image
+[2024-04-12 02:26:30,912][INFO] --FGSM sample 23 image
+[2024-04-12 02:26:31,581][INFO] --PGD sample 23 image
+[2024-04-12 02:26:34,808][INFO] --FGSM sample 24 image
+[2024-04-12 02:26:35,468][INFO] --PGD sample 24 image
+[2024-04-12 02:26:38,691][INFO] --FGSM sample 25 image
+[2024-04-12 02:26:39,343][INFO] --PGD sample 25 image
+[2024-04-12 02:26:42,570][INFO] --FGSM sample 26 image
+[2024-04-12 02:26:43,236][INFO] --PGD sample 26 image
+[2024-04-12 02:26:46,464][INFO] --FGSM sample 27 image
+[2024-04-12 02:26:47,130][INFO] --PGD sample 27 image
+[2024-04-12 02:26:50,342][INFO] --FGSM sample 28 image
+[2024-04-12 02:26:51,008][INFO] --PGD sample 28 image
+[2024-04-12 02:26:54,212][INFO] --FGSM sample 29 image
+[2024-04-12 02:26:54,887][INFO] --PGD sample 29 image
+[2024-04-12 02:26:58,116][INFO] --FGSM sample 30 image
+[2024-04-12 02:26:58,786][INFO] --PGD sample 30 image
+[2024-04-12 02:27:01,994][INFO] --FGSM sample 31 image
+[2024-04-12 02:27:02,660][INFO] --PGD sample 31 image
+[2024-04-12 02:27:05,869][INFO] --FGSM sample 32 image
+[2024-04-12 02:27:06,533][INFO] --PGD sample 32 image
+[2024-04-12 02:27:09,748][INFO] --FGSM sample 33 image
+[2024-04-12 02:27:10,419][INFO] --PGD sample 33 image
+[2024-04-12 02:27:13,628][INFO] --FGSM sample 34 image
+[2024-04-12 02:27:14,294][INFO] --PGD sample 34 image
+[2024-04-12 02:27:17,504][INFO] --FGSM sample 35 image
+[2024-04-12 02:27:20,745][INFO] --PGD sample 35 image
+[2024-04-12 02:27:23,947][INFO] --FGSM sample 36 image
+[2024-04-12 02:27:24,624][INFO] --PGD sample 36 image
+[2024-04-12 02:27:27,844][INFO] --FGSM sample 37 image
+[2024-04-12 02:27:28,508][INFO] --PGD sample 37 image
+[2024-04-12 02:27:31,740][INFO] --FGSM sample 38 image
+[2024-04-12 02:27:32,413][INFO] --PGD sample 38 image
+[2024-04-12 02:27:35,643][INFO] --FGSM sample 39 image
+[2024-04-12 02:27:36,310][INFO] --PGD sample 39 image
+[2024-04-12 02:27:39,527][INFO] --FGSM sample 40 image
+[2024-04-12 02:27:40,201][INFO] --PGD sample 40 image
+[2024-04-12 02:27:43,398][INFO] --FGSM sample 41 image
+[2024-04-12 02:27:44,066][INFO] --PGD sample 41 image
+[2024-04-12 02:27:47,278][INFO] --FGSM sample 42 image
+[2024-04-12 02:27:47,943][INFO] --PGD sample 42 image
+[2024-04-12 02:27:51,143][INFO] --FGSM sample 43 image
+[2024-04-12 02:27:51,804][INFO] --PGD sample 43 image
+[2024-04-12 02:27:54,697][INFO] --FGSM sample 44 image
+[2024-04-12 02:27:55,319][INFO] --PGD sample 44 image
+[2024-04-12 02:27:58,349][INFO] --FGSM sample 45 image
+[2024-04-12 02:27:59,019][INFO] --PGD sample 45 image
+[2024-04-12 02:28:01,729][INFO] --FGSM sample 46 image
+[2024-04-12 02:28:02,356][INFO] --PGD sample 46 image
+[2024-04-12 02:28:05,406][INFO] --FGSM sample 47 image
+[2024-04-12 02:28:06,077][INFO] --PGD sample 47 image
+[2024-04-12 02:28:08,836][INFO] --FGSM sample 48 image
+[2024-04-12 02:28:09,451][INFO] --PGD sample 48 image
+[2024-04-12 02:28:12,498][INFO] --FGSM sample 49 image
+[2024-04-12 02:28:13,166][INFO] --PGD sample 49 image
+[2024-04-12 02:28:16,001][INFO] --FGSM sample 50 image
+[2024-04-12 02:28:16,615][INFO] --PGD sample 50 image
+[2024-04-12 02:28:19,664][INFO] --FGSM sample 51 image
+[2024-04-12 02:28:20,283][INFO] --PGD sample 51 image
+[2024-04-12 02:28:23,181][INFO] --FGSM sample 52 image
+[2024-04-12 02:28:23,797][INFO] --PGD sample 52 image
+[2024-04-12 02:28:26,843][INFO] --FGSM sample 53 image
+[2024-04-12 02:28:27,464][INFO] --PGD sample 53 image
+[2024-04-12 02:28:30,320][INFO] --FGSM sample 54 image
+[2024-04-12 02:28:30,984][INFO] --PGD sample 54 image
+[2024-04-12 02:28:34,042][INFO] --FGSM sample 55 image
+[2024-04-12 02:28:34,652][INFO] --PGD sample 55 image
+[2024-04-12 02:28:37,316][INFO] --FGSM sample 56 image
+[2024-04-12 02:28:37,968][INFO] --PGD sample 56 image
+[2024-04-12 02:28:41,001][INFO] --FGSM sample 57 image
+[2024-04-12 02:28:41,610][INFO] --PGD sample 57 image
+[2024-04-12 02:28:44,473][INFO] --FGSM sample 58 image
+[2024-04-12 02:28:45,147][INFO] --PGD sample 58 image
+[2024-04-12 02:28:48,153][INFO] --FGSM sample 59 image
+[2024-04-12 02:28:48,753][INFO] --PGD sample 59 image
+[2024-04-12 02:28:51,508][INFO] --FGSM sample 60 image
+[2024-04-12 02:28:52,174][INFO] --PGD sample 60 image
+[2024-04-12 02:28:55,196][INFO] --FGSM sample 61 image
+[2024-04-12 02:28:55,811][INFO] --PGD sample 61 image
+[2024-04-12 02:28:58,621][INFO] --FGSM sample 62 image
+[2024-04-12 02:28:59,265][INFO] --PGD sample 62 image
+[2024-04-12 02:29:02,276][INFO] --FGSM sample 63 image
+[2024-04-12 02:29:02,908][INFO] --PGD sample 63 image
+[2024-04-12 02:29:05,786][INFO] --FGSM sample 64 image
+[2024-04-12 02:29:06,396][INFO] --PGD sample 64 image
+[2024-04-12 02:29:09,437][INFO] --FGSM sample 65 image
+[2024-04-12 02:29:10,123][INFO] --PGD sample 65 image
+[2024-04-12 02:29:12,992][INFO] --FGSM sample 66 image
+[2024-04-12 02:29:13,596][INFO] --PGD sample 66 image
+[2024-04-12 02:29:16,636][INFO] --FGSM sample 67 image
+[2024-04-12 02:29:17,279][INFO] --PGD sample 67 image
+[2024-04-12 02:29:20,162][INFO] --FGSM sample 68 image
+[2024-04-12 02:29:20,759][INFO] --PGD sample 68 image
+[2024-04-12 02:29:23,791][INFO] --FGSM sample 69 image
+[2024-04-12 02:29:24,411][INFO] --PGD sample 69 image
+[2024-04-12 02:29:27,186][INFO] --FGSM sample 70 image
+[2024-04-12 02:29:27,806][INFO] --PGD sample 70 image
+[2024-04-12 02:29:30,845][INFO] --FGSM sample 71 image
+[2024-04-12 02:29:31,459][INFO] --PGD sample 71 image
+[2024-04-12 02:29:34,273][INFO] --FGSM sample 72 image
+[2024-04-12 02:29:34,913][INFO] --PGD sample 72 image
+[2024-04-12 02:29:37,986][INFO] --FGSM sample 73 image
+[2024-04-12 02:29:38,581][INFO] --PGD sample 73 image
+[2024-04-12 02:29:41,561][INFO] --FGSM sample 74 image
+[2024-04-12 02:29:42,223][INFO] --PGD sample 74 image
+[2024-04-12 02:29:45,245][INFO] --FGSM sample 75 image
+[2024-04-12 02:29:45,871][INFO] --PGD sample 75 image
+[2024-04-12 02:29:48,740][INFO] --FGSM sample 76 image
+[2024-04-12 02:29:49,362][INFO] --PGD sample 76 image
+[2024-04-12 02:29:52,411][INFO] --FGSM sample 77 image
+[2024-04-12 02:29:53,088][INFO] --PGD sample 77 image
+[2024-04-12 02:29:55,979][INFO] --FGSM sample 78 image
+[2024-04-12 02:29:56,594][INFO] --PGD sample 78 image
+[2024-04-12 02:29:59,636][INFO] --FGSM sample 79 image
+[2024-04-12 02:30:00,290][INFO] --PGD sample 79 image
+[2024-04-12 02:30:03,180][INFO] --FGSM sample 80 image
+[2024-04-12 02:30:03,793][INFO] --PGD sample 80 image
+[2024-04-12 02:30:06,836][INFO] --FGSM sample 81 image
+[2024-04-12 02:30:07,450][INFO] --PGD sample 81 image
+[2024-04-12 02:30:10,258][INFO] --FGSM sample 82 image
+[2024-04-12 02:30:10,902][INFO] --PGD sample 82 image
+[2024-04-12 02:30:13,977][INFO] --FGSM sample 83 image
+[2024-04-12 02:30:14,605][INFO] --PGD sample 83 image
+[2024-04-12 02:30:17,378][INFO] --FGSM sample 84 image
+[2024-04-12 02:30:18,033][INFO] --PGD sample 84 image
+[2024-04-12 02:30:21,063][INFO] --FGSM sample 85 image
+[2024-04-12 02:30:21,684][INFO] --PGD sample 85 image
+[2024-04-12 02:30:24,538][INFO] --FGSM sample 86 image
+[2024-04-12 02:30:25,222][INFO] --PGD sample 86 image
+[2024-04-12 02:30:28,243][INFO] --FGSM sample 87 image
+[2024-04-12 02:30:28,869][INFO] --PGD sample 87 image
+[2024-04-12 02:30:31,736][INFO] --FGSM sample 88 image
+[2024-04-12 02:30:32,355][INFO] --PGD sample 88 image
+[2024-04-12 02:30:35,403][INFO] --FGSM sample 89 image
+[2024-04-12 02:30:36,075][INFO] --PGD sample 89 image
+[2024-04-12 02:30:38,953][INFO] --FGSM sample 90 image
+[2024-04-12 02:30:39,573][INFO] --PGD sample 90 image
+[2024-04-12 02:30:42,635][INFO] --FGSM sample 91 image
+[2024-04-12 02:30:43,279][INFO] --PGD sample 91 image
+[2024-04-12 02:30:46,245][INFO] --FGSM sample 92 image
+[2024-04-12 02:30:46,913][INFO] --PGD sample 92 image
+[2024-04-12 02:30:50,002][INFO] --FGSM sample 93 image
+[2024-04-12 02:30:50,605][INFO] --PGD sample 93 image
+[2024-04-12 02:30:53,526][INFO] --FGSM sample 94 image
+[2024-04-12 02:30:54,197][INFO] --PGD sample 94 image
+[2024-04-12 02:30:57,235][INFO] --FGSM sample 95 image
+[2024-04-12 02:30:57,873][INFO] --PGD sample 95 image
+[2024-04-12 02:31:00,631][INFO] --FGSM sample 96 image
+[2024-04-12 02:31:01,289][INFO] --PGD sample 96 image
+[2024-04-12 02:31:04,294][INFO] --FGSM sample 97 image
+[2024-04-12 02:31:04,943][INFO] --PGD sample 97 image
+[2024-04-12 02:31:07,733][INFO] --FGSM sample 98 image
+[2024-04-12 02:31:09,556][INFO] --PGD sample 98 image
+[2024-04-12 02:31:12,626][INFO] --FGSM sample 99 image
+[2024-04-12 02:31:13,272][INFO] --PGD sample 99 image
+[2024-04-12 02:31:16,172][INFO] --FGSM sample 100 image
+[2024-04-12 02:31:17,361][INFO] --PGD sample 100 image
+[2024-04-12 02:31:22,462][INFO] --get the 4 part of the feature_lb and feature_ub
+[2024-04-12 02:31:41,339][INFO] --Test repair set accuracy 0.0
+[2024-04-12 02:31:42,702][INFO] --Patch network: --- feature PatchNet ---
+Name: feature patch network 499
+--- End of feature PatchNet ---
+[2024-04-12 02:31:42,775][INFO] [0m 0s (0.037 seconds)] Start repair part 0: 0
+[2024-04-12 02:31:42,775][INFO] [0m 0s (0.037 seconds)] After epoch 0:
+[2024-04-12 02:31:42,776][INFO] Loaded 100 abstractions for training.
+[2024-04-12 02:31:43,001][INFO] min loss 2.036910057067871, max loss 6341.119140625.
+[2024-04-12 02:31:43,007][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+       device='cuda:2', dtype=torch.uint8).
+[2024-04-12 02:31:43,066][INFO] Test set accuracy 0.6436.
+[2024-04-12 02:31:43,066][INFO] repair set accuracy 0.0.
+[2024-04-12 02:31:43,066][INFO] attacked test set accuracy 0.013.
+[2024-04-12 02:31:43,066][INFO] 
+[0m 0s (0.328 seconds)] Starting epoch 1:
+[2024-04-12 02:31:43,959][INFO] [0m 1s (1.221 seconds)] After epoch 1:
+[2024-04-12 02:31:43,959][INFO] Loaded 100 abstractions for training.
+[2024-04-12 02:31:44,185][INFO] min loss 0.0, max loss 0.0.
+[2024-04-12 02:31:44,185][INFO] All 100 abstractions certified.
+[2024-04-12 02:31:44,244][INFO] Test set accuracy 0.6436.
+[2024-04-12 02:31:44,244][INFO] repair set accuracy 1.0.
+[2024-04-12 02:31:44,244][INFO] attacked test set accuracy 1.0.
+[2024-04-12 02:31:45,946][INFO] Accuracy at every epoch: [0.6436, 0.6436]
+[2024-04-12 02:31:45,946][INFO] After 1 epochs / 0m 1s (1.506 seconds), eventually the trained network got certified? True, with 0.6436 accuracy on test set,with 1.0000 accuracy on repair set,with 1.0000 accuracy on attack test set.
+[2024-04-12 02:31:45,984][INFO] [0m 3s (3.245 seconds)] Start repair part 1: 100
+[2024-04-12 02:31:45,984][INFO] [0m 3s (3.246 seconds)] After epoch 0:
+[2024-04-12 02:31:45,984][INFO] Loaded 100 abstractions for training.
+[2024-04-12 02:31:46,215][INFO] min loss 3.3058090209960938, max loss 5501.451171875.
+[2024-04-12 02:31:46,221][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+       device='cuda:2', dtype=torch.uint8).
+[2024-04-12 02:31:46,280][INFO] Test set accuracy 0.6436.
+[2024-04-12 02:31:46,280][INFO] repair set accuracy 0.01.
+[2024-04-12 02:31:46,280][INFO] attacked test set accuracy 0.009.
+[2024-04-12 02:31:46,280][INFO] 
+[0m 3s (3.542 seconds)] Starting epoch 1:
+[2024-04-12 02:31:47,184][INFO] [0m 4s (4.445 seconds)] After epoch 1:
+[2024-04-12 02:31:47,184][INFO] Loaded 100 abstractions for training.
+[2024-04-12 02:31:47,410][INFO] min loss 0.0, max loss 0.0.
+[2024-04-12 02:31:47,410][INFO] All 100 abstractions certified.
+[2024-04-12 02:31:47,469][INFO] Test set accuracy 0.6436.
+[2024-04-12 02:31:47,469][INFO] repair set accuracy 1.0.
+[2024-04-12 02:31:47,469][INFO] attacked test set accuracy 1.0.
+[2024-04-12 02:31:49,079][INFO] Accuracy at every epoch: [0.6436, 0.6436]
+[2024-04-12 02:31:49,079][INFO] After 1 epochs / 0m 4s (4.731 seconds), eventually the trained network got certified? True, with 0.6436 accuracy on test set,with 1.0000 accuracy on repair set,with 1.0000 accuracy on attack test set.
+[2024-04-12 02:31:49,118][INFO] [0m 6s (6.380 seconds)] Start repair part 2: 200
+[2024-04-12 02:31:49,118][INFO] [0m 6s (6.380 seconds)] After epoch 0:
+[2024-04-12 02:31:49,119][INFO] Loaded 100 abstractions for training.
+[2024-04-12 02:31:49,348][INFO] min loss 6.75944185256958, max loss 4427.31005859375.
+[2024-04-12 02:31:49,353][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+       device='cuda:2', dtype=torch.uint8).
+[2024-04-12 02:31:49,412][INFO] Test set accuracy 0.6436.
+[2024-04-12 02:31:49,412][INFO] repair set accuracy 0.02.
+[2024-04-12 02:31:49,412][INFO] attacked test set accuracy 0.015.
+[2024-04-12 02:31:49,412][INFO] 
+[0m 6s (6.674 seconds)] Starting epoch 1:
+[2024-04-12 02:31:50,332][INFO] [0m 7s (7.593 seconds)] After epoch 1:
+[2024-04-12 02:31:50,332][INFO] Loaded 100 abstractions for training.
+[2024-04-12 02:31:50,556][INFO] min loss 0.0, max loss 0.0.
+[2024-04-12 02:31:50,556][INFO] All 100 abstractions certified.
+[2024-04-12 02:31:50,615][INFO] Test set accuracy 0.6436.
+[2024-04-12 02:31:50,615][INFO] repair set accuracy 1.0.
+[2024-04-12 02:31:50,615][INFO] attacked test set accuracy 1.0.
+[2024-04-12 02:31:52,288][INFO] Accuracy at every epoch: [0.6436, 0.6436]
+[2024-04-12 02:31:52,288][INFO] After 1 epochs / 0m 7s (7.877 seconds), eventually the trained network got certified? True, with 0.6436 accuracy on test set,with 1.0000 accuracy on repair set,with 1.0000 accuracy on attack test set.
+[2024-04-12 02:31:52,328][INFO] [0m 9s (9.589 seconds)] Start repair part 3: 300
+[2024-04-12 02:31:52,328][INFO] [0m 9s (9.589 seconds)] After epoch 0:
+[2024-04-12 02:31:52,328][INFO] Loaded 100 abstractions for training.
+[2024-04-12 02:31:52,558][INFO] min loss 6.4152398109436035, max loss 6007.3759765625.
+[2024-04-12 02:31:52,564][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+       device='cuda:2', dtype=torch.uint8).
+[2024-04-12 02:31:52,623][INFO] Test set accuracy 0.6436.
+[2024-04-12 02:31:52,623][INFO] repair set accuracy 0.01.
+[2024-04-12 02:31:52,623][INFO] attacked test set accuracy 0.011.
+[2024-04-12 02:31:52,623][INFO] 
+[0m 9s (9.885 seconds)] Starting epoch 1:
+[2024-04-12 02:31:53,558][INFO] [0m 10s (10.819 seconds)] After epoch 1:
+[2024-04-12 02:31:53,558][INFO] Loaded 100 abstractions for training.
+[2024-04-12 02:31:53,783][INFO] min loss 0.0, max loss 0.0.
+[2024-04-12 02:31:53,784][INFO] All 100 abstractions certified.
+[2024-04-12 02:31:53,842][INFO] Test set accuracy 0.6436.
+[2024-04-12 02:31:53,843][INFO] repair set accuracy 1.0.
+[2024-04-12 02:31:53,843][INFO] attacked test set accuracy 1.0.
+[2024-04-12 02:31:55,500][INFO] Accuracy at every epoch: [0.6436, 0.6436]
+[2024-04-12 02:31:55,500][INFO] After 1 epochs / 0m 11s (11.104 seconds), eventually the trained network got certified? True, with 0.6436 accuracy on test set,with 1.0000 accuracy on repair set,with 1.0000 accuracy on attack test set.
+[2024-04-12 02:31:55,540][INFO] [0m 12s (12.801 seconds)] Start repair part 4: 400
+[2024-04-12 02:31:55,540][INFO] [0m 12s (12.801 seconds)] After epoch 0:
+[2024-04-12 02:31:55,540][INFO] Loaded 100 abstractions for training.
+[2024-04-12 02:31:55,770][INFO] min loss 4.348398685455322, max loss 5823.107421875.
+[2024-04-12 02:31:55,776][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+       device='cuda:2', dtype=torch.uint8).
+[2024-04-12 02:31:55,835][INFO] Test set accuracy 0.6436.
+[2024-04-12 02:31:55,835][INFO] repair set accuracy 0.0.
+[2024-04-12 02:31:55,835][INFO] attacked test set accuracy 0.025.
+[2024-04-12 02:31:55,835][INFO] 
+[0m 13s (13.097 seconds)] Starting epoch 1:
+[2024-04-12 02:31:56,786][INFO] [0m 14s (14.047 seconds)] After epoch 1:
+[2024-04-12 02:31:56,786][INFO] Loaded 100 abstractions for training.
+[2024-04-12 02:31:57,010][INFO] min loss 0.0, max loss 0.0.
+[2024-04-12 02:31:57,011][INFO] All 100 abstractions certified.
+[2024-04-12 02:31:57,069][INFO] Test set accuracy 0.6436.
+[2024-04-12 02:31:57,069][INFO] repair set accuracy 1.0.
+[2024-04-12 02:31:57,069][INFO] attacked test set accuracy 1.0.
+[2024-04-12 02:31:58,646][INFO] Accuracy at every epoch: [0.6436, 0.6436]
+[2024-04-12 02:31:58,646][INFO] After 1 epochs / 0m 14s (14.331 seconds), eventually the trained network got certified? True, with 0.6436 accuracy on test set,with 1.0000 accuracy on repair set,with 1.0000 accuracy on attack test set.
+[2024-04-12 02:31:58,646][INFO] final test
+[2024-04-12 02:31:58,660][INFO] --Test set accuracy 0.6436
+[2024-04-12 02:31:58,738][INFO] --Test repair set accuracy 1.0
+[2024-04-12 02:31:58,943][INFO] --Test attack test set accuracy 1.0
+[2024-04-12 02:31:58,943][INFO] traing time 16.20514497626573s
+[2024-04-12 02:31:58,957][INFO] === Avg <epochs, train_time, certified, accuracy> for pgd attack networks:
+[2024-04-12 02:31:58,957][INFO] tensor([ 1.0000, 14.3310,  1.0000,  0.6436])
+[2024-04-12 02:31:58,958][INFO] Total Cost Time: 2029.6125111440197s.
+
+
+

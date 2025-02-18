@@ -1,0 +1,62 @@
+[2024-07-09 01:51:01,089][INFO] 
+===== vgg19-4-feature-1000-2024-07-09-01-51-01 configuration =====
+  exp_fn: test_goal_test
+  seed: None
+  dom: deeppoly
+  start_abs_cnt: 500
+  max_abs_cnt: 1000
+  refine_top_k: 800
+  tiny_width: 0.001
+  lr: 0.001
+  batch_size: 50
+  min_epochs: 25
+  max_epochs: 45
+  use_scheduler: True
+  no_pts: False
+  no_abs: False
+  no_refine: False
+  quiet: False
+  debug: False
+  net: vgg19
+  no_repair: False
+  repair_number: 1000
+  repair_batchsize: 1
+  repair_location: feature
+  label_repaired: False
+  repair_radius: 4
+  loose_bound: 0.1
+  divided_repair: 1
+  accuracy_loss: <function CifarArgParser.setup_rest.<locals>.ce_loss at 0x7f5335357940>
+  reset_params: False
+  train_datasize: 10000
+  test_datasize: 10000
+  patch_size: big
+  repair_batch_size: 1000
+  scheduler_fn: <function ExpArgParser.setup_rest.<locals>.<lambda> at 0x7f53353578b0>
+===== end of vgg19-4-feature-1000-2024-07-09-01-51-01 configuration =====
+
+[2024-07-09 01:51:01,090][INFO] ===== start repair ======
+[2024-07-09 01:51:01,090][INFO] For pgd attack net
+[2024-07-09 01:51:03,548][INFO] --feature patch network: --- feature PatchNet ---
+Name: property patch network 999
+--- End of feature PatchNet ---
+[2024-07-09 01:51:06,370][INFO] --load the trainset and testset as testing set
+[2024-07-09 01:51:06,449][INFO] --evaluate the original net on testset
+[2024-07-09 01:51:06,816][INFO] --For testset, out of 10000 items, ratio 0.9342
+[2024-07-09 01:51:07,175][INFO] --evaluate the repaired net on testset and get the bitmap
+[2024-07-09 01:51:07,534][INFO] --For testset, out of 10000 items, ratio 0.9342
+[2024-07-09 01:51:07,534][INFO] --adv training
+[2024-07-09 01:51:07,900][INFO] --test the defense against autoattack
+[2024-07-09 01:51:07,942][INFO] attack net2 
+[2024-07-09 01:51:37,268][INFO] correct2 28
+[2024-07-09 01:51:37,388][INFO] correct3 0
+[2024-07-09 01:51:37,389][INFO] attack net2 
+[2024-07-09 01:52:01,496][INFO] correct2 23
+[2024-07-09 01:52:01,600][INFO] correct3 0
+[2024-07-09 01:52:01,601][INFO] attack net2 
+[2024-07-09 01:52:18,536][INFO] correct2 25
+[2024-07-09 01:52:18,658][INFO] correct3 0
+[2024-07-09 01:52:18,659][INFO] attack net2 
+[2024-07-09 01:52:43,102][INFO] correct2 28
+[2024-07-09 01:52:43,223][INFO] correct3 0
+[2024-07-09 01:52:43,223][INFO] attack net2 

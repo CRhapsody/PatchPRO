@@ -1,0 +1,57 @@
+[2024-01-15 11:05:36,358][INFO] 
+===== Acas-prpoerty2-2024-01-15-11-05-36 configuration =====
+  exp_fn: test_goal_safety
+  seed: None
+  dom: deeppoly
+  start_abs_cnt: 5000
+  max_abs_cnt: 10000
+  refine_top_k: 800
+  tiny_width: 0.001
+  lr: 0.001
+  batch_size: 100
+  min_epochs: 3
+  max_epochs: 35
+  use_scheduler: True
+  no_pts: False
+  no_abs: False
+  no_refine: False
+  quiet: False
+  debug: False
+  net: 1_1
+  no_repair: False
+  accuracy_loss: <function AcasArgParser.setup_rest.<locals>.ce_loss at 0x7f38520ed8b0>
+  sample_amount: 5000
+  reset_params: False
+  max_verifier_sec: 300
+  verifier_timeout_as_safe: True
+  scheduler_fn: <function ExpArgParser.setup_rest.<locals>.<lambda> at 0x7f38520ed820>
+===== end of Acas-prpoerty2-2024-01-15-11-05-36 configuration =====
+
+[2024-01-15 11:05:36,361][INFO] ===== start repair ======
+[2024-01-15 11:05:36,361][INFO] For AcasNetID_2_1_
+[2024-01-15 11:05:37,199][INFO] --- AcasNet ---
+Num layers: 7 (i.e. hidden + output, excluding input layer)
+Input size: 5
+Hidden sizes (len 6): [50, 50, 50, 50, 50, 50]
+Output size: 5
+Means for scaling (len 6): [19791.091, 0.0, 0.0, 650.0, 600.0, 7.5188840201005975]
+Ranges for scaling (len 6): [60261.0, 6.28318530718, 6.28318530718, 1100.0, 1200.0, 373.94992]
+Activation: deeppoly.ReLU()
+--- End of AcasNet ---
+[2024-01-15 11:05:39,414][INFO] [0m 1s (1.571 seconds)] After epoch 0:
+[2024-01-15 11:05:39,414][INFO] Loaded 10000 points for training.
+[2024-01-15 11:05:39,414][INFO] Loaded 5018 abstractions for training.
+[2024-01-15 11:05:39,444][INFO] min loss 0.0, max loss 61.389225006103516.
+[2024-01-15 11:05:39,448][INFO] Max loss at LB: tensor([ 0.6000,  0.0000,  0.1172,  0.4500, -0.4750], device='cuda:1'), UB: tensor([ 0.6799,  0.0313,  0.1250,  0.5000, -0.4688], device='cuda:1'), rule: tensor([1], device='cuda:1', dtype=torch.uint8).
+[2024-01-15 11:05:39,451][INFO] Test set accuracy 1.0.
+[2024-01-15 11:05:39,451][INFO] 
+[0m 1s (1.609 seconds)] Starting epoch 1:
+[2024-01-15 11:05:44,584][INFO] [0m 6s (6.742 seconds)] At epoch 1: avg accuracy training loss 5.993017859458924.
+[2024-01-15 11:05:45,037][INFO] [0m 7s (7.194 seconds)] After epoch 1:
+[2024-01-15 11:05:45,037][INFO] Loaded 10000 points for training.
+[2024-01-15 11:05:45,037][INFO] Loaded 5818 abstractions for training.
+[2024-01-15 11:05:45,068][INFO] min loss 0.0, max loss 50.321136474609375.
+[2024-01-15 11:05:45,072][INFO] Max loss at LB: tensor([ 0.6000,  0.0391, -0.1484,  0.4500, -0.4875], device='cuda:1'), UB: tensor([ 0.6799,  0.0469, -0.1406,  0.5000, -0.4750], device='cuda:1'), rule: tensor([1], device='cuda:1', dtype=torch.uint8).
+[2024-01-15 11:05:45,074][INFO] Test set accuracy 1.0.
+[2024-01-15 11:05:45,074][INFO] 
+[0m 7s (7.232 seconds)] Starting epoch 2:

@@ -1,0 +1,202 @@
+[2024-08-03 09:07:40,048][INFO] 
+===== FNN_small-0.1-50-small-2024-08-03-09-07-40 configuration =====
+  exp_fn: test_goal_repair
+  seed: None
+  dom: deeppoly
+  start_abs_cnt: 500
+  max_abs_cnt: 1000
+  refine_top_k: 50
+  tiny_width: 1e-05
+  lr: 10
+  batch_size: 50
+  min_epochs: 25
+  max_epochs: 25
+  use_scheduler: True
+  no_pts: False
+  no_abs: False
+  no_refine: True
+  quiet: False
+  debug: False
+  net: FNN_small
+  no_repair: False
+  repair_number: 50
+  repair_batchsize: 1
+  patch_size: small
+  label_repaired: False
+  repair_radius: 0.1
+  divided_repair: 1
+  accuracy_loss: <function MnistArgParser.setup_rest.<locals>.ce_loss at 0x7f694ac68a60>
+  reset_params: False
+  train_datasize: 10000
+  test_datasize: 500
+  max_verifier_sec: 300
+  verifier_timeout_as_safe: True
+  repair_batch_size: 50
+  scheduler_fn: <function ExpArgParser.setup_rest.<locals>.<lambda> at 0x7f694ac68af0>
+===== end of FNN_small-0.1-50-small-2024-08-03-09-07-40 configuration =====
+
+[2024-08-03 09:07:40,049][INFO] ===== start repair ======
+[2024-08-03 09:07:40,049][INFO] For pgd attack net
+[2024-08-03 09:07:40,284][INFO] --Test repair set accuracy 0.0
+[2024-08-03 09:07:40,284][INFO] --Test original set accuracy 1.0
+[2024-08-03 09:07:40,285][INFO] --Test test set accuracy 0.9658
+[2024-08-03 09:07:40,286][INFO] --Test attack test set accuracy 0.0
+[2024-08-03 09:07:40,286][INFO] --Test train set accuracy 0.9929
+[2024-08-03 09:07:40,534][INFO] --small patch network: Mnist_patch_model_small(
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (classifier): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+  )
+)
+[2024-08-03 09:07:40,560][INFO] [0m 0s (0.021 seconds)] Start repair part 0: 0
+[2024-08-03 09:07:40,560][INFO] [0m 0s (0.021 seconds)] After epoch 0:
+[2024-08-03 09:07:40,560][INFO] Loaded 50 points for repair.
+[2024-08-03 09:07:40,560][INFO] Loaded 500 points for attack test.
+[2024-08-03 09:07:40,560][INFO] Loaded 10000 points for training.
+[2024-08-03 09:07:40,560][INFO] Loaded 50 abstractions for training.
+[2024-08-03 09:07:40,638][INFO] min loss 171632.171875, max loss 396062.6875.
+[2024-08-03 09:07:40,639][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0], device='cuda:2', dtype=torch.uint8).
+[2024-08-03 09:07:40,658][INFO] Test set accuracy 0.9658.
+[2024-08-03 09:07:40,658][INFO] repair set accuracy 0.0.
+[2024-08-03 09:07:40,659][INFO] attacked test set accuracy 0.002.
+[2024-08-03 09:07:40,659][INFO] 
+[0m 0s (0.120 seconds)] Starting epoch 1:
+[2024-08-03 09:07:40,819][INFO] [0m 0s (0.280 seconds)] After epoch 1:
+[2024-08-03 09:07:40,819][INFO] Loaded 50 points for repair.
+[2024-08-03 09:07:40,819][INFO] Loaded 500 points for attack test.
+[2024-08-03 09:07:40,819][INFO] Loaded 10000 points for training.
+[2024-08-03 09:07:40,819][INFO] Loaded 50 abstractions for training.
+[2024-08-03 09:07:40,898][INFO] min loss 158074.890625, max loss 395070.75.
+[2024-08-03 09:07:40,899][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0], device='cuda:2', dtype=torch.uint8).
+[2024-08-03 09:07:40,918][INFO] Test set accuracy 0.9658.
+[2024-08-03 09:07:40,918][INFO] repair set accuracy 1.0.
+[2024-08-03 09:07:40,918][INFO] attacked test set accuracy 1.0.
+[2024-08-03 09:07:40,918][INFO] 
+[0m 0s (0.380 seconds)] Starting epoch 2:
+[2024-08-03 09:07:41,082][INFO] [0m 0s (0.543 seconds)] After epoch 2:
+[2024-08-03 09:07:41,082][INFO] Loaded 50 points for repair.
+[2024-08-03 09:07:41,082][INFO] Loaded 500 points for attack test.
+[2024-08-03 09:07:41,082][INFO] Loaded 10000 points for training.
+[2024-08-03 09:07:41,082][INFO] Loaded 50 abstractions for training.
+[2024-08-03 09:07:41,161][INFO] min loss 135657.40625, max loss 386397.9375.
+[2024-08-03 09:07:41,162][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0], device='cuda:2', dtype=torch.uint8).
+[2024-08-03 09:07:41,181][INFO] Test set accuracy 0.9658.
+[2024-08-03 09:07:41,181][INFO] repair set accuracy 1.0.
+[2024-08-03 09:07:41,182][INFO] attacked test set accuracy 1.0.
+[2024-08-03 09:07:41,182][INFO] 
+[0m 0s (0.643 seconds)] Starting epoch 3:
+[2024-08-03 09:07:41,346][INFO] [0m 0s (0.807 seconds)] After epoch 3:
+[2024-08-03 09:07:41,346][INFO] Loaded 50 points for repair.
+[2024-08-03 09:07:41,346][INFO] Loaded 500 points for attack test.
+[2024-08-03 09:07:41,346][INFO] Loaded 10000 points for training.
+[2024-08-03 09:07:41,346][INFO] Loaded 50 abstractions for training.
+[2024-08-03 09:07:41,427][INFO] min loss 103969.5390625, max loss 373680.5.
+[2024-08-03 09:07:41,428][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0], device='cuda:2', dtype=torch.uint8).
+[2024-08-03 09:07:41,447][INFO] Test set accuracy 0.9658.
+[2024-08-03 09:07:41,447][INFO] repair set accuracy 1.0.
+[2024-08-03 09:07:41,447][INFO] attacked test set accuracy 1.0.
+[2024-08-03 09:07:41,447][INFO] 
+[0m 0s (0.909 seconds)] Starting epoch 4:
+[2024-08-03 09:07:41,613][INFO] [0m 1s (1.074 seconds)] After epoch 4:
+[2024-08-03 09:07:41,613][INFO] Loaded 50 points for repair.
+[2024-08-03 09:07:41,613][INFO] Loaded 500 points for attack test.
+[2024-08-03 09:07:41,613][INFO] Loaded 10000 points for training.
+[2024-08-03 09:07:41,613][INFO] Loaded 50 abstractions for training.
+[2024-08-03 09:07:41,691][INFO] min loss 73144.203125, max loss 363983.15625.
+[2024-08-03 09:07:41,692][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0], device='cuda:2', dtype=torch.uint8).
+[2024-08-03 09:07:41,711][INFO] Test set accuracy 0.9658.
+[2024-08-03 09:07:41,711][INFO] repair set accuracy 1.0.
+[2024-08-03 09:07:41,711][INFO] attacked test set accuracy 1.0.
+[2024-08-03 09:07:41,712][INFO] 
+[0m 1s (1.173 seconds)] Starting epoch 5:
+[2024-08-03 09:07:41,875][INFO] [0m 1s (1.336 seconds)] After epoch 5:
+[2024-08-03 09:07:41,875][INFO] Loaded 50 points for repair.
+[2024-08-03 09:07:41,875][INFO] Loaded 500 points for attack test.
+[2024-08-03 09:07:41,875][INFO] Loaded 10000 points for training.
+[2024-08-03 09:07:41,875][INFO] Loaded 50 abstractions for training.
+[2024-08-03 09:07:41,953][INFO] min loss 46810.4453125, max loss 358186.9375.
+[2024-08-03 09:07:41,954][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0], device='cuda:2', dtype=torch.uint8).
+[2024-08-03 09:07:41,973][INFO] Test set accuracy 0.9658.
+[2024-08-03 09:07:41,973][INFO] repair set accuracy 1.0.
+[2024-08-03 09:07:41,973][INFO] attacked test set accuracy 1.0.
+[2024-08-03 09:07:41,973][INFO] 
+[0m 1s (1.435 seconds)] Starting epoch 6:
+[2024-08-03 09:07:42,137][INFO] [0m 1s (1.599 seconds)] After epoch 6:
+[2024-08-03 09:07:42,137][INFO] Loaded 50 points for repair.
+[2024-08-03 09:07:42,137][INFO] Loaded 500 points for attack test.
+[2024-08-03 09:07:42,137][INFO] Loaded 10000 points for training.
+[2024-08-03 09:07:42,138][INFO] Loaded 50 abstractions for training.
+[2024-08-03 09:07:42,216][INFO] min loss 18663.65234375, max loss 349511.0625.
+[2024-08-03 09:07:42,217][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0], device='cuda:2', dtype=torch.uint8).
+[2024-08-03 09:07:42,236][INFO] Test set accuracy 0.9658.
+[2024-08-03 09:07:42,236][INFO] repair set accuracy 1.0.
+[2024-08-03 09:07:42,236][INFO] attacked test set accuracy 1.0.
+[2024-08-03 09:07:42,236][INFO] 
+[0m 1s (1.698 seconds)] Starting epoch 7:
+[2024-08-03 09:07:42,401][INFO] [0m 1s (1.862 seconds)] After epoch 7:
+[2024-08-03 09:07:42,401][INFO] Loaded 50 points for repair.
+[2024-08-03 09:07:42,401][INFO] Loaded 500 points for attack test.
+[2024-08-03 09:07:42,401][INFO] Loaded 10000 points for training.
+[2024-08-03 09:07:42,401][INFO] Loaded 50 abstractions for training.
+[2024-08-03 09:07:42,480][INFO] min loss 3167.23193359375, max loss 339099.25.
+[2024-08-03 09:07:42,480][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0], device='cuda:2', dtype=torch.uint8).
+[2024-08-03 09:07:42,500][INFO] Test set accuracy 0.9658.
+[2024-08-03 09:07:42,500][INFO] repair set accuracy 1.0.
+[2024-08-03 09:07:42,500][INFO] attacked test set accuracy 1.0.
+[2024-08-03 09:07:42,500][INFO] 
+[0m 1s (1.961 seconds)] Starting epoch 8:
+[2024-08-03 09:07:42,665][INFO] [0m 2s (2.127 seconds)] After epoch 8:
+[2024-08-03 09:07:42,665][INFO] Loaded 50 points for repair.
+[2024-08-03 09:07:42,665][INFO] Loaded 500 points for attack test.
+[2024-08-03 09:07:42,665][INFO] Loaded 10000 points for training.
+[2024-08-03 09:07:42,665][INFO] Loaded 50 abstractions for training.
+[2024-08-03 09:07:42,744][INFO] min loss 0.0, max loss 331657.0625.
+[2024-08-03 09:07:42,745][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0], device='cuda:2', dtype=torch.uint8).
+[2024-08-03 09:07:42,764][INFO] Test set accuracy 0.9658.
+[2024-08-03 09:07:42,764][INFO] repair set accuracy 1.0.
+[2024-08-03 09:07:42,764][INFO] attacked test set accuracy 1.0.
+[2024-08-03 09:07:42,764][INFO] 
+[0m 2s (2.226 seconds)] Starting epoch 9:
+[2024-08-03 09:07:42,928][INFO] [0m 2s (2.389 seconds)] After epoch 9:
+[2024-08-03 09:07:42,928][INFO] Loaded 50 points for repair.
+[2024-08-03 09:07:42,928][INFO] Loaded 500 points for attack test.
+[2024-08-03 09:07:42,929][INFO] Loaded 10000 points for training.
+[2024-08-03 09:07:42,929][INFO] Loaded 50 abstractions for training.
+[2024-08-03 09:07:43,006][INFO] min loss 0.0, max loss 324909.34375.
+[2024-08-03 09:07:43,007][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0], device='cuda:2', dtype=torch.uint8).
+[2024-08-03 09:07:43,026][INFO] Test set accuracy 0.9658.
+[2024-08-03 09:07:43,026][INFO] repair set accuracy 1.0.
+[2024-08-03 09:07:43,026][INFO] attacked test set accuracy 1.0.
+[2024-08-03 09:07:43,042][INFO] Accuracy at every epoch: [0.9658, 0.9658, 0.9658, 0.9658, 0.9658, 0.9658, 0.9658, 0.9658, 0.9658, 0.9658]
+[2024-08-03 09:07:43,042][INFO] After 9 epochs / 0m 2s (2.488 seconds), eventually the trained network got certified? False, with 0.9658 accuracy on test set,with 1.0000 accuracy on repair set,with 1.0000 accuracy on attack test set.
+[2024-08-03 09:07:43,043][INFO] final test
+[2024-08-03 09:07:43,044][INFO] --Test set accuracy 0.9658
+[2024-08-03 09:07:43,053][INFO] --Test repair set accuracy 1.0
+[2024-08-03 09:07:43,062][INFO] --Test attack test set accuracy 1.0
+[2024-08-03 09:07:43,062][INFO] training time 2.523653404787183s
+[2024-08-03 09:07:43,070][INFO] === Avg <epochs, train_time, certified, accuracy> for pgd attack networks:
+[2024-08-03 09:07:43,070][INFO] tensor([9.0000, 2.4879, 0.0000, 0.9658])
+[2024-08-03 09:07:43,070][INFO] Total Cost Time: 3.022346580401063s.
+
+
+

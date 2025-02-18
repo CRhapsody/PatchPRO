@@ -1,0 +1,2177 @@
+[2024-11-25 15:59:16,193][INFO] 
+===== resnet18-8-feature-1000-2024-11-25-15-59-16 configuration =====
+  exp_fn: test_goal_repair
+  seed: None
+  dom: deeppoly
+  start_abs_cnt: 500
+  max_abs_cnt: 1000
+  refine_top_k: 50
+  tiny_width: 0.0008
+  lr: 10
+  batch_size: 50
+  min_epochs: 15
+  max_epochs: 100
+  use_scheduler: True
+  no_pts: True
+  no_abs: False
+  no_refine: True
+  quiet: False
+  debug: False
+  net: resnet18
+  no_repair: False
+  repair_number: 1000
+  repair_batchsize: 1
+  repair_location: feature
+  repair_radius: 8
+  loose_bound: 0.0314
+  divided_repair: 10
+  accuracy_loss: <function CifarArgParser.setup_rest.<locals>.ce_loss at 0x7ad895f18820>
+  reset_params: False
+  train_datasize: 10000
+  test_datasize: 10000
+  max_verifier_sec: 300
+  verifier_timeout_as_safe: True
+  sample_amount: 1000
+  repair_batch_size: 1000
+  scheduler_fn: <function ExpArgParser.setup_rest.<locals>.<lambda> at 0x7ad895f350d0>
+===== end of resnet18-8-feature-1000-2024-11-25-15-59-16 configuration =====
+
+[2024-11-25 15:59:16,193][INFO] ===== start repair ======
+[2024-11-25 15:59:16,193][INFO] For pgd attack net
+[2024-11-25 15:59:16,870][INFO] --Test repair set accuracy 0.0
+[2024-11-25 15:59:16,875][INFO] --Test original set accuracy 0.998
+[2024-11-25 15:59:16,930][INFO] --Test test set accuracy 0.8832
+[2024-11-25 15:59:16,984][INFO] --Test attack test set accuracy 0.001
+[2024-11-25 15:59:17,038][INFO] --Test train set accuracy 0.9988
+[2024-11-25 15:59:17,038][INFO] get the feature of the repairset, testset and trainset
+[2024-11-25 15:59:17,271][INFO] sample the datas from the radius of the original data with pgd attack
+[2024-11-25 15:59:17,271][INFO] --sample the 0 part of the originalset
+[2024-11-25 15:59:17,272][INFO] --FGSM sample 1 image
+[2024-11-25 15:59:18,126][INFO] --FGSM sample 2 image
+[2024-11-25 15:59:19,225][INFO] --FGSM sample 3 image
+[2024-11-25 15:59:20,323][INFO] --FGSM sample 4 image
+[2024-11-25 15:59:21,425][INFO] --FGSM sample 5 image
+[2024-11-25 15:59:22,524][INFO] --FGSM sample 6 image
+[2024-11-25 15:59:23,624][INFO] --FGSM sample 7 image
+[2024-11-25 15:59:24,725][INFO] --FGSM sample 8 image
+[2024-11-25 15:59:25,827][INFO] --FGSM sample 9 image
+[2024-11-25 15:59:26,923][INFO] --FGSM sample 10 image
+[2024-11-25 15:59:28,022][INFO] --FGSM sample 11 image
+[2024-11-25 15:59:29,121][INFO] --FGSM sample 12 image
+[2024-11-25 15:59:30,221][INFO] --FGSM sample 13 image
+[2024-11-25 15:59:31,321][INFO] --FGSM sample 14 image
+[2024-11-25 15:59:32,423][INFO] --FGSM sample 15 image
+[2024-11-25 15:59:33,519][INFO] --FGSM sample 16 image
+[2024-11-25 15:59:34,616][INFO] --FGSM sample 17 image
+[2024-11-25 15:59:35,715][INFO] --FGSM sample 18 image
+[2024-11-25 15:59:36,816][INFO] --FGSM sample 19 image
+[2024-11-25 15:59:37,914][INFO] --FGSM sample 20 image
+[2024-11-25 15:59:39,018][INFO] --FGSM sample 21 image
+[2024-11-25 15:59:40,119][INFO] --FGSM sample 22 image
+[2024-11-25 15:59:41,219][INFO] --FGSM sample 23 image
+[2024-11-25 15:59:42,322][INFO] --FGSM sample 24 image
+[2024-11-25 15:59:43,423][INFO] --FGSM sample 25 image
+[2024-11-25 15:59:44,523][INFO] --FGSM sample 26 image
+[2024-11-25 15:59:45,626][INFO] --FGSM sample 27 image
+[2024-11-25 15:59:46,730][INFO] --FGSM sample 28 image
+[2024-11-25 15:59:47,829][INFO] --FGSM sample 29 image
+[2024-11-25 15:59:48,930][INFO] --FGSM sample 30 image
+[2024-11-25 15:59:50,032][INFO] --FGSM sample 31 image
+[2024-11-25 15:59:51,133][INFO] --FGSM sample 32 image
+[2024-11-25 15:59:52,235][INFO] --FGSM sample 33 image
+[2024-11-25 15:59:53,337][INFO] --FGSM sample 34 image
+[2024-11-25 15:59:54,434][INFO] --FGSM sample 35 image
+[2024-11-25 16:00:01,032][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:00:01,033][INFO] --FGSM sample 36 image
+[2024-11-25 16:00:02,140][INFO] --FGSM sample 37 image
+[2024-11-25 16:00:03,239][INFO] --FGSM sample 38 image
+[2024-11-25 16:00:05,440][INFO] --FGSM sample 39 image
+[2024-11-25 16:00:12,032][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:00:12,033][INFO] --FGSM sample 40 image
+[2024-11-25 16:00:13,139][INFO] --FGSM sample 41 image
+[2024-11-25 16:00:14,235][INFO] --FGSM sample 42 image
+[2024-11-25 16:00:15,327][INFO] --FGSM sample 43 image
+[2024-11-25 16:00:22,042][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:00:22,043][INFO] --FGSM sample 44 image
+[2024-11-25 16:00:23,187][INFO] --FGSM sample 45 image
+[2024-11-25 16:00:24,291][INFO] --FGSM sample 46 image
+[2024-11-25 16:00:25,393][INFO] --FGSM sample 47 image
+[2024-11-25 16:00:26,495][INFO] --FGSM sample 48 image
+[2024-11-25 16:00:27,596][INFO] --FGSM sample 49 image
+[2024-11-25 16:00:28,695][INFO] --FGSM sample 50 image
+[2024-11-25 16:00:29,789][INFO] --FGSM sample 51 image
+[2024-11-25 16:00:30,877][INFO] --FGSM sample 52 image
+[2024-11-25 16:00:31,967][INFO] --FGSM sample 53 image
+[2024-11-25 16:00:33,065][INFO] --FGSM sample 54 image
+[2024-11-25 16:00:34,142][INFO] --FGSM sample 55 image
+[2024-11-25 16:00:35,217][INFO] --FGSM sample 56 image
+[2024-11-25 16:00:36,307][INFO] --FGSM sample 57 image
+[2024-11-25 16:00:42,905][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:00:42,905][INFO] --FGSM sample 58 image
+[2024-11-25 16:00:44,020][INFO] --FGSM sample 59 image
+[2024-11-25 16:00:45,124][INFO] --FGSM sample 60 image
+[2024-11-25 16:00:46,216][INFO] --FGSM sample 61 image
+[2024-11-25 16:00:47,327][INFO] --FGSM sample 62 image
+[2024-11-25 16:00:49,543][INFO] --FGSM sample 63 image
+[2024-11-25 16:00:56,226][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:00:56,226][INFO] --FGSM sample 64 image
+[2024-11-25 16:00:57,350][INFO] --FGSM sample 65 image
+[2024-11-25 16:00:58,435][INFO] --FGSM sample 66 image
+[2024-11-25 16:00:59,534][INFO] --FGSM sample 67 image
+[2024-11-25 16:01:00,633][INFO] --FGSM sample 68 image
+[2024-11-25 16:01:01,735][INFO] --FGSM sample 69 image
+[2024-11-25 16:01:02,835][INFO] --FGSM sample 70 image
+[2024-11-25 16:01:03,942][INFO] --FGSM sample 71 image
+[2024-11-25 16:01:10,549][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:01:10,550][INFO] --FGSM sample 72 image
+[2024-11-25 16:01:11,661][INFO] --FGSM sample 73 image
+[2024-11-25 16:01:12,766][INFO] --FGSM sample 74 image
+[2024-11-25 16:01:13,867][INFO] --FGSM sample 75 image
+[2024-11-25 16:01:14,969][INFO] --FGSM sample 76 image
+[2024-11-25 16:01:16,074][INFO] --FGSM sample 77 image
+[2024-11-25 16:01:17,178][INFO] --FGSM sample 78 image
+[2024-11-25 16:01:18,281][INFO] --FGSM sample 79 image
+[2024-11-25 16:01:19,383][INFO] --FGSM sample 80 image
+[2024-11-25 16:01:20,479][INFO] --FGSM sample 81 image
+[2024-11-25 16:01:21,585][INFO] --FGSM sample 82 image
+[2024-11-25 16:01:22,687][INFO] --FGSM sample 83 image
+[2024-11-25 16:01:23,790][INFO] --FGSM sample 84 image
+[2024-11-25 16:01:24,895][INFO] --FGSM sample 85 image
+[2024-11-25 16:01:25,995][INFO] --FGSM sample 86 image
+[2024-11-25 16:01:27,099][INFO] --FGSM sample 87 image
+[2024-11-25 16:01:28,202][INFO] --FGSM sample 88 image
+[2024-11-25 16:01:29,300][INFO] --FGSM sample 89 image
+[2024-11-25 16:01:30,386][INFO] --FGSM sample 90 image
+[2024-11-25 16:01:31,483][INFO] --FGSM sample 91 image
+[2024-11-25 16:01:32,581][INFO] --FGSM sample 92 image
+[2024-11-25 16:01:33,663][INFO] --FGSM sample 93 image
+[2024-11-25 16:01:34,760][INFO] --FGSM sample 94 image
+[2024-11-25 16:01:35,847][INFO] --FGSM sample 95 image
+[2024-11-25 16:01:36,948][INFO] --FGSM sample 96 image
+[2024-11-25 16:01:38,062][INFO] --FGSM sample 97 image
+[2024-11-25 16:01:39,146][INFO] --FGSM sample 98 image
+[2024-11-25 16:01:40,248][INFO] --FGSM sample 99 image
+[2024-11-25 16:01:41,364][INFO] --FGSM sample 100 image
+[2024-11-25 16:01:42,789][INFO] --get the 0 part of the feature_lb and feature_ub
+[2024-11-25 16:01:42,789][INFO] --sample the 1 part of the originalset
+[2024-11-25 16:01:42,790][INFO] --FGSM sample 1 image
+[2024-11-25 16:01:43,754][INFO] --FGSM sample 2 image
+[2024-11-25 16:01:44,855][INFO] --FGSM sample 3 image
+[2024-11-25 16:01:45,940][INFO] --FGSM sample 4 image
+[2024-11-25 16:01:47,035][INFO] --FGSM sample 5 image
+[2024-11-25 16:01:48,133][INFO] --FGSM sample 6 image
+[2024-11-25 16:01:49,239][INFO] --FGSM sample 7 image
+[2024-11-25 16:01:50,351][INFO] --FGSM sample 8 image
+[2024-11-25 16:01:57,011][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:01:57,011][INFO] --FGSM sample 9 image
+[2024-11-25 16:01:58,103][INFO] --FGSM sample 10 image
+[2024-11-25 16:01:59,210][INFO] --FGSM sample 11 image
+[2024-11-25 16:02:00,305][INFO] --FGSM sample 12 image
+[2024-11-25 16:02:01,408][INFO] --FGSM sample 13 image
+[2024-11-25 16:02:02,510][INFO] --FGSM sample 14 image
+[2024-11-25 16:02:03,609][INFO] --FGSM sample 15 image
+[2024-11-25 16:02:04,708][INFO] --FGSM sample 16 image
+[2024-11-25 16:02:05,809][INFO] --FGSM sample 17 image
+[2024-11-25 16:02:06,922][INFO] --FGSM sample 18 image
+[2024-11-25 16:02:08,030][INFO] --FGSM sample 19 image
+[2024-11-25 16:02:09,107][INFO] --FGSM sample 20 image
+[2024-11-25 16:02:10,202][INFO] --FGSM sample 21 image
+[2024-11-25 16:02:11,279][INFO] --FGSM sample 22 image
+[2024-11-25 16:02:12,350][INFO] --FGSM sample 23 image
+[2024-11-25 16:02:13,426][INFO] --FGSM sample 24 image
+[2024-11-25 16:02:14,506][INFO] --FGSM sample 25 image
+[2024-11-25 16:02:15,584][INFO] --FGSM sample 26 image
+[2024-11-25 16:02:22,170][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:02:22,171][INFO] --FGSM sample 27 image
+[2024-11-25 16:02:23,287][INFO] --FGSM sample 28 image
+[2024-11-25 16:02:24,363][INFO] --FGSM sample 29 image
+[2024-11-25 16:02:25,436][INFO] --FGSM sample 30 image
+[2024-11-25 16:02:26,513][INFO] --FGSM sample 31 image
+[2024-11-25 16:02:27,588][INFO] --FGSM sample 32 image
+[2024-11-25 16:02:28,657][INFO] --FGSM sample 33 image
+[2024-11-25 16:02:29,759][INFO] --FGSM sample 34 image
+[2024-11-25 16:02:30,859][INFO] --FGSM sample 35 image
+[2024-11-25 16:02:31,936][INFO] --FGSM sample 36 image
+[2024-11-25 16:02:33,027][INFO] --FGSM sample 37 image
+[2024-11-25 16:02:34,141][INFO] --FGSM sample 38 image
+[2024-11-25 16:02:35,222][INFO] --FGSM sample 39 image
+[2024-11-25 16:02:36,308][INFO] --FGSM sample 40 image
+[2024-11-25 16:02:37,423][INFO] --FGSM sample 41 image
+[2024-11-25 16:02:38,531][INFO] --FGSM sample 42 image
+[2024-11-25 16:02:39,613][INFO] --FGSM sample 43 image
+[2024-11-25 16:02:40,723][INFO] --FGSM sample 44 image
+[2024-11-25 16:02:41,810][INFO] --FGSM sample 45 image
+[2024-11-25 16:02:42,890][INFO] --FGSM sample 46 image
+[2024-11-25 16:02:43,990][INFO] --FGSM sample 47 image
+[2024-11-25 16:02:45,088][INFO] --FGSM sample 48 image
+[2024-11-25 16:02:46,171][INFO] --FGSM sample 49 image
+[2024-11-25 16:02:47,270][INFO] --FGSM sample 50 image
+[2024-11-25 16:02:48,352][INFO] --FGSM sample 51 image
+[2024-11-25 16:02:49,452][INFO] --FGSM sample 52 image
+[2024-11-25 16:02:50,539][INFO] --FGSM sample 53 image
+[2024-11-25 16:02:51,630][INFO] --FGSM sample 54 image
+[2024-11-25 16:02:52,730][INFO] --FGSM sample 55 image
+[2024-11-25 16:02:53,832][INFO] --FGSM sample 56 image
+[2024-11-25 16:02:54,914][INFO] --FGSM sample 57 image
+[2024-11-25 16:02:56,011][INFO] --FGSM sample 58 image
+[2024-11-25 16:02:57,111][INFO] --FGSM sample 59 image
+[2024-11-25 16:02:58,210][INFO] --FGSM sample 60 image
+[2024-11-25 16:02:59,317][INFO] --FGSM sample 61 image
+[2024-11-25 16:03:00,417][INFO] --FGSM sample 62 image
+[2024-11-25 16:03:01,529][INFO] --FGSM sample 63 image
+[2024-11-25 16:03:02,639][INFO] --FGSM sample 64 image
+[2024-11-25 16:03:03,724][INFO] --FGSM sample 65 image
+[2024-11-25 16:03:04,835][INFO] --FGSM sample 66 image
+[2024-11-25 16:03:05,941][INFO] --FGSM sample 67 image
+[2024-11-25 16:03:12,623][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:03:12,623][INFO] --FGSM sample 68 image
+[2024-11-25 16:03:19,313][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:03:19,313][INFO] --FGSM sample 69 image
+[2024-11-25 16:03:20,439][INFO] --FGSM sample 70 image
+[2024-11-25 16:03:21,546][INFO] --FGSM sample 71 image
+[2024-11-25 16:03:22,653][INFO] --FGSM sample 72 image
+[2024-11-25 16:03:23,751][INFO] --FGSM sample 73 image
+[2024-11-25 16:03:24,864][INFO] --FGSM sample 74 image
+[2024-11-25 16:03:25,972][INFO] --FGSM sample 75 image
+[2024-11-25 16:03:27,055][INFO] --FGSM sample 76 image
+[2024-11-25 16:03:28,156][INFO] --FGSM sample 77 image
+[2024-11-25 16:03:29,239][INFO] --FGSM sample 78 image
+[2024-11-25 16:03:30,335][INFO] --FGSM sample 79 image
+[2024-11-25 16:03:31,450][INFO] --FGSM sample 80 image
+[2024-11-25 16:03:38,131][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:03:38,131][INFO] --FGSM sample 81 image
+[2024-11-25 16:03:39,252][INFO] --FGSM sample 82 image
+[2024-11-25 16:03:40,350][INFO] --FGSM sample 83 image
+[2024-11-25 16:03:41,452][INFO] --FGSM sample 84 image
+[2024-11-25 16:03:42,538][INFO] --FGSM sample 85 image
+[2024-11-25 16:03:43,633][INFO] --FGSM sample 86 image
+[2024-11-25 16:03:44,730][INFO] --FGSM sample 87 image
+[2024-11-25 16:03:45,834][INFO] --FGSM sample 88 image
+[2024-11-25 16:03:46,940][INFO] --FGSM sample 89 image
+[2024-11-25 16:03:51,402][INFO] --FGSM sample 90 image
+[2024-11-25 16:03:52,487][INFO] --FGSM sample 91 image
+[2024-11-25 16:03:53,571][INFO] --FGSM sample 92 image
+[2024-11-25 16:03:54,666][INFO] --FGSM sample 93 image
+[2024-11-25 16:03:55,782][INFO] --FGSM sample 94 image
+[2024-11-25 16:03:56,888][INFO] --FGSM sample 95 image
+[2024-11-25 16:03:57,991][INFO] --FGSM sample 96 image
+[2024-11-25 16:03:59,106][INFO] --FGSM sample 97 image
+[2024-11-25 16:04:00,209][INFO] --FGSM sample 98 image
+[2024-11-25 16:04:01,314][INFO] --FGSM sample 99 image
+[2024-11-25 16:04:02,414][INFO] --FGSM sample 100 image
+[2024-11-25 16:04:09,103][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:04:09,455][INFO] --get the 1 part of the feature_lb and feature_ub
+[2024-11-25 16:04:09,455][INFO] --sample the 2 part of the originalset
+[2024-11-25 16:04:09,455][INFO] --FGSM sample 1 image
+[2024-11-25 16:04:10,464][INFO] --FGSM sample 2 image
+[2024-11-25 16:04:11,566][INFO] --FGSM sample 3 image
+[2024-11-25 16:04:12,672][INFO] --FGSM sample 4 image
+[2024-11-25 16:04:13,770][INFO] --FGSM sample 5 image
+[2024-11-25 16:04:14,857][INFO] --FGSM sample 6 image
+[2024-11-25 16:04:15,968][INFO] --FGSM sample 7 image
+[2024-11-25 16:04:17,075][INFO] --FGSM sample 8 image
+[2024-11-25 16:04:18,170][INFO] --FGSM sample 9 image
+[2024-11-25 16:04:19,271][INFO] --FGSM sample 10 image
+[2024-11-25 16:04:20,371][INFO] --FGSM sample 11 image
+[2024-11-25 16:04:21,447][INFO] --FGSM sample 12 image
+[2024-11-25 16:04:22,521][INFO] --FGSM sample 13 image
+[2024-11-25 16:04:23,598][INFO] --FGSM sample 14 image
+[2024-11-25 16:04:24,693][INFO] --FGSM sample 15 image
+[2024-11-25 16:04:25,772][INFO] --FGSM sample 16 image
+[2024-11-25 16:04:26,870][INFO] --FGSM sample 17 image
+[2024-11-25 16:04:27,945][INFO] --FGSM sample 18 image
+[2024-11-25 16:04:32,358][INFO] --FGSM sample 19 image
+[2024-11-25 16:04:33,433][INFO] --FGSM sample 20 image
+[2024-11-25 16:04:34,517][INFO] --FGSM sample 21 image
+[2024-11-25 16:04:35,594][INFO] --FGSM sample 22 image
+[2024-11-25 16:04:36,670][INFO] --FGSM sample 23 image
+[2024-11-25 16:04:37,745][INFO] --FGSM sample 24 image
+[2024-11-25 16:04:38,816][INFO] --FGSM sample 25 image
+[2024-11-25 16:04:39,891][INFO] --FGSM sample 26 image
+[2024-11-25 16:04:40,967][INFO] --FGSM sample 27 image
+[2024-11-25 16:04:42,041][INFO] --FGSM sample 28 image
+[2024-11-25 16:04:43,129][INFO] --FGSM sample 29 image
+[2024-11-25 16:04:44,206][INFO] --FGSM sample 30 image
+[2024-11-25 16:04:45,273][INFO] --FGSM sample 31 image
+[2024-11-25 16:04:46,347][INFO] --FGSM sample 32 image
+[2024-11-25 16:04:47,417][INFO] --FGSM sample 33 image
+[2024-11-25 16:04:48,490][INFO] --FGSM sample 34 image
+[2024-11-25 16:04:49,565][INFO] --FGSM sample 35 image
+[2024-11-25 16:04:50,642][INFO] --FGSM sample 36 image
+[2024-11-25 16:04:51,719][INFO] --FGSM sample 37 image
+[2024-11-25 16:04:58,330][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:04:58,330][INFO] --FGSM sample 38 image
+[2024-11-25 16:04:59,422][INFO] --FGSM sample 39 image
+[2024-11-25 16:05:00,493][INFO] --FGSM sample 40 image
+[2024-11-25 16:05:01,569][INFO] --FGSM sample 41 image
+[2024-11-25 16:05:02,663][INFO] --FGSM sample 42 image
+[2024-11-25 16:05:03,740][INFO] --FGSM sample 43 image
+[2024-11-25 16:05:04,805][INFO] --FGSM sample 44 image
+[2024-11-25 16:05:05,903][INFO] --FGSM sample 45 image
+[2024-11-25 16:05:06,981][INFO] --FGSM sample 46 image
+[2024-11-25 16:05:08,054][INFO] --FGSM sample 47 image
+[2024-11-25 16:05:09,143][INFO] --FGSM sample 48 image
+[2024-11-25 16:05:10,222][INFO] --FGSM sample 49 image
+[2024-11-25 16:05:11,297][INFO] --FGSM sample 50 image
+[2024-11-25 16:05:12,372][INFO] --FGSM sample 51 image
+[2024-11-25 16:05:13,459][INFO] --FGSM sample 52 image
+[2024-11-25 16:05:14,536][INFO] --FGSM sample 53 image
+[2024-11-25 16:05:15,610][INFO] --FGSM sample 54 image
+[2024-11-25 16:05:16,682][INFO] --FGSM sample 55 image
+[2024-11-25 16:05:23,278][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:05:23,279][INFO] --FGSM sample 56 image
+[2024-11-25 16:05:26,581][INFO] --FGSM sample 57 image
+[2024-11-25 16:05:27,687][INFO] --FGSM sample 58 image
+[2024-11-25 16:05:28,766][INFO] --FGSM sample 59 image
+[2024-11-25 16:05:29,841][INFO] --FGSM sample 60 image
+[2024-11-25 16:05:30,918][INFO] --FGSM sample 61 image
+[2024-11-25 16:05:31,993][INFO] --FGSM sample 62 image
+[2024-11-25 16:05:33,083][INFO] --FGSM sample 63 image
+[2024-11-25 16:05:39,649][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:05:39,649][INFO] --FGSM sample 64 image
+[2024-11-25 16:05:40,769][INFO] --FGSM sample 65 image
+[2024-11-25 16:05:41,848][INFO] --FGSM sample 66 image
+[2024-11-25 16:05:42,943][INFO] --FGSM sample 67 image
+[2024-11-25 16:05:44,028][INFO] --FGSM sample 68 image
+[2024-11-25 16:05:45,107][INFO] --FGSM sample 69 image
+[2024-11-25 16:05:46,205][INFO] --FGSM sample 70 image
+[2024-11-25 16:05:47,284][INFO] --FGSM sample 71 image
+[2024-11-25 16:05:48,360][INFO] --FGSM sample 72 image
+[2024-11-25 16:05:49,461][INFO] --FGSM sample 73 image
+[2024-11-25 16:05:50,542][INFO] --FGSM sample 74 image
+[2024-11-25 16:05:51,643][INFO] --FGSM sample 75 image
+[2024-11-25 16:05:52,742][INFO] --FGSM sample 76 image
+[2024-11-25 16:05:53,827][INFO] --FGSM sample 77 image
+[2024-11-25 16:05:54,924][INFO] --FGSM sample 78 image
+[2024-11-25 16:05:56,024][INFO] --FGSM sample 79 image
+[2024-11-25 16:05:57,122][INFO] --FGSM sample 80 image
+[2024-11-25 16:05:58,198][INFO] --FGSM sample 81 image
+[2024-11-25 16:05:59,274][INFO] --FGSM sample 82 image
+[2024-11-25 16:06:00,363][INFO] --FGSM sample 83 image
+[2024-11-25 16:06:01,441][INFO] --FGSM sample 84 image
+[2024-11-25 16:06:02,517][INFO] --FGSM sample 85 image
+[2024-11-25 16:06:03,556][INFO] --FGSM sample 86 image
+[2024-11-25 16:06:04,635][INFO] --FGSM sample 87 image
+[2024-11-25 16:06:05,714][INFO] --FGSM sample 88 image
+[2024-11-25 16:06:06,798][INFO] --FGSM sample 89 image
+[2024-11-25 16:06:07,877][INFO] --FGSM sample 90 image
+[2024-11-25 16:06:08,954][INFO] --FGSM sample 91 image
+[2024-11-25 16:06:10,038][INFO] --FGSM sample 92 image
+[2024-11-25 16:06:11,137][INFO] --FGSM sample 93 image
+[2024-11-25 16:06:12,237][INFO] --FGSM sample 94 image
+[2024-11-25 16:06:13,329][INFO] --FGSM sample 95 image
+[2024-11-25 16:06:14,426][INFO] --FGSM sample 96 image
+[2024-11-25 16:06:15,522][INFO] --FGSM sample 97 image
+[2024-11-25 16:06:16,593][INFO] --FGSM sample 98 image
+[2024-11-25 16:06:17,693][INFO] --FGSM sample 99 image
+[2024-11-25 16:06:18,791][INFO] --FGSM sample 100 image
+[2024-11-25 16:06:20,248][INFO] --get the 2 part of the feature_lb and feature_ub
+[2024-11-25 16:06:20,249][INFO] --sample the 3 part of the originalset
+[2024-11-25 16:06:20,249][INFO] --FGSM sample 1 image
+[2024-11-25 16:06:21,264][INFO] --FGSM sample 2 image
+[2024-11-25 16:06:22,353][INFO] --FGSM sample 3 image
+[2024-11-25 16:06:23,446][INFO] --FGSM sample 4 image
+[2024-11-25 16:06:24,539][INFO] --FGSM sample 5 image
+[2024-11-25 16:06:25,632][INFO] --FGSM sample 6 image
+[2024-11-25 16:06:26,725][INFO] --FGSM sample 7 image
+[2024-11-25 16:06:27,814][INFO] --FGSM sample 8 image
+[2024-11-25 16:06:28,900][INFO] --FGSM sample 9 image
+[2024-11-25 16:06:29,992][INFO] --FGSM sample 10 image
+[2024-11-25 16:06:31,085][INFO] --FGSM sample 11 image
+[2024-11-25 16:06:37,632][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:06:37,633][INFO] --FGSM sample 12 image
+[2024-11-25 16:06:38,721][INFO] --FGSM sample 13 image
+[2024-11-25 16:06:39,819][INFO] --FGSM sample 14 image
+[2024-11-25 16:06:40,915][INFO] --FGSM sample 15 image
+[2024-11-25 16:06:42,010][INFO] --FGSM sample 16 image
+[2024-11-25 16:06:43,104][INFO] --FGSM sample 17 image
+[2024-11-25 16:06:44,197][INFO] --FGSM sample 18 image
+[2024-11-25 16:06:45,294][INFO] --FGSM sample 19 image
+[2024-11-25 16:06:46,388][INFO] --FGSM sample 20 image
+[2024-11-25 16:06:47,485][INFO] --FGSM sample 21 image
+[2024-11-25 16:06:48,579][INFO] --FGSM sample 22 image
+[2024-11-25 16:06:49,674][INFO] --FGSM sample 23 image
+[2024-11-25 16:06:50,770][INFO] --FGSM sample 24 image
+[2024-11-25 16:06:51,860][INFO] --FGSM sample 25 image
+[2024-11-25 16:06:52,956][INFO] --FGSM sample 26 image
+[2024-11-25 16:06:59,520][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:06:59,520][INFO] --FGSM sample 27 image
+[2024-11-25 16:07:00,622][INFO] --FGSM sample 28 image
+[2024-11-25 16:07:01,719][INFO] --FGSM sample 29 image
+[2024-11-25 16:07:02,815][INFO] --FGSM sample 30 image
+[2024-11-25 16:07:03,913][INFO] --FGSM sample 31 image
+[2024-11-25 16:07:05,006][INFO] --FGSM sample 32 image
+[2024-11-25 16:07:06,100][INFO] --FGSM sample 33 image
+[2024-11-25 16:07:07,197][INFO] --FGSM sample 34 image
+[2024-11-25 16:07:08,291][INFO] --FGSM sample 35 image
+[2024-11-25 16:07:09,389][INFO] --FGSM sample 36 image
+[2024-11-25 16:07:10,485][INFO] --FGSM sample 37 image
+[2024-11-25 16:07:11,582][INFO] --FGSM sample 38 image
+[2024-11-25 16:07:12,680][INFO] --FGSM sample 39 image
+[2024-11-25 16:07:13,780][INFO] --FGSM sample 40 image
+[2024-11-25 16:07:14,874][INFO] --FGSM sample 41 image
+[2024-11-25 16:07:15,968][INFO] --FGSM sample 42 image
+[2024-11-25 16:07:17,064][INFO] --FGSM sample 43 image
+[2024-11-25 16:07:23,620][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:07:23,620][INFO] --FGSM sample 44 image
+[2024-11-25 16:07:24,722][INFO] --FGSM sample 45 image
+[2024-11-25 16:07:31,357][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:07:31,358][INFO] --FGSM sample 46 image
+[2024-11-25 16:07:32,459][INFO] --FGSM sample 47 image
+[2024-11-25 16:07:33,565][INFO] --FGSM sample 48 image
+[2024-11-25 16:07:34,659][INFO] --FGSM sample 49 image
+[2024-11-25 16:07:35,754][INFO] --FGSM sample 50 image
+[2024-11-25 16:07:36,852][INFO] --FGSM sample 51 image
+[2024-11-25 16:07:37,945][INFO] --FGSM sample 52 image
+[2024-11-25 16:07:39,042][INFO] --FGSM sample 53 image
+[2024-11-25 16:07:45,597][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:07:45,598][INFO] --FGSM sample 54 image
+[2024-11-25 16:07:46,699][INFO] --FGSM sample 55 image
+[2024-11-25 16:07:47,797][INFO] --FGSM sample 56 image
+[2024-11-25 16:07:48,890][INFO] --FGSM sample 57 image
+[2024-11-25 16:07:49,987][INFO] --FGSM sample 58 image
+[2024-11-25 16:07:51,080][INFO] --FGSM sample 59 image
+[2024-11-25 16:07:52,179][INFO] --FGSM sample 60 image
+[2024-11-25 16:07:53,275][INFO] --FGSM sample 61 image
+[2024-11-25 16:07:54,372][INFO] --FGSM sample 62 image
+[2024-11-25 16:08:00,937][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:08:00,938][INFO] --FGSM sample 63 image
+[2024-11-25 16:08:02,038][INFO] --FGSM sample 64 image
+[2024-11-25 16:08:03,129][INFO] --FGSM sample 65 image
+[2024-11-25 16:08:04,229][INFO] --FGSM sample 66 image
+[2024-11-25 16:08:05,326][INFO] --FGSM sample 67 image
+[2024-11-25 16:08:06,422][INFO] --FGSM sample 68 image
+[2024-11-25 16:08:07,520][INFO] --FGSM sample 69 image
+[2024-11-25 16:08:08,610][INFO] --FGSM sample 70 image
+[2024-11-25 16:08:15,179][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:08:15,179][INFO] --FGSM sample 71 image
+[2024-11-25 16:08:16,282][INFO] --FGSM sample 72 image
+[2024-11-25 16:08:17,380][INFO] --FGSM sample 73 image
+[2024-11-25 16:08:18,472][INFO] --FGSM sample 74 image
+[2024-11-25 16:08:19,566][INFO] --FGSM sample 75 image
+[2024-11-25 16:08:20,664][INFO] --FGSM sample 76 image
+[2024-11-25 16:08:21,762][INFO] --FGSM sample 77 image
+[2024-11-25 16:08:22,852][INFO] --FGSM sample 78 image
+[2024-11-25 16:08:29,422][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:08:29,422][INFO] --FGSM sample 79 image
+[2024-11-25 16:08:30,525][INFO] --FGSM sample 80 image
+[2024-11-25 16:08:31,621][INFO] --FGSM sample 81 image
+[2024-11-25 16:08:32,721][INFO] --FGSM sample 82 image
+[2024-11-25 16:08:33,822][INFO] --FGSM sample 83 image
+[2024-11-25 16:08:34,915][INFO] --FGSM sample 84 image
+[2024-11-25 16:08:36,004][INFO] --FGSM sample 85 image
+[2024-11-25 16:08:37,100][INFO] --FGSM sample 86 image
+[2024-11-25 16:08:38,197][INFO] --FGSM sample 87 image
+[2024-11-25 16:08:39,286][INFO] --FGSM sample 88 image
+[2024-11-25 16:08:40,387][INFO] --FGSM sample 89 image
+[2024-11-25 16:08:41,484][INFO] --FGSM sample 90 image
+[2024-11-25 16:08:43,675][INFO] --FGSM sample 91 image
+[2024-11-25 16:08:44,772][INFO] --FGSM sample 92 image
+[2024-11-25 16:08:45,863][INFO] --FGSM sample 93 image
+[2024-11-25 16:08:46,960][INFO] --FGSM sample 94 image
+[2024-11-25 16:08:48,062][INFO] --FGSM sample 95 image
+[2024-11-25 16:08:49,162][INFO] --FGSM sample 96 image
+[2024-11-25 16:08:50,260][INFO] --FGSM sample 97 image
+[2024-11-25 16:08:56,832][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:08:56,832][INFO] --FGSM sample 98 image
+[2024-11-25 16:08:57,935][INFO] --FGSM sample 99 image
+[2024-11-25 16:08:59,027][INFO] --FGSM sample 100 image
+[2024-11-25 16:09:00,488][INFO] --get the 3 part of the feature_lb and feature_ub
+[2024-11-25 16:09:00,488][INFO] --sample the 4 part of the originalset
+[2024-11-25 16:09:00,489][INFO] --FGSM sample 1 image
+[2024-11-25 16:09:01,505][INFO] --FGSM sample 2 image
+[2024-11-25 16:09:02,599][INFO] --FGSM sample 3 image
+[2024-11-25 16:09:03,691][INFO] --FGSM sample 4 image
+[2024-11-25 16:09:04,785][INFO] --FGSM sample 5 image
+[2024-11-25 16:09:05,882][INFO] --FGSM sample 6 image
+[2024-11-25 16:09:12,427][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:09:12,427][INFO] --FGSM sample 7 image
+[2024-11-25 16:09:13,526][INFO] --FGSM sample 8 image
+[2024-11-25 16:09:14,620][INFO] --FGSM sample 9 image
+[2024-11-25 16:09:15,716][INFO] --FGSM sample 10 image
+[2024-11-25 16:09:16,811][INFO] --FGSM sample 11 image
+[2024-11-25 16:09:17,906][INFO] --FGSM sample 12 image
+[2024-11-25 16:09:24,454][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:09:24,454][INFO] --FGSM sample 13 image
+[2024-11-25 16:09:25,554][INFO] --FGSM sample 14 image
+[2024-11-25 16:09:26,644][INFO] --FGSM sample 15 image
+[2024-11-25 16:09:27,736][INFO] --FGSM sample 16 image
+[2024-11-25 16:09:28,825][INFO] --FGSM sample 17 image
+[2024-11-25 16:09:29,917][INFO] --FGSM sample 18 image
+[2024-11-25 16:09:31,013][INFO] --FGSM sample 19 image
+[2024-11-25 16:09:32,103][INFO] --FGSM sample 20 image
+[2024-11-25 16:09:33,189][INFO] --FGSM sample 21 image
+[2024-11-25 16:09:34,287][INFO] --FGSM sample 22 image
+[2024-11-25 16:09:35,381][INFO] --FGSM sample 23 image
+[2024-11-25 16:09:36,478][INFO] --FGSM sample 24 image
+[2024-11-25 16:09:37,566][INFO] --FGSM sample 25 image
+[2024-11-25 16:09:44,128][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:09:44,128][INFO] --FGSM sample 26 image
+[2024-11-25 16:09:45,233][INFO] --FGSM sample 27 image
+[2024-11-25 16:09:46,325][INFO] --FGSM sample 28 image
+[2024-11-25 16:09:47,424][INFO] --FGSM sample 29 image
+[2024-11-25 16:09:48,516][INFO] --FGSM sample 30 image
+[2024-11-25 16:09:55,071][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:09:55,072][INFO] --FGSM sample 31 image
+[2024-11-25 16:09:56,172][INFO] --FGSM sample 32 image
+[2024-11-25 16:09:57,272][INFO] --FGSM sample 33 image
+[2024-11-25 16:10:03,830][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:10:03,830][INFO] --FGSM sample 34 image
+[2024-11-25 16:10:04,931][INFO] --FGSM sample 35 image
+[2024-11-25 16:10:06,026][INFO] --FGSM sample 36 image
+[2024-11-25 16:10:07,125][INFO] --FGSM sample 37 image
+[2024-11-25 16:10:08,220][INFO] --FGSM sample 38 image
+[2024-11-25 16:10:09,317][INFO] --FGSM sample 39 image
+[2024-11-25 16:10:15,936][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:10:15,936][INFO] --FGSM sample 40 image
+[2024-11-25 16:10:17,077][INFO] --FGSM sample 41 image
+[2024-11-25 16:10:18,175][INFO] --FGSM sample 42 image
+[2024-11-25 16:10:19,274][INFO] --FGSM sample 43 image
+[2024-11-25 16:10:20,370][INFO] --FGSM sample 44 image
+[2024-11-25 16:10:21,467][INFO] --FGSM sample 45 image
+[2024-11-25 16:10:22,558][INFO] --FGSM sample 46 image
+[2024-11-25 16:10:23,657][INFO] --FGSM sample 47 image
+[2024-11-25 16:10:24,750][INFO] --FGSM sample 48 image
+[2024-11-25 16:10:25,846][INFO] --FGSM sample 49 image
+[2024-11-25 16:10:26,939][INFO] --FGSM sample 50 image
+[2024-11-25 16:10:28,033][INFO] --FGSM sample 51 image
+[2024-11-25 16:10:29,131][INFO] --FGSM sample 52 image
+[2024-11-25 16:10:30,219][INFO] --FGSM sample 53 image
+[2024-11-25 16:10:31,315][INFO] --FGSM sample 54 image
+[2024-11-25 16:10:32,400][INFO] --FGSM sample 55 image
+[2024-11-25 16:10:33,495][INFO] --FGSM sample 56 image
+[2024-11-25 16:10:34,591][INFO] --FGSM sample 57 image
+[2024-11-25 16:10:41,154][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:10:41,154][INFO] --FGSM sample 58 image
+[2024-11-25 16:10:42,243][INFO] --FGSM sample 59 image
+[2024-11-25 16:10:43,344][INFO] --FGSM sample 60 image
+[2024-11-25 16:10:44,435][INFO] --FGSM sample 61 image
+[2024-11-25 16:10:45,534][INFO] --FGSM sample 62 image
+[2024-11-25 16:10:46,624][INFO] --FGSM sample 63 image
+[2024-11-25 16:10:47,702][INFO] --FGSM sample 64 image
+[2024-11-25 16:10:49,911][INFO] --FGSM sample 65 image
+[2024-11-25 16:10:51,001][INFO] --FGSM sample 66 image
+[2024-11-25 16:10:52,082][INFO] --FGSM sample 67 image
+[2024-11-25 16:10:53,159][INFO] --FGSM sample 68 image
+[2024-11-25 16:10:54,234][INFO] --FGSM sample 69 image
+[2024-11-25 16:10:55,322][INFO] --FGSM sample 70 image
+[2024-11-25 16:10:56,419][INFO] --FGSM sample 71 image
+[2024-11-25 16:10:57,519][INFO] --FGSM sample 72 image
+[2024-11-25 16:10:58,592][INFO] --FGSM sample 73 image
+[2024-11-25 16:10:59,680][INFO] --FGSM sample 74 image
+[2024-11-25 16:11:00,759][INFO] --FGSM sample 75 image
+[2024-11-25 16:11:01,842][INFO] --FGSM sample 76 image
+[2024-11-25 16:11:02,937][INFO] --FGSM sample 77 image
+[2024-11-25 16:11:04,038][INFO] --FGSM sample 78 image
+[2024-11-25 16:11:05,118][INFO] --FGSM sample 79 image
+[2024-11-25 16:11:06,194][INFO] --FGSM sample 80 image
+[2024-11-25 16:11:07,268][INFO] --FGSM sample 81 image
+[2024-11-25 16:11:08,358][INFO] --FGSM sample 82 image
+[2024-11-25 16:11:09,437][INFO] --FGSM sample 83 image
+[2024-11-25 16:11:10,536][INFO] --FGSM sample 84 image
+[2024-11-25 16:11:11,615][INFO] --FGSM sample 85 image
+[2024-11-25 16:11:12,693][INFO] --FGSM sample 86 image
+[2024-11-25 16:11:13,770][INFO] --FGSM sample 87 image
+[2024-11-25 16:11:14,847][INFO] --FGSM sample 88 image
+[2024-11-25 16:11:15,925][INFO] --FGSM sample 89 image
+[2024-11-25 16:11:17,002][INFO] --FGSM sample 90 image
+[2024-11-25 16:11:18,074][INFO] --FGSM sample 91 image
+[2024-11-25 16:11:19,150][INFO] --FGSM sample 92 image
+[2024-11-25 16:11:20,255][INFO] --FGSM sample 93 image
+[2024-11-25 16:11:21,337][INFO] --FGSM sample 94 image
+[2024-11-25 16:11:22,416][INFO] --FGSM sample 95 image
+[2024-11-25 16:11:23,494][INFO] --FGSM sample 96 image
+[2024-11-25 16:11:24,575][INFO] --FGSM sample 97 image
+[2024-11-25 16:11:25,671][INFO] --FGSM sample 98 image
+[2024-11-25 16:11:26,753][INFO] --FGSM sample 99 image
+[2024-11-25 16:11:27,830][INFO] --FGSM sample 100 image
+[2024-11-25 16:11:29,256][INFO] --get the 4 part of the feature_lb and feature_ub
+[2024-11-25 16:11:29,257][INFO] --sample the 5 part of the originalset
+[2024-11-25 16:11:29,257][INFO] --FGSM sample 1 image
+[2024-11-25 16:11:30,258][INFO] --FGSM sample 2 image
+[2024-11-25 16:11:31,340][INFO] --FGSM sample 3 image
+[2024-11-25 16:11:32,429][INFO] --FGSM sample 4 image
+[2024-11-25 16:11:33,505][INFO] --FGSM sample 5 image
+[2024-11-25 16:11:34,589][INFO] --FGSM sample 6 image
+[2024-11-25 16:11:35,688][INFO] --FGSM sample 7 image
+[2024-11-25 16:11:36,785][INFO] --FGSM sample 8 image
+[2024-11-25 16:11:37,862][INFO] --FGSM sample 9 image
+[2024-11-25 16:11:38,966][INFO] --FGSM sample 10 image
+[2024-11-25 16:11:40,050][INFO] --FGSM sample 11 image
+[2024-11-25 16:11:41,145][INFO] --FGSM sample 12 image
+[2024-11-25 16:11:42,228][INFO] --FGSM sample 13 image
+[2024-11-25 16:11:48,858][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:11:48,859][INFO] --FGSM sample 14 image
+[2024-11-25 16:11:49,975][INFO] --FGSM sample 15 image
+[2024-11-25 16:11:51,081][INFO] --FGSM sample 16 image
+[2024-11-25 16:11:52,183][INFO] --FGSM sample 17 image
+[2024-11-25 16:11:53,260][INFO] --FGSM sample 18 image
+[2024-11-25 16:11:54,337][INFO] --FGSM sample 19 image
+[2024-11-25 16:11:55,412][INFO] --FGSM sample 20 image
+[2024-11-25 16:11:56,498][INFO] --FGSM sample 21 image
+[2024-11-25 16:11:57,600][INFO] --FGSM sample 22 image
+[2024-11-25 16:11:58,680][INFO] --FGSM sample 23 image
+[2024-11-25 16:11:59,778][INFO] --FGSM sample 24 image
+[2024-11-25 16:12:00,880][INFO] --FGSM sample 25 image
+[2024-11-25 16:12:01,958][INFO] --FGSM sample 26 image
+[2024-11-25 16:12:03,043][INFO] --FGSM sample 27 image
+[2024-11-25 16:12:09,686][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:12:09,687][INFO] --FGSM sample 28 image
+[2024-11-25 16:12:10,804][INFO] --FGSM sample 29 image
+[2024-11-25 16:12:11,881][INFO] --FGSM sample 30 image
+[2024-11-25 16:12:12,957][INFO] --FGSM sample 31 image
+[2024-11-25 16:12:14,051][INFO] --FGSM sample 32 image
+[2024-11-25 16:12:15,148][INFO] --FGSM sample 33 image
+[2024-11-25 16:12:21,840][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:12:21,840][INFO] --FGSM sample 34 image
+[2024-11-25 16:12:22,982][INFO] --FGSM sample 35 image
+[2024-11-25 16:12:29,546][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:12:29,546][INFO] --FGSM sample 36 image
+[2024-11-25 16:12:30,647][INFO] --FGSM sample 37 image
+[2024-11-25 16:12:31,739][INFO] --FGSM sample 38 image
+[2024-11-25 16:12:32,835][INFO] --FGSM sample 39 image
+[2024-11-25 16:12:33,935][INFO] --FGSM sample 40 image
+[2024-11-25 16:12:35,022][INFO] --FGSM sample 41 image
+[2024-11-25 16:12:36,120][INFO] --FGSM sample 42 image
+[2024-11-25 16:12:37,215][INFO] --FGSM sample 43 image
+[2024-11-25 16:12:38,314][INFO] --FGSM sample 44 image
+[2024-11-25 16:12:39,410][INFO] --FGSM sample 45 image
+[2024-11-25 16:12:40,508][INFO] --FGSM sample 46 image
+[2024-11-25 16:12:41,601][INFO] --FGSM sample 47 image
+[2024-11-25 16:12:42,697][INFO] --FGSM sample 48 image
+[2024-11-25 16:12:43,797][INFO] --FGSM sample 49 image
+[2024-11-25 16:12:44,894][INFO] --FGSM sample 50 image
+[2024-11-25 16:12:45,990][INFO] --FGSM sample 51 image
+[2024-11-25 16:12:47,087][INFO] --FGSM sample 52 image
+[2024-11-25 16:12:48,185][INFO] --FGSM sample 53 image
+[2024-11-25 16:12:49,266][INFO] --FGSM sample 54 image
+[2024-11-25 16:12:50,363][INFO] --FGSM sample 55 image
+[2024-11-25 16:12:51,459][INFO] --FGSM sample 56 image
+[2024-11-25 16:12:52,551][INFO] --FGSM sample 57 image
+[2024-11-25 16:12:53,647][INFO] --FGSM sample 58 image
+[2024-11-25 16:12:54,746][INFO] --FGSM sample 59 image
+[2024-11-25 16:12:55,843][INFO] --FGSM sample 60 image
+[2024-11-25 16:12:56,942][INFO] --FGSM sample 61 image
+[2024-11-25 16:12:58,039][INFO] --FGSM sample 62 image
+[2024-11-25 16:12:59,131][INFO] --FGSM sample 63 image
+[2024-11-25 16:13:00,228][INFO] --FGSM sample 64 image
+[2024-11-25 16:13:01,328][INFO] --FGSM sample 65 image
+[2024-11-25 16:13:02,426][INFO] --FGSM sample 66 image
+[2024-11-25 16:13:03,525][INFO] --FGSM sample 67 image
+[2024-11-25 16:13:04,621][INFO] --FGSM sample 68 image
+[2024-11-25 16:13:05,719][INFO] --FGSM sample 69 image
+[2024-11-25 16:13:06,819][INFO] --FGSM sample 70 image
+[2024-11-25 16:13:13,399][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:13:13,400][INFO] --FGSM sample 71 image
+[2024-11-25 16:13:14,503][INFO] --FGSM sample 72 image
+[2024-11-25 16:13:15,601][INFO] --FGSM sample 73 image
+[2024-11-25 16:13:16,696][INFO] --FGSM sample 74 image
+[2024-11-25 16:13:17,797][INFO] --FGSM sample 75 image
+[2024-11-25 16:13:18,894][INFO] --FGSM sample 76 image
+[2024-11-25 16:13:19,993][INFO] --FGSM sample 77 image
+[2024-11-25 16:13:21,090][INFO] --FGSM sample 78 image
+[2024-11-25 16:13:22,189][INFO] --FGSM sample 79 image
+[2024-11-25 16:13:23,289][INFO] --FGSM sample 80 image
+[2024-11-25 16:13:24,388][INFO] --FGSM sample 81 image
+[2024-11-25 16:13:25,483][INFO] --FGSM sample 82 image
+[2024-11-25 16:13:26,577][INFO] --FGSM sample 83 image
+[2024-11-25 16:13:27,663][INFO] --FGSM sample 84 image
+[2024-11-25 16:13:28,763][INFO] --FGSM sample 85 image
+[2024-11-25 16:13:29,860][INFO] --FGSM sample 86 image
+[2024-11-25 16:13:30,956][INFO] --FGSM sample 87 image
+[2024-11-25 16:13:32,052][INFO] --FGSM sample 88 image
+[2024-11-25 16:13:33,151][INFO] --FGSM sample 89 image
+[2024-11-25 16:13:34,249][INFO] --FGSM sample 90 image
+[2024-11-25 16:13:35,348][INFO] --FGSM sample 91 image
+[2024-11-25 16:13:36,449][INFO] --FGSM sample 92 image
+[2024-11-25 16:13:37,548][INFO] --FGSM sample 93 image
+[2024-11-25 16:13:38,648][INFO] --FGSM sample 94 image
+[2024-11-25 16:13:45,336][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:13:45,337][INFO] --FGSM sample 95 image
+[2024-11-25 16:13:46,439][INFO] --FGSM sample 96 image
+[2024-11-25 16:13:47,536][INFO] --FGSM sample 97 image
+[2024-11-25 16:13:48,633][INFO] --FGSM sample 98 image
+[2024-11-25 16:13:49,733][INFO] --FGSM sample 99 image
+[2024-11-25 16:13:50,832][INFO] --FGSM sample 100 image
+[2024-11-25 16:13:52,291][INFO] --get the 5 part of the feature_lb and feature_ub
+[2024-11-25 16:13:52,291][INFO] --sample the 6 part of the originalset
+[2024-11-25 16:13:52,291][INFO] --FGSM sample 1 image
+[2024-11-25 16:13:53,307][INFO] --FGSM sample 2 image
+[2024-11-25 16:13:54,402][INFO] --FGSM sample 3 image
+[2024-11-25 16:13:55,492][INFO] --FGSM sample 4 image
+[2024-11-25 16:14:02,156][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:14:02,157][INFO] --FGSM sample 5 image
+[2024-11-25 16:14:03,292][INFO] --FGSM sample 6 image
+[2024-11-25 16:14:04,393][INFO] --FGSM sample 7 image
+[2024-11-25 16:14:05,485][INFO] --FGSM sample 8 image
+[2024-11-25 16:14:06,576][INFO] --FGSM sample 9 image
+[2024-11-25 16:14:07,671][INFO] --FGSM sample 10 image
+[2024-11-25 16:14:08,759][INFO] --FGSM sample 11 image
+[2024-11-25 16:14:15,302][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:14:15,302][INFO] --FGSM sample 12 image
+[2024-11-25 16:14:16,439][INFO] --FGSM sample 13 image
+[2024-11-25 16:14:17,537][INFO] --FGSM sample 14 image
+[2024-11-25 16:14:18,627][INFO] --FGSM sample 15 image
+[2024-11-25 16:14:19,721][INFO] --FGSM sample 16 image
+[2024-11-25 16:14:20,815][INFO] --FGSM sample 17 image
+[2024-11-25 16:14:21,910][INFO] --FGSM sample 18 image
+[2024-11-25 16:14:23,007][INFO] --FGSM sample 19 image
+[2024-11-25 16:14:24,099][INFO] --FGSM sample 20 image
+[2024-11-25 16:14:25,194][INFO] --FGSM sample 21 image
+[2024-11-25 16:14:26,286][INFO] --FGSM sample 22 image
+[2024-11-25 16:14:27,382][INFO] --FGSM sample 23 image
+[2024-11-25 16:14:28,470][INFO] --FGSM sample 24 image
+[2024-11-25 16:14:29,563][INFO] --FGSM sample 25 image
+[2024-11-25 16:14:30,656][INFO] --FGSM sample 26 image
+[2024-11-25 16:14:31,752][INFO] --FGSM sample 27 image
+[2024-11-25 16:14:32,844][INFO] --FGSM sample 28 image
+[2024-11-25 16:14:39,405][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:14:39,405][INFO] --FGSM sample 29 image
+[2024-11-25 16:14:46,141][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:14:46,141][INFO] --FGSM sample 30 image
+[2024-11-25 16:14:47,279][INFO] --FGSM sample 31 image
+[2024-11-25 16:14:48,377][INFO] --FGSM sample 32 image
+[2024-11-25 16:14:49,468][INFO] --FGSM sample 33 image
+[2024-11-25 16:14:50,564][INFO] --FGSM sample 34 image
+[2024-11-25 16:14:51,663][INFO] --FGSM sample 35 image
+[2024-11-25 16:14:52,754][INFO] --FGSM sample 36 image
+[2024-11-25 16:14:53,850][INFO] --FGSM sample 37 image
+[2024-11-25 16:15:00,419][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:15:00,420][INFO] --FGSM sample 38 image
+[2024-11-25 16:15:01,521][INFO] --FGSM sample 39 image
+[2024-11-25 16:15:02,615][INFO] --FGSM sample 40 image
+[2024-11-25 16:15:03,711][INFO] --FGSM sample 41 image
+[2024-11-25 16:15:04,808][INFO] --FGSM sample 42 image
+[2024-11-25 16:15:05,908][INFO] --FGSM sample 43 image
+[2024-11-25 16:15:07,004][INFO] --FGSM sample 44 image
+[2024-11-25 16:15:08,103][INFO] --FGSM sample 45 image
+[2024-11-25 16:15:09,202][INFO] --FGSM sample 46 image
+[2024-11-25 16:15:15,764][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:15:15,764][INFO] --FGSM sample 47 image
+[2024-11-25 16:15:16,866][INFO] --FGSM sample 48 image
+[2024-11-25 16:15:17,963][INFO] --FGSM sample 49 image
+[2024-11-25 16:15:19,049][INFO] --FGSM sample 50 image
+[2024-11-25 16:15:20,144][INFO] --FGSM sample 51 image
+[2024-11-25 16:15:21,242][INFO] --FGSM sample 52 image
+[2024-11-25 16:15:22,339][INFO] --FGSM sample 53 image
+[2024-11-25 16:15:23,431][INFO] --FGSM sample 54 image
+[2024-11-25 16:15:24,525][INFO] --FGSM sample 55 image
+[2024-11-25 16:15:31,109][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:15:31,109][INFO] --FGSM sample 56 image
+[2024-11-25 16:15:32,213][INFO] --FGSM sample 57 image
+[2024-11-25 16:15:38,806][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:15:38,807][INFO] --FGSM sample 58 image
+[2024-11-25 16:15:39,927][INFO] --FGSM sample 59 image
+[2024-11-25 16:15:41,053][INFO] --FGSM sample 60 image
+[2024-11-25 16:15:42,163][INFO] --FGSM sample 61 image
+[2024-11-25 16:15:43,244][INFO] --FGSM sample 62 image
+[2024-11-25 16:15:44,328][INFO] --FGSM sample 63 image
+[2024-11-25 16:15:45,423][INFO] --FGSM sample 64 image
+[2024-11-25 16:15:46,503][INFO] --FGSM sample 65 image
+[2024-11-25 16:15:47,584][INFO] --FGSM sample 66 image
+[2024-11-25 16:15:48,665][INFO] --FGSM sample 67 image
+[2024-11-25 16:15:49,744][INFO] --FGSM sample 68 image
+[2024-11-25 16:15:50,836][INFO] --FGSM sample 69 image
+[2024-11-25 16:15:51,916][INFO] --FGSM sample 70 image
+[2024-11-25 16:15:52,996][INFO] --FGSM sample 71 image
+[2024-11-25 16:15:54,076][INFO] --FGSM sample 72 image
+[2024-11-25 16:15:55,172][INFO] --FGSM sample 73 image
+[2024-11-25 16:15:56,253][INFO] --FGSM sample 74 image
+[2024-11-25 16:15:57,324][INFO] --FGSM sample 75 image
+[2024-11-25 16:15:58,409][INFO] --FGSM sample 76 image
+[2024-11-25 16:15:59,506][INFO] --FGSM sample 77 image
+[2024-11-25 16:16:06,129][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:16:06,129][INFO] --FGSM sample 78 image
+[2024-11-25 16:16:12,809][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:16:12,809][INFO] --FGSM sample 79 image
+[2024-11-25 16:16:13,930][INFO] --FGSM sample 80 image
+[2024-11-25 16:16:15,034][INFO] --FGSM sample 81 image
+[2024-11-25 16:16:16,114][INFO] --FGSM sample 82 image
+[2024-11-25 16:16:17,198][INFO] --FGSM sample 83 image
+[2024-11-25 16:16:18,280][INFO] --FGSM sample 84 image
+[2024-11-25 16:16:19,361][INFO] --FGSM sample 85 image
+[2024-11-25 16:16:20,437][INFO] --FGSM sample 86 image
+[2024-11-25 16:16:21,531][INFO] --FGSM sample 87 image
+[2024-11-25 16:16:22,611][INFO] --FGSM sample 88 image
+[2024-11-25 16:16:23,689][INFO] --FGSM sample 89 image
+[2024-11-25 16:16:24,770][INFO] --FGSM sample 90 image
+[2024-11-25 16:16:25,851][INFO] --FGSM sample 91 image
+[2024-11-25 16:16:26,930][INFO] --FGSM sample 92 image
+[2024-11-25 16:16:28,009][INFO] --FGSM sample 93 image
+[2024-11-25 16:16:29,088][INFO] --FGSM sample 94 image
+[2024-11-25 16:16:30,165][INFO] --FGSM sample 95 image
+[2024-11-25 16:16:31,244][INFO] --FGSM sample 96 image
+[2024-11-25 16:16:32,335][INFO] --FGSM sample 97 image
+[2024-11-25 16:16:36,725][INFO] --FGSM sample 98 image
+[2024-11-25 16:16:37,833][INFO] --FGSM sample 99 image
+[2024-11-25 16:16:38,915][INFO] --FGSM sample 100 image
+[2024-11-25 16:16:40,362][INFO] --get the 6 part of the feature_lb and feature_ub
+[2024-11-25 16:16:40,363][INFO] --sample the 7 part of the originalset
+[2024-11-25 16:16:40,363][INFO] --FGSM sample 1 image
+[2024-11-25 16:16:41,364][INFO] --FGSM sample 2 image
+[2024-11-25 16:16:42,462][INFO] --FGSM sample 3 image
+[2024-11-25 16:16:43,546][INFO] --FGSM sample 4 image
+[2024-11-25 16:16:44,642][INFO] --FGSM sample 5 image
+[2024-11-25 16:16:45,742][INFO] --FGSM sample 6 image
+[2024-11-25 16:16:46,820][INFO] --FGSM sample 7 image
+[2024-11-25 16:16:47,902][INFO] --FGSM sample 8 image
+[2024-11-25 16:16:48,984][INFO] --FGSM sample 9 image
+[2024-11-25 16:16:50,079][INFO] --FGSM sample 10 image
+[2024-11-25 16:16:51,180][INFO] --FGSM sample 11 image
+[2024-11-25 16:16:52,259][INFO] --FGSM sample 12 image
+[2024-11-25 16:16:53,334][INFO] --FGSM sample 13 image
+[2024-11-25 16:16:54,409][INFO] --FGSM sample 14 image
+[2024-11-25 16:16:55,501][INFO] --FGSM sample 15 image
+[2024-11-25 16:16:56,594][INFO] --FGSM sample 16 image
+[2024-11-25 16:16:57,693][INFO] --FGSM sample 17 image
+[2024-11-25 16:16:58,792][INFO] --FGSM sample 18 image
+[2024-11-25 16:16:59,893][INFO] --FGSM sample 19 image
+[2024-11-25 16:17:00,976][INFO] --FGSM sample 20 image
+[2024-11-25 16:17:02,056][INFO] --FGSM sample 21 image
+[2024-11-25 16:17:03,150][INFO] --FGSM sample 22 image
+[2024-11-25 16:17:04,234][INFO] --FGSM sample 23 image
+[2024-11-25 16:17:05,332][INFO] --FGSM sample 24 image
+[2024-11-25 16:17:11,981][INFO] --FGSM sample 25 image
+[2024-11-25 16:17:13,075][INFO] --FGSM sample 26 image
+[2024-11-25 16:17:14,174][INFO] --FGSM sample 27 image
+[2024-11-25 16:17:15,259][INFO] --FGSM sample 28 image
+[2024-11-25 16:17:16,339][INFO] --FGSM sample 29 image
+[2024-11-25 16:17:17,415][INFO] --FGSM sample 30 image
+[2024-11-25 16:17:18,511][INFO] --FGSM sample 31 image
+[2024-11-25 16:17:19,591][INFO] --FGSM sample 32 image
+[2024-11-25 16:17:20,668][INFO] --FGSM sample 33 image
+[2024-11-25 16:17:21,745][INFO] --FGSM sample 34 image
+[2024-11-25 16:17:22,822][INFO] --FGSM sample 35 image
+[2024-11-25 16:17:23,896][INFO] --FGSM sample 36 image
+[2024-11-25 16:17:26,090][INFO] --FGSM sample 37 image
+[2024-11-25 16:17:27,168][INFO] --FGSM sample 38 image
+[2024-11-25 16:17:28,245][INFO] --FGSM sample 39 image
+[2024-11-25 16:17:29,320][INFO] --FGSM sample 40 image
+[2024-11-25 16:17:30,400][INFO] --FGSM sample 41 image
+[2024-11-25 16:17:31,479][INFO] --FGSM sample 42 image
+[2024-11-25 16:17:32,552][INFO] --FGSM sample 43 image
+[2024-11-25 16:17:33,642][INFO] --FGSM sample 44 image
+[2024-11-25 16:17:34,722][INFO] --FGSM sample 45 image
+[2024-11-25 16:17:35,799][INFO] --FGSM sample 46 image
+[2024-11-25 16:17:36,877][INFO] --FGSM sample 47 image
+[2024-11-25 16:17:37,956][INFO] --FGSM sample 48 image
+[2024-11-25 16:17:39,033][INFO] --FGSM sample 49 image
+[2024-11-25 16:17:40,105][INFO] --FGSM sample 50 image
+[2024-11-25 16:17:41,192][INFO] --FGSM sample 51 image
+[2024-11-25 16:17:42,270][INFO] --FGSM sample 52 image
+[2024-11-25 16:17:48,921][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:17:48,921][INFO] --FGSM sample 53 image
+[2024-11-25 16:17:50,039][INFO] --FGSM sample 54 image
+[2024-11-25 16:17:51,121][INFO] --FGSM sample 55 image
+[2024-11-25 16:17:52,200][INFO] --FGSM sample 56 image
+[2024-11-25 16:17:53,293][INFO] --FGSM sample 57 image
+[2024-11-25 16:17:54,374][INFO] --FGSM sample 58 image
+[2024-11-25 16:17:55,453][INFO] --FGSM sample 59 image
+[2024-11-25 16:17:56,545][INFO] --FGSM sample 60 image
+[2024-11-25 16:17:57,642][INFO] --FGSM sample 61 image
+[2024-11-25 16:17:58,721][INFO] --FGSM sample 62 image
+[2024-11-25 16:17:59,800][INFO] --FGSM sample 63 image
+[2024-11-25 16:18:00,878][INFO] --FGSM sample 64 image
+[2024-11-25 16:18:01,955][INFO] --FGSM sample 65 image
+[2024-11-25 16:18:03,033][INFO] --FGSM sample 66 image
+[2024-11-25 16:18:04,134][INFO] --FGSM sample 67 image
+[2024-11-25 16:18:05,214][INFO] --FGSM sample 68 image
+[2024-11-25 16:18:06,292][INFO] --FGSM sample 69 image
+[2024-11-25 16:18:07,390][INFO] --FGSM sample 70 image
+[2024-11-25 16:18:08,494][INFO] --FGSM sample 71 image
+[2024-11-25 16:18:15,145][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:18:15,145][INFO] --FGSM sample 72 image
+[2024-11-25 16:18:16,265][INFO] --FGSM sample 73 image
+[2024-11-25 16:18:17,360][INFO] --FGSM sample 74 image
+[2024-11-25 16:18:18,442][INFO] --FGSM sample 75 image
+[2024-11-25 16:18:19,520][INFO] --FGSM sample 76 image
+[2024-11-25 16:18:26,080][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:18:26,081][INFO] --FGSM sample 77 image
+[2024-11-25 16:18:27,200][INFO] --FGSM sample 78 image
+[2024-11-25 16:18:28,280][INFO] --FGSM sample 79 image
+[2024-11-25 16:18:29,358][INFO] --FGSM sample 80 image
+[2024-11-25 16:18:35,943][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:18:35,944][INFO] --FGSM sample 81 image
+[2024-11-25 16:18:37,062][INFO] --FGSM sample 82 image
+[2024-11-25 16:18:38,141][INFO] --FGSM sample 83 image
+[2024-11-25 16:18:39,236][INFO] --FGSM sample 84 image
+[2024-11-25 16:18:40,315][INFO] --FGSM sample 85 image
+[2024-11-25 16:18:41,410][INFO] --FGSM sample 86 image
+[2024-11-25 16:18:42,496][INFO] --FGSM sample 87 image
+[2024-11-25 16:18:43,576][INFO] --FGSM sample 88 image
+[2024-11-25 16:18:44,655][INFO] --FGSM sample 89 image
+[2024-11-25 16:18:45,733][INFO] --FGSM sample 90 image
+[2024-11-25 16:18:46,830][INFO] --FGSM sample 91 image
+[2024-11-25 16:18:47,907][INFO] --FGSM sample 92 image
+[2024-11-25 16:18:49,007][INFO] --FGSM sample 93 image
+[2024-11-25 16:18:50,089][INFO] --FGSM sample 94 image
+[2024-11-25 16:18:51,166][INFO] --FGSM sample 95 image
+[2024-11-25 16:18:52,265][INFO] --FGSM sample 96 image
+[2024-11-25 16:18:53,347][INFO] --FGSM sample 97 image
+[2024-11-25 16:18:54,426][INFO] --FGSM sample 98 image
+[2024-11-25 16:18:55,503][INFO] --FGSM sample 99 image
+[2024-11-25 16:18:56,582][INFO] --FGSM sample 100 image
+[2024-11-25 16:18:58,006][INFO] --get the 7 part of the feature_lb and feature_ub
+[2024-11-25 16:18:58,006][INFO] --sample the 8 part of the originalset
+[2024-11-25 16:18:58,015][INFO] --FGSM sample 1 image
+[2024-11-25 16:18:59,012][INFO] --FGSM sample 2 image
+[2024-11-25 16:19:00,112][INFO] --FGSM sample 3 image
+[2024-11-25 16:19:01,189][INFO] --FGSM sample 4 image
+[2024-11-25 16:19:02,257][INFO] --FGSM sample 5 image
+[2024-11-25 16:19:03,332][INFO] --FGSM sample 6 image
+[2024-11-25 16:19:04,419][INFO] --FGSM sample 7 image
+[2024-11-25 16:19:05,513][INFO] --FGSM sample 8 image
+[2024-11-25 16:19:06,614][INFO] --FGSM sample 9 image
+[2024-11-25 16:19:07,713][INFO] --FGSM sample 10 image
+[2024-11-25 16:19:08,789][INFO] --FGSM sample 11 image
+[2024-11-25 16:19:09,879][INFO] --FGSM sample 12 image
+[2024-11-25 16:19:10,957][INFO] --FGSM sample 13 image
+[2024-11-25 16:19:12,037][INFO] --FGSM sample 14 image
+[2024-11-25 16:19:13,115][INFO] --FGSM sample 15 image
+[2024-11-25 16:19:14,204][INFO] --FGSM sample 16 image
+[2024-11-25 16:19:15,279][INFO] --FGSM sample 17 image
+[2024-11-25 16:19:16,359][INFO] --FGSM sample 18 image
+[2024-11-25 16:19:17,456][INFO] --FGSM sample 19 image
+[2024-11-25 16:19:18,556][INFO] --FGSM sample 20 image
+[2024-11-25 16:19:19,640][INFO] --FGSM sample 21 image
+[2024-11-25 16:19:20,737][INFO] --FGSM sample 22 image
+[2024-11-25 16:19:21,838][INFO] --FGSM sample 23 image
+[2024-11-25 16:19:22,934][INFO] --FGSM sample 24 image
+[2024-11-25 16:19:24,019][INFO] --FGSM sample 25 image
+[2024-11-25 16:19:25,117][INFO] --FGSM sample 26 image
+[2024-11-25 16:19:26,200][INFO] --FGSM sample 27 image
+[2024-11-25 16:19:27,297][INFO] --FGSM sample 28 image
+[2024-11-25 16:19:28,376][INFO] --FGSM sample 29 image
+[2024-11-25 16:19:29,476][INFO] --FGSM sample 30 image
+[2024-11-25 16:19:30,559][INFO] --FGSM sample 31 image
+[2024-11-25 16:19:31,637][INFO] --FGSM sample 32 image
+[2024-11-25 16:19:32,712][INFO] --FGSM sample 33 image
+[2024-11-25 16:19:33,794][INFO] --FGSM sample 34 image
+[2024-11-25 16:19:34,891][INFO] --FGSM sample 35 image
+[2024-11-25 16:19:35,970][INFO] --FGSM sample 36 image
+[2024-11-25 16:19:42,613][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:19:42,613][INFO] --FGSM sample 37 image
+[2024-11-25 16:19:43,730][INFO] --FGSM sample 38 image
+[2024-11-25 16:19:44,829][INFO] --FGSM sample 39 image
+[2024-11-25 16:19:45,933][INFO] --FGSM sample 40 image
+[2024-11-25 16:19:47,035][INFO] --FGSM sample 41 image
+[2024-11-25 16:19:48,145][INFO] --FGSM sample 42 image
+[2024-11-25 16:19:49,223][INFO] --FGSM sample 43 image
+[2024-11-25 16:19:55,981][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:19:55,982][INFO] --FGSM sample 44 image
+[2024-11-25 16:19:57,124][INFO] --FGSM sample 45 image
+[2024-11-25 16:19:58,226][INFO] --FGSM sample 46 image
+[2024-11-25 16:19:59,323][INFO] --FGSM sample 47 image
+[2024-11-25 16:20:05,894][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:20:05,895][INFO] --FGSM sample 48 image
+[2024-11-25 16:20:06,998][INFO] --FGSM sample 49 image
+[2024-11-25 16:20:08,095][INFO] --FGSM sample 50 image
+[2024-11-25 16:20:09,194][INFO] --FGSM sample 51 image
+[2024-11-25 16:20:10,287][INFO] --FGSM sample 52 image
+[2024-11-25 16:20:16,846][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:20:16,846][INFO] --FGSM sample 53 image
+[2024-11-25 16:20:17,948][INFO] --FGSM sample 54 image
+[2024-11-25 16:20:19,041][INFO] --FGSM sample 55 image
+[2024-11-25 16:20:20,138][INFO] --FGSM sample 56 image
+[2024-11-25 16:20:21,236][INFO] --FGSM sample 57 image
+[2024-11-25 16:20:22,327][INFO] --FGSM sample 58 image
+[2024-11-25 16:20:23,426][INFO] --FGSM sample 59 image
+[2024-11-25 16:20:24,526][INFO] --FGSM sample 60 image
+[2024-11-25 16:20:25,624][INFO] --FGSM sample 61 image
+[2024-11-25 16:20:26,721][INFO] --FGSM sample 62 image
+[2024-11-25 16:20:27,817][INFO] --FGSM sample 63 image
+[2024-11-25 16:20:28,912][INFO] --FGSM sample 64 image
+[2024-11-25 16:20:30,007][INFO] --FGSM sample 65 image
+[2024-11-25 16:20:31,109][INFO] --FGSM sample 66 image
+[2024-11-25 16:20:32,211][INFO] --FGSM sample 67 image
+[2024-11-25 16:20:33,306][INFO] --FGSM sample 68 image
+[2024-11-25 16:20:34,401][INFO] --FGSM sample 69 image
+[2024-11-25 16:20:35,501][INFO] --FGSM sample 70 image
+[2024-11-25 16:20:36,600][INFO] --FGSM sample 71 image
+[2024-11-25 16:20:37,690][INFO] --FGSM sample 72 image
+[2024-11-25 16:20:38,787][INFO] --FGSM sample 73 image
+[2024-11-25 16:20:39,884][INFO] --FGSM sample 74 image
+[2024-11-25 16:20:40,984][INFO] --FGSM sample 75 image
+[2024-11-25 16:20:42,084][INFO] --FGSM sample 76 image
+[2024-11-25 16:20:43,183][INFO] --FGSM sample 77 image
+[2024-11-25 16:20:44,281][INFO] --FGSM sample 78 image
+[2024-11-25 16:20:45,380][INFO] --FGSM sample 79 image
+[2024-11-25 16:20:46,478][INFO] --FGSM sample 80 image
+[2024-11-25 16:20:47,573][INFO] --FGSM sample 81 image
+[2024-11-25 16:20:48,668][INFO] --FGSM sample 82 image
+[2024-11-25 16:20:49,766][INFO] --FGSM sample 83 image
+[2024-11-25 16:20:50,865][INFO] --FGSM sample 84 image
+[2024-11-25 16:20:51,964][INFO] --FGSM sample 85 image
+[2024-11-25 16:20:53,061][INFO] --FGSM sample 86 image
+[2024-11-25 16:20:54,153][INFO] --FGSM sample 87 image
+[2024-11-25 16:20:55,249][INFO] --FGSM sample 88 image
+[2024-11-25 16:20:56,345][INFO] --FGSM sample 89 image
+[2024-11-25 16:20:57,445][INFO] --FGSM sample 90 image
+[2024-11-25 16:20:58,535][INFO] --FGSM sample 91 image
+[2024-11-25 16:20:59,630][INFO] --FGSM sample 92 image
+[2024-11-25 16:21:00,729][INFO] --FGSM sample 93 image
+[2024-11-25 16:21:01,828][INFO] --FGSM sample 94 image
+[2024-11-25 16:21:02,926][INFO] --FGSM sample 95 image
+[2024-11-25 16:21:04,027][INFO] --FGSM sample 96 image
+[2024-11-25 16:21:05,125][INFO] --FGSM sample 97 image
+[2024-11-25 16:21:06,223][INFO] --FGSM sample 98 image
+[2024-11-25 16:21:07,323][INFO] --FGSM sample 99 image
+[2024-11-25 16:21:08,421][INFO] --FGSM sample 100 image
+[2024-11-25 16:21:09,882][INFO] --get the 8 part of the feature_lb and feature_ub
+[2024-11-25 16:21:09,882][INFO] --sample the 9 part of the originalset
+[2024-11-25 16:21:09,882][INFO] --FGSM sample 1 image
+[2024-11-25 16:21:10,893][INFO] --FGSM sample 2 image
+[2024-11-25 16:21:11,985][INFO] --FGSM sample 3 image
+[2024-11-25 16:21:13,075][INFO] --FGSM sample 4 image
+[2024-11-25 16:21:14,164][INFO] --FGSM sample 5 image
+[2024-11-25 16:21:15,260][INFO] --FGSM sample 6 image
+[2024-11-25 16:21:21,817][INFO] --The attack_datas is empty, we use the repair data as the attack data
+[2024-11-25 16:21:21,818][INFO] --FGSM sample 7 image
+[2024-11-25 16:21:22,919][INFO] --FGSM sample 8 image
+[2024-11-25 16:21:24,011][INFO] --FGSM sample 9 image
+[2024-11-25 16:21:25,093][INFO] --FGSM sample 10 image
+[2024-11-25 16:21:26,188][INFO] --FGSM sample 11 image
+[2024-11-25 16:21:27,286][INFO] --FGSM sample 12 image
+[2024-11-25 16:21:28,376][INFO] --FGSM sample 13 image
+[2024-11-25 16:21:29,469][INFO] --FGSM sample 14 image
+[2024-11-25 16:21:30,566][INFO] --FGSM sample 15 image
+[2024-11-25 16:21:31,663][INFO] --FGSM sample 16 image
+[2024-11-25 16:21:32,761][INFO] --FGSM sample 17 image
+[2024-11-25 16:21:33,860][INFO] --FGSM sample 18 image
+[2024-11-25 16:21:34,958][INFO] --FGSM sample 19 image
+[2024-11-25 16:21:36,056][INFO] --FGSM sample 20 image
+[2024-11-25 16:21:37,148][INFO] --FGSM sample 21 image
+[2024-11-25 16:21:38,248][INFO] --FGSM sample 22 image
+[2024-11-25 16:21:39,347][INFO] --FGSM sample 23 image
+[2024-11-25 16:21:40,443][INFO] --FGSM sample 24 image
+[2024-11-25 16:21:41,543][INFO] --FGSM sample 25 image
+[2024-11-25 16:21:42,641][INFO] --FGSM sample 26 image
+[2024-11-25 16:21:43,733][INFO] --FGSM sample 27 image
+[2024-11-25 16:21:44,831][INFO] --FGSM sample 28 image
+[2024-11-25 16:21:45,928][INFO] --FGSM sample 29 image
+[2024-11-25 16:21:47,015][INFO] --FGSM sample 30 image
+[2024-11-25 16:21:48,114][INFO] --FGSM sample 31 image
+[2024-11-25 16:21:49,200][INFO] --FGSM sample 32 image
+[2024-11-25 16:21:50,300][INFO] --FGSM sample 33 image
+[2024-11-25 16:21:51,393][INFO] --FGSM sample 34 image
+[2024-11-25 16:21:52,490][INFO] --FGSM sample 35 image
+[2024-11-25 16:21:53,590][INFO] --FGSM sample 36 image
+[2024-11-25 16:21:54,688][INFO] --FGSM sample 37 image
+[2024-11-25 16:21:55,788][INFO] --FGSM sample 38 image
+[2024-11-25 16:21:56,883][INFO] --FGSM sample 39 image
+[2024-11-25 16:21:57,960][INFO] --FGSM sample 40 image
+[2024-11-25 16:21:59,037][INFO] --FGSM sample 41 image
+[2024-11-25 16:22:00,136][INFO] --FGSM sample 42 image
+[2024-11-25 16:22:01,233][INFO] --FGSM sample 43 image
+[2024-11-25 16:22:02,311][INFO] --FGSM sample 44 image
+[2024-11-25 16:22:03,413][INFO] --FGSM sample 45 image
+[2024-11-25 16:22:04,492][INFO] --FGSM sample 46 image
+[2024-11-25 16:22:05,594][INFO] --FGSM sample 47 image
+[2024-11-25 16:22:06,671][INFO] --FGSM sample 48 image
+[2024-11-25 16:22:07,744][INFO] --FGSM sample 49 image
+[2024-11-25 16:22:08,832][INFO] --FGSM sample 50 image
+[2024-11-25 16:22:09,935][INFO] --FGSM sample 51 image
+[2024-11-25 16:22:11,028][INFO] --FGSM sample 52 image
+[2024-11-25 16:22:12,106][INFO] --FGSM sample 53 image
+[2024-11-25 16:22:13,209][INFO] --FGSM sample 54 image
+[2024-11-25 16:22:14,288][INFO] --FGSM sample 55 image
+[2024-11-25 16:22:15,390][INFO] --FGSM sample 56 image
+[2024-11-25 16:22:16,470][INFO] --FGSM sample 57 image
+[2024-11-25 16:22:17,553][INFO] --FGSM sample 58 image
+[2024-11-25 16:22:18,649][INFO] --FGSM sample 59 image
+[2024-11-25 16:22:19,747][INFO] --FGSM sample 60 image
+[2024-11-25 16:22:20,851][INFO] --FGSM sample 61 image
+[2024-11-25 16:22:21,932][INFO] --FGSM sample 62 image
+[2024-11-25 16:22:23,028][INFO] --FGSM sample 63 image
+[2024-11-25 16:22:24,128][INFO] --FGSM sample 64 image
+[2024-11-25 16:22:25,206][INFO] --FGSM sample 65 image
+[2024-11-25 16:22:26,290][INFO] --FGSM sample 66 image
+[2024-11-25 16:22:27,369][INFO] --FGSM sample 67 image
+[2024-11-25 16:22:28,443][INFO] --FGSM sample 68 image
+[2024-11-25 16:22:29,530][INFO] --FGSM sample 69 image
+[2024-11-25 16:22:30,624][INFO] --FGSM sample 70 image
+[2024-11-25 16:22:31,726][INFO] --FGSM sample 71 image
+[2024-11-25 16:22:32,823][INFO] --FGSM sample 72 image
+[2024-11-25 16:22:33,923][INFO] --FGSM sample 73 image
+[2024-11-25 16:22:35,025][INFO] --FGSM sample 74 image
+[2024-11-25 16:22:36,105][INFO] --FGSM sample 75 image
+[2024-11-25 16:22:37,182][INFO] --FGSM sample 76 image
+[2024-11-25 16:22:38,274][INFO] --FGSM sample 77 image
+[2024-11-25 16:22:39,353][INFO] --FGSM sample 78 image
+[2024-11-25 16:22:40,434][INFO] --FGSM sample 79 image
+[2024-11-25 16:22:41,533][INFO] --FGSM sample 80 image
+[2024-11-25 16:22:42,630][INFO] --FGSM sample 81 image
+[2024-11-25 16:22:43,708][INFO] --FGSM sample 82 image
+[2024-11-25 16:22:44,800][INFO] --FGSM sample 83 image
+[2024-11-25 16:22:45,900][INFO] --FGSM sample 84 image
+[2024-11-25 16:22:47,000][INFO] --FGSM sample 85 image
+[2024-11-25 16:22:48,098][INFO] --FGSM sample 86 image
+[2024-11-25 16:22:49,184][INFO] --FGSM sample 87 image
+[2024-11-25 16:22:50,261][INFO] --FGSM sample 88 image
+[2024-11-25 16:22:51,337][INFO] --FGSM sample 89 image
+[2024-11-25 16:22:52,439][INFO] --FGSM sample 90 image
+[2024-11-25 16:22:53,538][INFO] --FGSM sample 91 image
+[2024-11-25 16:22:54,637][INFO] --FGSM sample 92 image
+[2024-11-25 16:22:55,717][INFO] --FGSM sample 93 image
+[2024-11-25 16:22:56,801][INFO] --FGSM sample 94 image
+[2024-11-25 16:22:57,879][INFO] --FGSM sample 95 image
+[2024-11-25 16:22:58,959][INFO] --FGSM sample 96 image
+[2024-11-25 16:23:00,058][INFO] --FGSM sample 97 image
+[2024-11-25 16:23:01,141][INFO] --FGSM sample 98 image
+[2024-11-25 16:23:02,234][INFO] --FGSM sample 99 image
+[2024-11-25 16:23:03,332][INFO] --FGSM sample 100 image
+[2024-11-25 16:23:04,755][INFO] --get the 9 part of the feature_lb and feature_ub
+[2024-11-25 16:24:21,292][INFO] --Test repair set accuracy 0.0
+[2024-11-25 16:24:22,868][INFO] --Patch network: --- feature PatchNet ---
+Name: feature patch network 999
+--- End of feature PatchNet ---
+[2024-11-25 16:24:22,934][INFO] [0m 0s (0.020 seconds)] Start repair part 0: 0
+[2024-11-25 16:24:22,934][INFO] [0m 0s (0.020 seconds)] After epoch 0:
+[2024-11-25 16:24:22,934][INFO] Loaded 100 abstractions for training.
+[2024-11-25 16:24:23,552][INFO] min loss 1.5351496934890747, max loss 461.9028015136719.
+[2024-11-25 16:24:23,561][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1',
+       dtype=torch.uint8).
+[2024-11-25 16:24:23,668][INFO] Test set accuracy 0.8832.
+[2024-11-25 16:24:23,669][INFO] repair set accuracy 0.02.
+[2024-11-25 16:24:23,669][INFO] attacked test set accuracy 0.019.
+[2024-11-25 16:24:23,669][INFO] 
+[0m 0s (0.754 seconds)] Starting epoch 1:
+[2024-11-25 16:24:25,185][INFO] [0m 2s (2.271 seconds)] After epoch 1:
+[2024-11-25 16:24:25,186][INFO] Loaded 100 abstractions for training.
+[2024-11-25 16:24:25,779][INFO] min loss 0.0, max loss 3.4600014686584473.
+[2024-11-25 16:24:25,788][INFO] Max loss at rule: tensor([0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1',
+       dtype=torch.uint8).
+[2024-11-25 16:24:25,896][INFO] Test set accuracy 0.8832.
+[2024-11-25 16:24:25,896][INFO] repair set accuracy 1.0.
+[2024-11-25 16:24:25,896][INFO] attacked test set accuracy 1.0.
+[2024-11-25 16:24:27,027][INFO] Accuracy at every epoch: [0.8832, 0.8832]
+[2024-11-25 16:24:27,028][INFO] After 1 epochs / 0m 2s (2.982 seconds), eventually the trained network got certified? False, with 0.8832 accuracy on test set,with 1.0000 accuracy on repair set,with 1.0000 accuracy on attack test set.
+[2024-11-25 16:24:27,051][INFO] [0m 4s (4.137 seconds)] Start repair part 1: 100
+[2024-11-25 16:24:27,051][INFO] [0m 4s (4.137 seconds)] After epoch 0:
+[2024-11-25 16:24:27,051][INFO] Loaded 100 abstractions for training.
+[2024-11-25 16:24:27,641][INFO] min loss 3.6321969032287598, max loss 917.1727294921875.
+[2024-11-25 16:24:27,651][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1',
+       dtype=torch.uint8).
+[2024-11-25 16:24:27,759][INFO] Test set accuracy 0.8832.
+[2024-11-25 16:24:27,759][INFO] repair set accuracy 0.01.
+[2024-11-25 16:24:27,759][INFO] attacked test set accuracy 0.008.
+[2024-11-25 16:24:27,759][INFO] 
+[0m 4s (4.845 seconds)] Starting epoch 1:
+[2024-11-25 16:24:29,152][INFO] [0m 6s (6.238 seconds)] After epoch 1:
+[2024-11-25 16:24:29,153][INFO] Loaded 100 abstractions for training.
+[2024-11-25 16:24:29,753][INFO] min loss 0.0, max loss 8.611250877380371.
+[2024-11-25 16:24:29,762][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1',
+       dtype=torch.uint8).
+[2024-11-25 16:24:29,871][INFO] Test set accuracy 0.8832.
+[2024-11-25 16:24:29,871][INFO] repair set accuracy 1.0.
+[2024-11-25 16:24:29,871][INFO] attacked test set accuracy 1.0.
+[2024-11-25 16:24:31,294][INFO] Accuracy at every epoch: [0.8832, 0.8832]
+[2024-11-25 16:24:31,295][INFO] After 1 epochs / 0m 6s (6.957 seconds), eventually the trained network got certified? False, with 0.8832 accuracy on test set,with 1.0000 accuracy on repair set,with 1.0000 accuracy on attack test set.
+[2024-11-25 16:24:31,326][INFO] [0m 8s (8.412 seconds)] Start repair part 2: 200
+[2024-11-25 16:24:31,326][INFO] [0m 8s (8.412 seconds)] After epoch 0:
+[2024-11-25 16:24:31,326][INFO] Loaded 100 abstractions for training.
+[2024-11-25 16:24:31,917][INFO] min loss 3.7343759536743164, max loss 728.1444091796875.
+[2024-11-25 16:24:31,926][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1',
+       dtype=torch.uint8).
+[2024-11-25 16:24:32,035][INFO] Test set accuracy 0.8832.
+[2024-11-25 16:24:32,035][INFO] repair set accuracy 0.0.
+[2024-11-25 16:24:32,035][INFO] attacked test set accuracy 0.001.
+[2024-11-25 16:24:32,035][INFO] 
+[0m 9s (9.121 seconds)] Starting epoch 1:
+[2024-11-25 16:24:33,313][INFO] [0m 10s (10.399 seconds)] After epoch 1:
+[2024-11-25 16:24:33,314][INFO] Loaded 100 abstractions for training.
+[2024-11-25 16:24:33,910][INFO] min loss 0.0, max loss 3.9363999366760254.
+[2024-11-25 16:24:33,919][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1',
+       dtype=torch.uint8).
+[2024-11-25 16:24:34,027][INFO] Test set accuracy 0.8832.
+[2024-11-25 16:24:34,027][INFO] repair set accuracy 1.0.
+[2024-11-25 16:24:34,027][INFO] attacked test set accuracy 1.0.
+[2024-11-25 16:24:35,437][INFO] Accuracy at every epoch: [0.8832, 0.8832]
+[2024-11-25 16:24:35,438][INFO] After 1 epochs / 0m 11s (11.113 seconds), eventually the trained network got certified? False, with 0.8832 accuracy on test set,with 1.0000 accuracy on repair set,with 1.0000 accuracy on attack test set.
+[2024-11-25 16:24:35,466][INFO] [0m 12s (12.552 seconds)] Start repair part 3: 300
+[2024-11-25 16:24:35,466][INFO] [0m 12s (12.552 seconds)] After epoch 0:
+[2024-11-25 16:24:35,466][INFO] Loaded 100 abstractions for training.
+[2024-11-25 16:24:36,054][INFO] min loss 3.8512659072875977, max loss 952.111572265625.
+[2024-11-25 16:24:36,064][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1',
+       dtype=torch.uint8).
+[2024-11-25 16:24:36,171][INFO] Test set accuracy 0.8832.
+[2024-11-25 16:24:36,171][INFO] repair set accuracy 0.02.
+[2024-11-25 16:24:36,171][INFO] attacked test set accuracy 0.021.
+[2024-11-25 16:24:36,171][INFO] 
+[0m 13s (13.257 seconds)] Starting epoch 1:
+[2024-11-25 16:24:37,508][INFO] [0m 14s (14.594 seconds)] After epoch 1:
+[2024-11-25 16:24:37,508][INFO] Loaded 100 abstractions for training.
+[2024-11-25 16:24:38,102][INFO] min loss 0.0, max loss 3.8787331581115723.
+[2024-11-25 16:24:38,111][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1',
+       dtype=torch.uint8).
+[2024-11-25 16:24:38,219][INFO] Test set accuracy 0.8832.
+[2024-11-25 16:24:38,219][INFO] repair set accuracy 1.0.
+[2024-11-25 16:24:38,219][INFO] attacked test set accuracy 1.0.
+[2024-11-25 16:24:39,633][INFO] Accuracy at every epoch: [0.8832, 0.8832]
+[2024-11-25 16:24:39,634][INFO] After 1 epochs / 0m 15s (15.305 seconds), eventually the trained network got certified? False, with 0.8832 accuracy on test set,with 1.0000 accuracy on repair set,with 1.0000 accuracy on attack test set.
+[2024-11-25 16:24:39,664][INFO] [0m 16s (16.750 seconds)] Start repair part 4: 400
+[2024-11-25 16:24:39,664][INFO] [0m 16s (16.750 seconds)] After epoch 0:
+[2024-11-25 16:24:39,665][INFO] Loaded 100 abstractions for training.
+[2024-11-25 16:24:40,253][INFO] min loss 4.646778106689453, max loss 792.05419921875.
+[2024-11-25 16:24:40,262][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1',
+       dtype=torch.uint8).
+[2024-11-25 16:24:40,369][INFO] Test set accuracy 0.8832.
+[2024-11-25 16:24:40,370][INFO] repair set accuracy 0.01.
+[2024-11-25 16:24:40,370][INFO] attacked test set accuracy 0.014.
+[2024-11-25 16:24:40,370][INFO] 
+[0m 17s (17.455 seconds)] Starting epoch 1:
+[2024-11-25 16:24:41,766][INFO] [0m 18s (18.852 seconds)] After epoch 1:
+[2024-11-25 16:24:41,766][INFO] Loaded 100 abstractions for training.
+[2024-11-25 16:24:42,360][INFO] min loss 0.0, max loss 2.8866162300109863.
+[2024-11-25 16:24:42,369][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1',
+       dtype=torch.uint8).
+[2024-11-25 16:24:42,476][INFO] Test set accuracy 0.8832.
+[2024-11-25 16:24:42,476][INFO] repair set accuracy 1.0.
+[2024-11-25 16:24:42,476][INFO] attacked test set accuracy 1.0.
+[2024-11-25 16:24:43,896][INFO] Accuracy at every epoch: [0.8832, 0.8832]
+[2024-11-25 16:24:43,897][INFO] After 1 epochs / 0m 19s (19.562 seconds), eventually the trained network got certified? False, with 0.8832 accuracy on test set,with 1.0000 accuracy on repair set,with 1.0000 accuracy on attack test set.
+[2024-11-25 16:24:43,939][INFO] [0m 21s (21.025 seconds)] Start repair part 5: 500
+[2024-11-25 16:24:43,939][INFO] [0m 21s (21.025 seconds)] After epoch 0:
+[2024-11-25 16:24:43,939][INFO] Loaded 100 abstractions for training.
+[2024-11-25 16:24:44,528][INFO] min loss 6.3571367263793945, max loss 845.033203125.
+[2024-11-25 16:24:44,538][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1',
+       dtype=torch.uint8).
+[2024-11-25 16:24:44,645][INFO] Test set accuracy 0.8832.
+[2024-11-25 16:24:44,645][INFO] repair set accuracy 0.0.
+[2024-11-25 16:24:44,645][INFO] attacked test set accuracy 0.002.
+[2024-11-25 16:24:44,645][INFO] 
+[0m 21s (21.731 seconds)] Starting epoch 1:
+[2024-11-25 16:24:46,099][INFO] [0m 23s (23.185 seconds)] After epoch 1:
+[2024-11-25 16:24:46,100][INFO] Loaded 100 abstractions for training.
+[2024-11-25 16:24:46,694][INFO] min loss 0.0, max loss 4.1895575523376465.
+[2024-11-25 16:24:46,704][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1',
+       dtype=torch.uint8).
+[2024-11-25 16:24:46,811][INFO] Test set accuracy 0.8832.
+[2024-11-25 16:24:46,811][INFO] repair set accuracy 1.0.
+[2024-11-25 16:24:46,811][INFO] attacked test set accuracy 1.0.
+[2024-11-25 16:24:48,220][INFO] Accuracy at every epoch: [0.8832, 0.8832]
+[2024-11-25 16:24:48,221][INFO] After 1 epochs / 0m 23s (23.897 seconds), eventually the trained network got certified? False, with 0.8832 accuracy on test set,with 1.0000 accuracy on repair set,with 1.0000 accuracy on attack test set.
+[2024-11-25 16:24:48,255][INFO] [0m 25s (25.341 seconds)] Start repair part 6: 600
+[2024-11-25 16:24:48,255][INFO] [0m 25s (25.341 seconds)] After epoch 0:
+[2024-11-25 16:24:48,256][INFO] Loaded 100 abstractions for training.
+[2024-11-25 16:24:48,843][INFO] min loss 3.243278741836548, max loss 946.0728149414062.
+[2024-11-25 16:24:48,852][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1',
+       dtype=torch.uint8).
+[2024-11-25 16:24:48,960][INFO] Test set accuracy 0.8832.
+[2024-11-25 16:24:48,960][INFO] repair set accuracy 0.01.
+[2024-11-25 16:24:48,960][INFO] attacked test set accuracy 0.012.
+[2024-11-25 16:24:48,960][INFO] 
+[0m 26s (26.046 seconds)] Starting epoch 1:
+[2024-11-25 16:24:50,468][INFO] [0m 27s (27.554 seconds)] After epoch 1:
+[2024-11-25 16:24:50,469][INFO] Loaded 100 abstractions for training.
+[2024-11-25 16:24:51,063][INFO] min loss 0.0, max loss 7.079457759857178.
+[2024-11-25 16:24:51,072][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1',
+       dtype=torch.uint8).
+[2024-11-25 16:24:51,179][INFO] Test set accuracy 0.8832.
+[2024-11-25 16:24:51,179][INFO] repair set accuracy 1.0.
+[2024-11-25 16:24:51,179][INFO] attacked test set accuracy 1.0.
+[2024-11-25 16:24:52,591][INFO] Accuracy at every epoch: [0.8832, 0.8832]
+[2024-11-25 16:24:52,592][INFO] After 1 epochs / 0m 28s (28.265 seconds), eventually the trained network got certified? False, with 0.8832 accuracy on test set,with 1.0000 accuracy on repair set,with 1.0000 accuracy on attack test set.
+[2024-11-25 16:24:52,628][INFO] [0m 29s (29.714 seconds)] Start repair part 7: 700
+[2024-11-25 16:24:52,629][INFO] [0m 29s (29.714 seconds)] After epoch 0:
+[2024-11-25 16:24:52,629][INFO] Loaded 100 abstractions for training.
+[2024-11-25 16:24:53,217][INFO] min loss 2.6762938499450684, max loss 825.1793823242188.
+[2024-11-25 16:24:53,226][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1',
+       dtype=torch.uint8).
+[2024-11-25 16:24:53,334][INFO] Test set accuracy 0.8832.
+[2024-11-25 16:24:53,334][INFO] repair set accuracy 0.01.
+[2024-11-25 16:24:53,334][INFO] attacked test set accuracy 0.011.
+[2024-11-25 16:24:53,334][INFO] 
+[0m 30s (30.420 seconds)] Starting epoch 1:
+[2024-11-25 16:24:54,902][INFO] [0m 31s (31.988 seconds)] After epoch 1:
+[2024-11-25 16:24:54,903][INFO] Loaded 100 abstractions for training.
+[2024-11-25 16:24:55,497][INFO] min loss 0.0, max loss 3.962517261505127.
+[2024-11-25 16:24:55,507][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1',
+       dtype=torch.uint8).
+[2024-11-25 16:24:55,614][INFO] Test set accuracy 0.8832.
+[2024-11-25 16:24:55,614][INFO] repair set accuracy 1.0.
+[2024-11-25 16:24:55,614][INFO] attacked test set accuracy 1.0.
+[2024-11-25 16:24:57,050][INFO] Accuracy at every epoch: [0.8832, 0.8832]
+[2024-11-25 16:24:57,052][INFO] After 1 epochs / 0m 32s (32.700 seconds), eventually the trained network got certified? False, with 0.8832 accuracy on test set,with 1.0000 accuracy on repair set,with 1.0000 accuracy on attack test set.
+[2024-11-25 16:24:57,105][INFO] [0m 34s (34.191 seconds)] Start repair part 8: 800
+[2024-11-25 16:24:57,106][INFO] [0m 34s (34.192 seconds)] After epoch 0:
+[2024-11-25 16:24:57,107][INFO] Loaded 100 abstractions for training.
+[2024-11-25 16:24:58,117][INFO] min loss 5.562804698944092, max loss 884.559814453125.
+[2024-11-25 16:24:58,132][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1',
+       dtype=torch.uint8).
+[2024-11-25 16:24:58,296][INFO] Test set accuracy 0.8832.
+[2024-11-25 16:24:58,296][INFO] repair set accuracy 0.0.
+[2024-11-25 16:24:58,296][INFO] attacked test set accuracy 0.001.
+[2024-11-25 16:24:58,296][INFO] 
+[0m 35s (35.382 seconds)] Starting epoch 1:
+[2024-11-25 16:25:00,473][INFO] [0m 37s (37.558 seconds)] After epoch 1:
+[2024-11-25 16:25:00,473][INFO] Loaded 100 abstractions for training.
+[2024-11-25 16:25:01,078][INFO] min loss 0.0, max loss 3.3855972290039062.
+[2024-11-25 16:25:01,088][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1',
+       dtype=torch.uint8).
+[2024-11-25 16:25:01,196][INFO] Test set accuracy 0.8832.
+[2024-11-25 16:25:01,196][INFO] repair set accuracy 1.0.
+[2024-11-25 16:25:01,196][INFO] attacked test set accuracy 1.0.
+[2024-11-25 16:25:02,622][INFO] Accuracy at every epoch: [0.8832, 0.8832]
+[2024-11-25 16:25:02,623][INFO] After 1 epochs / 0m 38s (38.282 seconds), eventually the trained network got certified? False, with 0.8832 accuracy on test set,with 1.0000 accuracy on repair set,with 1.0000 accuracy on attack test set.
+[2024-11-25 16:25:02,663][INFO] [0m 39s (39.749 seconds)] Start repair part 9: 900
+[2024-11-25 16:25:02,664][INFO] [0m 39s (39.750 seconds)] After epoch 0:
+[2024-11-25 16:25:02,664][INFO] Loaded 100 abstractions for training.
+[2024-11-25 16:25:03,263][INFO] min loss 5.212881565093994, max loss 735.3875122070312.
+[2024-11-25 16:25:03,272][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1',
+       dtype=torch.uint8).
+[2024-11-25 16:25:03,382][INFO] Test set accuracy 0.8832.
+[2024-11-25 16:25:03,382][INFO] repair set accuracy 0.0.
+[2024-11-25 16:25:03,382][INFO] attacked test set accuracy 0.002.
+[2024-11-25 16:25:03,382][INFO] 
+[0m 40s (40.468 seconds)] Starting epoch 1:
+[2024-11-25 16:25:05,128][INFO] [0m 42s (42.214 seconds)] After epoch 1:
+[2024-11-25 16:25:05,128][INFO] Loaded 100 abstractions for training.
+[2024-11-25 16:25:05,732][INFO] min loss 0.0, max loss 677.1873168945312.
+[2024-11-25 16:25:05,742][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], device='cuda:1',
+       dtype=torch.uint8).
+[2024-11-25 16:25:05,849][INFO] Test set accuracy 0.8832.
+[2024-11-25 16:25:05,849][INFO] repair set accuracy 0.99.
+[2024-11-25 16:25:05,849][INFO] attacked test set accuracy 0.99.
+[2024-11-25 16:25:05,849][INFO] 
+[0m 42s (42.935 seconds)] Starting epoch 2:
+[2024-11-25 16:25:07,534][INFO] [0m 44s (44.620 seconds)] After epoch 2:
+[2024-11-25 16:25:07,535][INFO] Loaded 100 abstractions for training.
+[2024-11-25 16:25:08,145][INFO] min loss 0.0, max loss 0.0.
+[2024-11-25 16:25:08,145][INFO] All 100 abstractions certified.
+[2024-11-25 16:25:08,254][INFO] Test set accuracy 0.8832.
+[2024-11-25 16:25:08,254][INFO] repair set accuracy 1.0.
+[2024-11-25 16:25:08,254][INFO] attacked test set accuracy 1.0.
+[2024-11-25 16:25:09,692][INFO] Accuracy at every epoch: [0.8832, 0.8832, 0.8832]
+[2024-11-25 16:25:09,693][INFO] After 2 epochs / 0m 45s (45.340 seconds), eventually the trained network got certified? True, with 0.8832 accuracy on test set,with 1.0000 accuracy on repair set,with 1.0000 accuracy on attack test set.
+[2024-11-25 16:25:09,694][INFO] final test
+[2024-11-25 16:25:09,721][INFO] --Test set accuracy 0.8832
+[2024-11-25 16:25:09,970][INFO] --Test repair set accuracy 1.0
+[2024-11-25 16:25:10,228][INFO] --Test attack test set accuracy 1.0
+[2024-11-25 16:25:10,229][INFO] traing time 47.31437970200204s
+[2024-11-25 16:25:10,294][INFO] === Avg <epochs, train_time, certified, accuracy> for pgd attack networks:
+[2024-11-25 16:25:10,294][INFO] tensor([ 2.0000, 45.3399,  1.0000,  0.8832])
+[2024-11-25 16:25:10,295][INFO] Total Cost Time: 1554.1023870229837s.
+
+
+

@@ -1,0 +1,366 @@
+[2024-01-02 16:17:12,672][INFO] 
+===== FNN_small-0.05-50-small-2024-01-02-16-17-12 configuration =====
+  exp_fn: test_goal_test
+  seed: None
+  dom: deeppoly
+  start_abs_cnt: 500
+  max_abs_cnt: 1000
+  refine_top_k: 800
+  tiny_width: 0.001
+  lr: 0.001
+  batch_size: 50
+  min_epochs: 25
+  max_epochs: 45
+  use_scheduler: True
+  no_pts: False
+  no_abs: False
+  no_refine: False
+  quiet: False
+  debug: False
+  net: FNN_small
+  no_repair: False
+  repair_number: 50
+  repair_batchsize: 1
+  patch_size: small
+  label_repaired: True
+  repair_radius: 0.05
+  divided_repair: 1
+  accuracy_loss: <function MnistArgParser.setup_rest.<locals>.ce_loss at 0x7f0c83cae1f0>
+  sample_amount: 5000
+  reset_params: False
+  train_datasize: 10000
+  test_datasize: 10000
+  repair_batch_size: 50
+  scheduler_fn: <function ExpArgParser.setup_rest.<locals>.<lambda> at 0x7f0c2e31cf70>
+===== end of FNN_small-0.05-50-small-2024-01-02-16-17-12 configuration =====
+
+[2024-01-02 16:17:12,672][INFO] ===== start repair ======
+[2024-01-02 16:17:12,672][INFO] For pgd attack net
+[2024-01-02 16:17:12,672][INFO] --test_label_repaired
+[2024-01-02 16:17:12,680][INFO] --big patch network: --- PatchNet ---
+Name: small patch network 9
+--- End of PatchNet ---
+[2024-01-02 16:17:12,733][INFO] --load the trainset and testset as testing set
+[2024-01-02 16:17:12,743][INFO] --evaluate the original net on testset
+[2024-01-02 16:17:12,743][INFO] --For testset, out of 10000 items, ratio 0.9658
+[2024-01-02 16:17:12,744][INFO] --evaluate the repaired net on testset and get the bitmap
+[2024-01-02 16:17:12,748][INFO] --For testset, out of 10000 items, ratio 0.9659
+[2024-01-02 16:17:12,748][INFO] --test the defense against autoattack
+[2024-01-02 16:17:15,040][INFO] correct2 27
+[2024-01-02 16:17:15,710][INFO] correct2 31
+[2024-01-02 16:17:18,078][INFO] correct2 30
+[2024-01-02 16:17:20,253][INFO] correct2 30
+[2024-01-02 16:17:22,398][INFO] correct2 26
+[2024-01-02 16:17:24,676][INFO] correct2 31
+[2024-01-02 16:17:25,890][INFO] correct2 29
+[2024-01-02 16:17:28,024][INFO] correct2 29
+[2024-01-02 16:17:30,159][INFO] correct2 28
+[2024-01-02 16:17:32,308][INFO] correct2 27
+[2024-01-02 16:17:34,490][INFO] correct2 27
+[2024-01-02 16:17:36,789][INFO] correct2 28
+[2024-01-02 16:17:39,130][INFO] correct2 30
+[2024-01-02 16:17:41,380][INFO] correct2 28
+[2024-01-02 16:17:43,439][INFO] correct2 31
+[2024-01-02 16:17:45,519][INFO] correct2 27
+[2024-01-02 16:17:47,637][INFO] correct2 31
+[2024-01-02 16:17:49,724][INFO] correct2 26
+[2024-01-02 16:17:51,820][INFO] correct2 28
+[2024-01-02 16:17:53,954][INFO] correct2 28
+[2024-01-02 16:17:56,142][INFO] correct2 26
+[2024-01-02 16:17:58,381][INFO] correct2 30
+[2024-01-02 16:18:00,643][INFO] correct2 25
+[2024-01-02 16:18:02,907][INFO] correct2 29
+[2024-01-02 16:18:05,013][INFO] correct2 31
+[2024-01-02 16:18:06,882][INFO] correct2 30
+[2024-01-02 16:18:08,735][INFO] correct2 28
+[2024-01-02 16:18:10,571][INFO] correct2 27
+[2024-01-02 16:18:12,480][INFO] correct2 30
+[2024-01-02 16:18:14,097][INFO] correct2 27
+[2024-01-02 16:18:16,260][INFO] correct2 30
+[2024-01-02 16:18:18,382][INFO] correct2 28
+[2024-01-02 16:18:20,586][INFO] correct2 29
+[2024-01-02 16:18:22,765][INFO] correct2 30
+[2024-01-02 16:18:24,916][INFO] correct2 30
+[2024-01-02 16:18:26,082][INFO] correct2 29
+[2024-01-02 16:18:28,216][INFO] correct2 28
+[2024-01-02 16:18:30,286][INFO] correct2 28
+[2024-01-02 16:18:32,334][INFO] correct2 23
+[2024-01-02 16:18:34,382][INFO] correct2 29
+[2024-01-02 16:18:36,455][INFO] correct2 29
+[2024-01-02 16:18:38,762][INFO] correct2 30
+[2024-01-02 16:18:41,001][INFO] correct2 31
+[2024-01-02 16:18:43,161][INFO] correct2 28
+[2024-01-02 16:18:45,217][INFO] correct2 28
+[2024-01-02 16:18:47,262][INFO] correct2 28
+[2024-01-02 16:18:49,359][INFO] correct2 30
+[2024-01-02 16:18:51,486][INFO] correct2 24
+[2024-01-02 16:18:53,621][INFO] correct2 27
+[2024-01-02 16:18:55,795][INFO] correct2 28
+[2024-01-02 16:18:57,928][INFO] correct2 28
+[2024-01-02 16:19:00,066][INFO] correct2 28
+[2024-01-02 16:19:02,142][INFO] correct2 29
+[2024-01-02 16:19:04,107][INFO] correct2 26
+[2024-01-02 16:19:06,121][INFO] correct2 27
+[2024-01-02 16:19:08,140][INFO] correct2 26
+[2024-01-02 16:19:10,159][INFO] correct2 27
+[2024-01-02 16:19:12,242][INFO] correct2 30
+[2024-01-02 16:19:14,269][INFO] correct2 32
+[2024-01-02 16:19:16,320][INFO] correct2 27
+[2024-01-02 16:19:18,334][INFO] correct2 30
+[2024-01-02 16:19:20,426][INFO] correct2 30
+[2024-01-02 16:19:20,821][INFO] correct2 27
+[2024-01-02 16:19:22,863][INFO] correct2 26
+[2024-01-02 16:19:24,927][INFO] correct2 29
+[2024-01-02 16:19:27,169][INFO] correct2 28
+[2024-01-02 16:19:29,406][INFO] correct2 29
+[2024-01-02 16:19:31,610][INFO] correct2 31
+[2024-01-02 16:19:33,967][INFO] correct2 27
+[2024-01-02 16:19:36,215][INFO] correct2 28
+[2024-01-02 16:19:38,361][INFO] correct2 31
+[2024-01-02 16:19:39,004][INFO] correct2 26
+[2024-01-02 16:19:41,387][INFO] correct2 27
+[2024-01-02 16:19:43,541][INFO] correct2 32
+[2024-01-02 16:19:45,612][INFO] correct2 26
+[2024-01-02 16:19:47,682][INFO] correct2 25
+[2024-01-02 16:19:49,838][INFO] correct2 27
+[2024-01-02 16:19:52,010][INFO] correct2 29
+[2024-01-02 16:19:54,218][INFO] correct2 30
+[2024-01-02 16:19:56,500][INFO] correct2 28
+[2024-01-02 16:19:57,493][INFO] correct2 30
+[2024-01-02 16:19:59,584][INFO] correct2 27
+[2024-01-02 16:20:01,716][INFO] correct2 26
+[2024-01-02 16:20:04,122][INFO] correct2 27
+[2024-01-02 16:20:06,659][INFO] correct2 30
+[2024-01-02 16:20:09,044][INFO] correct2 26
+[2024-01-02 16:20:11,320][INFO] correct2 27
+[2024-01-02 16:20:13,366][INFO] correct2 30
+[2024-01-02 16:20:15,352][INFO] correct2 27
+[2024-01-02 16:20:17,390][INFO] correct2 29
+[2024-01-02 16:20:19,442][INFO] correct2 30
+[2024-01-02 16:20:21,699][INFO] correct2 27
+[2024-01-02 16:20:23,816][INFO] correct2 28
+[2024-01-02 16:20:25,865][INFO] correct2 28
+[2024-01-02 16:20:27,944][INFO] correct2 30
+[2024-01-02 16:20:30,033][INFO] correct2 27
+[2024-01-02 16:20:32,204][INFO] correct2 29
+[2024-01-02 16:20:34,522][INFO] correct2 28
+[2024-01-02 16:20:36,834][INFO] correct2 30
+[2024-01-02 16:20:39,115][INFO] correct2 30
+[2024-01-02 16:20:41,354][INFO] correct2 29
+[2024-01-02 16:20:43,469][INFO] correct2 28
+[2024-01-02 16:20:45,509][INFO] correct2 30
+[2024-01-02 16:20:47,563][INFO] correct2 26
+[2024-01-02 16:20:49,624][INFO] correct2 29
+[2024-01-02 16:20:51,717][INFO] correct2 30
+[2024-01-02 16:20:53,726][INFO] correct2 28
+[2024-01-02 16:20:55,788][INFO] correct2 29
+[2024-01-02 16:20:57,921][INFO] correct2 29
+[2024-01-02 16:21:00,018][INFO] correct2 27
+[2024-01-02 16:21:02,149][INFO] correct2 26
+[2024-01-02 16:21:04,212][INFO] correct2 24
+[2024-01-02 16:21:06,286][INFO] correct2 30
+[2024-01-02 16:21:08,301][INFO] correct2 27
+[2024-01-02 16:21:10,385][INFO] correct2 28
+[2024-01-02 16:21:12,436][INFO] correct2 27
+[2024-01-02 16:21:14,542][INFO] correct2 29
+[2024-01-02 16:21:16,674][INFO] correct2 27
+[2024-01-02 16:21:18,801][INFO] correct2 26
+[2024-01-02 16:21:20,946][INFO] correct2 28
+[2024-01-02 16:21:23,005][INFO] correct2 26
+[2024-01-02 16:21:25,155][INFO] correct2 30
+[2024-01-02 16:21:27,516][INFO] correct2 29
+[2024-01-02 16:21:29,741][INFO] correct2 25
+[2024-01-02 16:21:31,809][INFO] correct2 27
+[2024-01-02 16:21:34,024][INFO] correct2 30
+[2024-01-02 16:21:36,083][INFO] correct2 27
+[2024-01-02 16:21:37,975][INFO] correct2 25
+[2024-01-02 16:21:39,869][INFO] correct2 32
+[2024-01-02 16:21:41,718][INFO] correct2 30
+[2024-01-02 16:21:43,823][INFO] correct2 28
+[2024-01-02 16:21:46,165][INFO] correct2 28
+[2024-01-02 16:21:48,407][INFO] correct2 28
+[2024-01-02 16:21:50,540][INFO] correct2 26
+[2024-01-02 16:21:50,719][INFO] correct2 28
+[2024-01-02 16:21:52,810][INFO] correct2 29
+[2024-01-02 16:21:55,025][INFO] correct2 27
+[2024-01-02 16:21:57,157][INFO] correct2 29
+[2024-01-02 16:21:59,295][INFO] correct2 28
+[2024-01-02 16:22:01,598][INFO] correct2 27
+[2024-01-02 16:22:01,793][INFO] correct2 29
+[2024-01-02 16:22:04,120][INFO] correct2 29
+[2024-01-02 16:22:06,197][INFO] correct2 26
+[2024-01-02 16:22:08,310][INFO] correct2 30
+[2024-01-02 16:22:10,424][INFO] correct2 30
+[2024-01-02 16:22:11,446][INFO] correct2 29
+[2024-01-02 16:22:11,853][INFO] correct2 30
+[2024-01-02 16:22:14,145][INFO] correct2 29
+[2024-01-02 16:22:14,553][INFO] correct2 24
+[2024-01-02 16:22:16,567][INFO] correct2 29
+[2024-01-02 16:22:18,752][INFO] correct2 28
+[2024-01-02 16:22:19,607][INFO] correct2 28
+[2024-01-02 16:22:21,691][INFO] correct2 26
+[2024-01-02 16:22:23,717][INFO] correct2 30
+[2024-01-02 16:22:25,726][INFO] correct2 27
+[2024-01-02 16:22:27,732][INFO] correct2 31
+[2024-01-02 16:22:29,722][INFO] correct2 31
+[2024-01-02 16:22:31,729][INFO] correct2 29
+[2024-01-02 16:22:33,796][INFO] correct2 28
+[2024-01-02 16:22:35,905][INFO] correct2 31
+[2024-01-02 16:22:37,986][INFO] correct2 30
+[2024-01-02 16:22:38,787][INFO] correct2 30
+[2024-01-02 16:22:40,762][INFO] correct2 32
+[2024-01-02 16:22:42,790][INFO] correct2 29
+[2024-01-02 16:22:44,900][INFO] correct2 26
+[2024-01-02 16:22:47,144][INFO] correct2 32
+[2024-01-02 16:22:49,414][INFO] correct2 31
+[2024-01-02 16:22:51,606][INFO] correct2 32
+[2024-01-02 16:22:53,783][INFO] correct2 31
+[2024-01-02 16:22:55,930][INFO] correct2 31
+[2024-01-02 16:22:58,031][INFO] correct2 27
+[2024-01-02 16:23:00,126][INFO] correct2 31
+[2024-01-02 16:23:02,297][INFO] correct2 28
+[2024-01-02 16:23:04,516][INFO] correct2 30
+[2024-01-02 16:23:06,783][INFO] correct2 31
+[2024-01-02 16:23:08,974][INFO] correct2 29
+[2024-01-02 16:23:11,042][INFO] correct2 29
+[2024-01-02 16:23:13,201][INFO] correct2 30
+[2024-01-02 16:23:15,331][INFO] correct2 31
+[2024-01-02 16:23:17,552][INFO] correct2 26
+[2024-01-02 16:23:19,828][INFO] correct2 29
+[2024-01-02 16:23:22,126][INFO] correct2 30
+[2024-01-02 16:23:24,229][INFO] correct2 27
+[2024-01-02 16:23:26,290][INFO] correct2 30
+[2024-01-02 16:23:26,671][INFO] correct2 28
+[2024-01-02 16:23:28,723][INFO] correct2 31
+[2024-01-02 16:23:30,736][INFO] correct2 26
+[2024-01-02 16:23:32,963][INFO] correct2 26
+[2024-01-02 16:23:35,223][INFO] correct2 26
+[2024-01-02 16:23:37,448][INFO] correct2 28
+[2024-01-02 16:23:39,650][INFO] correct2 31
+[2024-01-02 16:23:41,962][INFO] correct2 32
+[2024-01-02 16:23:44,283][INFO] correct2 29
+[2024-01-02 16:23:46,627][INFO] correct2 32
+[2024-01-02 16:23:48,904][INFO] correct2 32
+[2024-01-02 16:23:50,900][INFO] correct2 30
+[2024-01-02 16:23:52,754][INFO] correct2 32
+[2024-01-02 16:23:54,617][INFO] correct2 31
+[2024-01-02 16:23:56,510][INFO] correct2 29
+[2024-01-02 16:23:58,652][INFO] correct2 29
+[2024-01-02 16:24:00,863][INFO] correct2 28
+[2024-01-02 16:24:03,110][INFO] correct2 30
+[2024-01-02 16:24:05,308][INFO] correct2 31
+[2024-01-02 16:24:07,523][INFO] correct2 31
+[2024-01-02 16:24:09,817][INFO] correct2 26
+[2024-01-02 16:24:10,208][INFO] correct2 22
+[2024-01-02 16:24:12,457][INFO] correct2 25
+[2024-01-02 16:24:14,605][INFO] correct2 26
+[2024-01-02 16:24:16,794][INFO] correct2 30
+[2024-01-02 16:24:19,063][INFO] correct2 32
+[2024-01-02 16:24:21,141][INFO] correct2 30
+[2024-01-02 16:24:23,243][INFO] correct2 28
+[2024-01-02 16:24:25,453][INFO] correct2 31
+[2024-01-02 16:24:27,609][INFO] correct2 28
+[2024-01-02 16:24:29,748][INFO] correct2 31
+[2024-01-02 16:24:31,993][INFO] correct2 29
+[2024-01-02 16:24:34,169][INFO] correct2 26
+[2024-01-02 16:24:36,374][INFO] correct2 28
+[2024-01-02 16:24:38,554][INFO] correct2 30
+[2024-01-02 16:24:40,818][INFO] correct2 30
+[2024-01-02 16:24:43,080][INFO] correct2 29
+[2024-01-02 16:24:45,145][INFO] correct2 28
+[2024-01-02 16:24:47,247][INFO] correct2 30
+[2024-01-02 16:24:49,330][INFO] correct2 28
+[2024-01-02 16:24:51,373][INFO] correct2 28
+[2024-01-02 16:24:53,403][INFO] correct2 29
+[2024-01-02 16:24:55,398][INFO] correct2 30
+[2024-01-02 16:24:57,669][INFO] correct2 29
+[2024-01-02 16:25:00,762][INFO] correct2 32
+[2024-01-02 16:25:03,874][INFO] correct2 30
+[2024-01-02 16:25:07,120][INFO] correct2 32
+[2024-01-02 16:25:10,203][INFO] correct2 31
+[2024-01-02 16:25:12,435][INFO] correct2 25
+[2024-01-02 16:25:12,706][INFO] correct2 30
+[2024-01-02 16:25:16,397][INFO] correct2 29
+[2024-01-02 16:25:20,332][INFO] correct2 30
+[2024-01-02 16:25:23,898][INFO] correct2 31
+[2024-01-02 16:25:26,805][INFO] correct2 30
+[2024-01-02 16:25:29,750][INFO] correct2 31
+[2024-01-02 16:25:32,751][INFO] correct2 31
+[2024-01-02 16:25:36,239][INFO] correct2 31
+[2024-01-02 16:25:39,628][INFO] correct2 31
+[2024-01-02 16:25:42,869][INFO] correct2 31
+[2024-01-02 16:25:46,248][INFO] correct2 29
+[2024-01-02 16:25:49,484][INFO] correct2 28
+[2024-01-02 16:25:52,613][INFO] correct2 27
+[2024-01-02 16:25:55,810][INFO] correct2 26
+[2024-01-02 16:25:58,946][INFO] correct2 28
+[2024-01-02 16:26:02,071][INFO] correct2 31
+[2024-01-02 16:26:05,222][INFO] correct2 29
+[2024-01-02 16:26:08,372][INFO] correct2 28
+[2024-01-02 16:26:11,488][INFO] correct2 30
+[2024-01-02 16:26:14,613][INFO] correct2 31
+[2024-01-02 16:26:17,779][INFO] correct2 30
+[2024-01-02 16:26:21,132][INFO] correct2 30
+[2024-01-02 16:26:24,254][INFO] correct2 29
+[2024-01-02 16:26:27,493][INFO] correct2 30
+[2024-01-02 16:26:30,616][INFO] correct2 29
+[2024-01-02 16:26:33,700][INFO] correct2 27
+[2024-01-02 16:26:36,863][INFO] correct2 30
+[2024-01-02 16:26:39,984][INFO] correct2 27
+[2024-01-02 16:26:43,010][INFO] correct2 29
+[2024-01-02 16:26:46,065][INFO] correct2 27
+[2024-01-02 16:26:49,112][INFO] correct2 31
+[2024-01-02 16:26:52,220][INFO] correct2 29
+[2024-01-02 16:26:55,297][INFO] correct2 30
+[2024-01-02 16:26:58,515][INFO] correct2 30
+[2024-01-02 16:27:01,921][INFO] correct2 30
+[2024-01-02 16:27:05,146][INFO] correct2 32
+[2024-01-02 16:27:08,464][INFO] correct2 28
+[2024-01-02 16:27:10,982][INFO] correct2 32
+[2024-01-02 16:27:13,125][INFO] correct2 31
+[2024-01-02 16:27:15,266][INFO] correct2 32
+[2024-01-02 16:27:17,427][INFO] correct2 30
+[2024-01-02 16:27:19,641][INFO] correct2 31
+[2024-01-02 16:27:21,920][INFO] correct2 31
+[2024-01-02 16:27:24,174][INFO] correct2 29
+[2024-01-02 16:27:26,426][INFO] correct2 28
+[2024-01-02 16:27:28,846][INFO] correct2 31
+[2024-01-02 16:27:31,362][INFO] correct2 31
+[2024-01-02 16:27:33,713][INFO] correct2 29
+[2024-01-02 16:27:35,987][INFO] correct2 25
+[2024-01-02 16:27:38,359][INFO] correct2 28
+[2024-01-02 16:27:40,607][INFO] correct2 32
+[2024-01-02 16:27:42,836][INFO] correct2 30
+[2024-01-02 16:27:45,025][INFO] correct2 31
+[2024-01-02 16:27:47,209][INFO] correct2 30
+[2024-01-02 16:27:49,364][INFO] correct2 31
+[2024-01-02 16:27:51,528][INFO] correct2 29
+[2024-01-02 16:27:53,694][INFO] correct2 29
+[2024-01-02 16:27:55,777][INFO] correct2 27
+[2024-01-02 16:27:56,171][INFO] correct2 30
+[2024-01-02 16:27:58,472][INFO] correct2 32
+[2024-01-02 16:28:00,772][INFO] correct2 28
+[2024-01-02 16:28:02,838][INFO] correct2 29
+[2024-01-02 16:28:04,967][INFO] correct2 28
+[2024-01-02 16:28:07,273][INFO] correct2 30
+[2024-01-02 16:28:09,452][INFO] correct2 28
+[2024-01-02 16:28:11,556][INFO] correct2 31
+[2024-01-02 16:28:13,604][INFO] correct2 30
+[2024-01-02 16:28:15,799][INFO] correct2 27
+[2024-01-02 16:28:17,883][INFO] correct2 29
+[2024-01-02 16:28:18,254][INFO] correct2 23
+[2024-01-02 16:28:20,233][INFO] correct2 28
+[2024-01-02 16:28:20,810][INFO] correct2 24
+[2024-01-02 16:28:22,704][INFO] correct2 24
+[2024-01-02 16:28:24,761][INFO] correct2 28
+[2024-01-02 16:28:26,798][INFO] correct2 29
+[2024-01-02 16:28:28,909][INFO] correct2 29
+[2024-01-02 16:28:30,973][INFO] correct2 30
+[2024-01-02 16:28:33,074][INFO] correct2 26
+[2024-01-02 16:28:35,252][INFO] correct2 29
+[2024-01-02 16:28:37,356][INFO] correct2 15
+[2024-01-02 16:28:37,358][INFO] --For testset, out of 10000 items, repaired net ratio 0.8985
+[2024-01-02 16:28:37,363][INFO] Total Cost Time: 684.6907532215118s.
+
+
+

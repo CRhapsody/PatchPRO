@@ -1,0 +1,56 @@
+[2024-07-08 13:57:29,683][INFO] 
+===== vgg19-4-feature-1000-2024-07-08-13-57-29 configuration =====
+  exp_fn: test_goal_test
+  seed: None
+  dom: deeppoly
+  start_abs_cnt: 500
+  max_abs_cnt: 1000
+  refine_top_k: 800
+  tiny_width: 0.001
+  lr: 0.001
+  batch_size: 50
+  min_epochs: 25
+  max_epochs: 45
+  use_scheduler: True
+  no_pts: False
+  no_abs: False
+  no_refine: False
+  quiet: False
+  debug: False
+  net: vgg19
+  no_repair: False
+  repair_number: 1000
+  repair_batchsize: 1
+  repair_location: feature
+  label_repaired: False
+  repair_radius: 4
+  loose_bound: 0.1
+  divided_repair: 1
+  accuracy_loss: <function CifarArgParser.setup_rest.<locals>.ce_loss at 0x7febfe979ee0>
+  reset_params: False
+  train_datasize: 10000
+  test_datasize: 10000
+  patch_size: big
+  repair_batch_size: 1000
+  scheduler_fn: <function ExpArgParser.setup_rest.<locals>.<lambda> at 0x7febfe979f70>
+===== end of vgg19-4-feature-1000-2024-07-08-13-57-29 configuration =====
+
+[2024-07-08 13:57:29,683][INFO] ===== start repair ======
+[2024-07-08 13:57:29,684][INFO] For pgd attack net
+[2024-07-08 13:57:32,147][INFO] --feature patch network: --- feature PatchNet ---
+Name: property patch network 999
+--- End of feature PatchNet ---
+[2024-07-08 13:57:32,850][INFO] --label patch network: --- feature PatchNet ---
+Name: label patch network 9
+--- End of feature PatchNet ---
+[2024-07-08 13:57:35,328][INFO] --load the trainset and testset as testing set
+[2024-07-08 13:57:35,407][INFO] --evaluate the original net on testset
+[2024-07-08 13:57:35,773][INFO] --For testset, out of 10000 items, ratio 0.9342
+[2024-07-08 13:57:35,773][INFO] --evaluate the repaired net on testset and get the bitmap
+[2024-07-08 13:57:36,131][INFO] --For testset, out of 10000 items, ratio 0.9342
+[2024-07-08 13:57:36,132][INFO] --evaluate the label repaired net on testset and get the bitmap
+[2024-07-08 13:57:36,491][INFO] --For testset, out of 10000 items, ratio 0.9342
+[2024-07-08 13:57:36,492][INFO] --adv training
+[2024-07-08 13:57:36,909][INFO] --evaluate the adv training net on testset
+[2024-07-08 13:57:36,909][INFO] --test the defense against autoattack
+[2024-07-08 13:57:36,910][INFO] attack net2 

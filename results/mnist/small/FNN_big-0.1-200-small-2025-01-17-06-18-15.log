@@ -1,0 +1,283 @@
+[2025-01-17 06:18:15,796][INFO] 
+===== FNN_big-0.1-200-small-2025-01-17-06-18-15 configuration =====
+  exp_fn: test_goal_repair
+  seed: None
+  dom: deeppoly
+  start_abs_cnt: 500
+  max_abs_cnt: 1000
+  refine_top_k: 50
+  tiny_width: 1e-05
+  lr: 10
+  batch_size: 50
+  min_epochs: 25
+  max_epochs: 25
+  use_scheduler: True
+  no_pts: False
+  no_abs: False
+  no_refine: True
+  quiet: False
+  debug: False
+  net: FNN_big
+  no_repair: False
+  repair_number: 200
+  repair_batchsize: 1
+  patch_size: small
+  label_repaired: False
+  repair_radius: 0.1
+  divided_repair: 2
+  accuracy_loss: <function MnistArgParser.setup_rest.<locals>.ce_loss at 0x79ca149ecca0>
+  reset_params: False
+  train_datasize: 10000
+  test_datasize: 2000
+  max_verifier_sec: 300
+  verifier_timeout_as_safe: True
+  repair_batch_size: 200
+  scheduler_fn: <function ExpArgParser.setup_rest.<locals>.<lambda> at 0x79ca14ef4e50>
+===== end of FNN_big-0.1-200-small-2025-01-17-06-18-15 configuration =====
+
+[2025-01-17 06:18:15,796][INFO] ===== start repair ======
+[2025-01-17 06:18:15,796][INFO] For pgd attack net
+[2025-01-17 06:18:15,984][INFO] --Test repair set accuracy 0.0
+[2025-01-17 06:18:15,985][INFO] --Test original set accuracy 0.995
+[2025-01-17 06:18:15,986][INFO] --Test test set accuracy 0.9717
+[2025-01-17 06:18:15,986][INFO] --Test attack test set accuracy 0.0
+[2025-01-17 06:18:15,987][INFO] --Test train set accuracy 0.9909
+[2025-01-17 06:18:18,858][INFO] --small patch network: Mnist_patch_model_small(
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (classifier): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+  )
+)
+[2025-01-17 06:18:18,922][INFO] [0m 0s (0.045 seconds)] Start repair part 0: 0
+[2025-01-17 06:18:18,922][INFO] [0m 0s (0.045 seconds)] After epoch 0:
+[2025-01-17 06:18:18,922][INFO] Loaded 100 points for repair.
+[2025-01-17 06:18:18,922][INFO] Loaded 1000 points for attack test.
+[2025-01-17 06:18:18,922][INFO] Loaded 10000 points for training.
+[2025-01-17 06:18:18,922][INFO] Loaded 100 abstractions for training.
+[2025-01-17 06:18:19,073][INFO] min loss 315671.78125, max loss 630227.6875.
+[2025-01-17 06:18:19,114][INFO] Test set accuracy 0.9717.
+[2025-01-17 06:18:19,114][INFO] repair set accuracy 0.0.
+[2025-01-17 06:18:19,114][INFO] attacked test set accuracy 0.003.
+[2025-01-17 06:18:19,114][INFO] 
+[0m 0s (0.238 seconds)] Starting epoch 1:
+[2025-01-17 06:18:19,449][INFO] [0m 0s (0.572 seconds)] After epoch 1:
+[2025-01-17 06:18:19,449][INFO] Loaded 100 points for repair.
+[2025-01-17 06:18:19,449][INFO] Loaded 1000 points for attack test.
+[2025-01-17 06:18:19,449][INFO] Loaded 10000 points for training.
+[2025-01-17 06:18:19,449][INFO] Loaded 100 abstractions for training.
+[2025-01-17 06:18:19,601][INFO] min loss 297235.125, max loss 629435.625.
+[2025-01-17 06:18:19,642][INFO] Test set accuracy 0.9717.
+[2025-01-17 06:18:19,642][INFO] repair set accuracy 1.0.
+[2025-01-17 06:18:19,642][INFO] attacked test set accuracy 1.0.
+[2025-01-17 06:18:19,642][INFO] 
+[0m 0s (0.766 seconds)] Starting epoch 2:
+[2025-01-17 06:18:19,981][INFO] [0m 1s (1.104 seconds)] After epoch 2:
+[2025-01-17 06:18:19,981][INFO] Loaded 100 points for repair.
+[2025-01-17 06:18:19,981][INFO] Loaded 1000 points for attack test.
+[2025-01-17 06:18:19,981][INFO] Loaded 10000 points for training.
+[2025-01-17 06:18:19,981][INFO] Loaded 100 abstractions for training.
+[2025-01-17 06:18:20,133][INFO] min loss 270829.0625, max loss 621955.875.
+[2025-01-17 06:18:20,175][INFO] Test set accuracy 0.9717.
+[2025-01-17 06:18:20,175][INFO] repair set accuracy 1.0.
+[2025-01-17 06:18:20,175][INFO] attacked test set accuracy 1.0.
+[2025-01-17 06:18:20,175][INFO] 
+[0m 1s (1.298 seconds)] Starting epoch 3:
+[2025-01-17 06:18:20,512][INFO] [0m 1s (1.636 seconds)] After epoch 3:
+[2025-01-17 06:18:20,513][INFO] Loaded 100 points for repair.
+[2025-01-17 06:18:20,513][INFO] Loaded 1000 points for attack test.
+[2025-01-17 06:18:20,513][INFO] Loaded 10000 points for training.
+[2025-01-17 06:18:20,513][INFO] Loaded 100 abstractions for training.
+[2025-01-17 06:18:20,664][INFO] min loss 240983.84375, max loss 610388.0.
+[2025-01-17 06:18:20,706][INFO] Test set accuracy 0.9717.
+[2025-01-17 06:18:20,706][INFO] repair set accuracy 1.0.
+[2025-01-17 06:18:20,706][INFO] attacked test set accuracy 1.0.
+[2025-01-17 06:18:20,706][INFO] 
+[0m 1s (1.829 seconds)] Starting epoch 4:
+[2025-01-17 06:18:21,044][INFO] [0m 2s (2.167 seconds)] After epoch 4:
+[2025-01-17 06:18:21,044][INFO] Loaded 100 points for repair.
+[2025-01-17 06:18:21,044][INFO] Loaded 1000 points for attack test.
+[2025-01-17 06:18:21,044][INFO] Loaded 10000 points for training.
+[2025-01-17 06:18:21,044][INFO] Loaded 100 abstractions for training.
+[2025-01-17 06:18:21,196][INFO] min loss 213050.5, max loss 603138.875.
+[2025-01-17 06:18:21,237][INFO] Test set accuracy 0.9717.
+[2025-01-17 06:18:21,238][INFO] repair set accuracy 1.0.
+[2025-01-17 06:18:21,238][INFO] attacked test set accuracy 1.0.
+[2025-01-17 06:18:21,238][INFO] 
+[0m 2s (2.361 seconds)] Starting epoch 5:
+[2025-01-17 06:18:21,577][INFO] [0m 2s (2.700 seconds)] After epoch 5:
+[2025-01-17 06:18:21,577][INFO] Loaded 100 points for repair.
+[2025-01-17 06:18:21,577][INFO] Loaded 1000 points for attack test.
+[2025-01-17 06:18:21,577][INFO] Loaded 10000 points for training.
+[2025-01-17 06:18:21,578][INFO] Loaded 100 abstractions for training.
+[2025-01-17 06:18:21,729][INFO] min loss 189346.5625, max loss 598569.125.
+[2025-01-17 06:18:21,771][INFO] Test set accuracy 0.9717.
+[2025-01-17 06:18:21,771][INFO] repair set accuracy 1.0.
+[2025-01-17 06:18:21,771][INFO] attacked test set accuracy 1.0.
+[2025-01-17 06:18:21,771][INFO] 
+[0m 2s (2.894 seconds)] Starting epoch 6:
+[2025-01-17 06:18:22,113][INFO] [0m 3s (3.236 seconds)] After epoch 6:
+[2025-01-17 06:18:22,113][INFO] Loaded 100 points for repair.
+[2025-01-17 06:18:22,113][INFO] Loaded 1000 points for attack test.
+[2025-01-17 06:18:22,113][INFO] Loaded 10000 points for training.
+[2025-01-17 06:18:22,113][INFO] Loaded 100 abstractions for training.
+[2025-01-17 06:18:22,265][INFO] min loss 160931.96875, max loss 591155.5.
+[2025-01-17 06:18:22,306][INFO] Test set accuracy 0.9717.
+[2025-01-17 06:18:22,306][INFO] repair set accuracy 1.0.
+[2025-01-17 06:18:22,306][INFO] attacked test set accuracy 1.0.
+[2025-01-17 06:18:22,307][INFO] 
+[0m 3s (3.430 seconds)] Starting epoch 7:
+[2025-01-17 06:18:22,647][INFO] [0m 3s (3.770 seconds)] After epoch 7:
+[2025-01-17 06:18:22,647][INFO] Loaded 100 points for repair.
+[2025-01-17 06:18:22,647][INFO] Loaded 1000 points for attack test.
+[2025-01-17 06:18:22,647][INFO] Loaded 10000 points for training.
+[2025-01-17 06:18:22,647][INFO] Loaded 100 abstractions for training.
+[2025-01-17 06:18:22,798][INFO] min loss 130498.03125, max loss 581966.5.
+[2025-01-17 06:18:22,840][INFO] Test set accuracy 0.9717.
+[2025-01-17 06:18:22,840][INFO] repair set accuracy 1.0.
+[2025-01-17 06:18:22,840][INFO] attacked test set accuracy 1.0.
+[2025-01-17 06:18:22,840][INFO] 
+[0m 3s (3.963 seconds)] Starting epoch 8:
+[2025-01-17 06:18:23,179][INFO] [0m 4s (4.303 seconds)] After epoch 8:
+[2025-01-17 06:18:23,180][INFO] Loaded 100 points for repair.
+[2025-01-17 06:18:23,180][INFO] Loaded 1000 points for attack test.
+[2025-01-17 06:18:23,180][INFO] Loaded 10000 points for training.
+[2025-01-17 06:18:23,180][INFO] Loaded 100 abstractions for training.
+[2025-01-17 06:18:23,331][INFO] min loss 102938.09375, max loss 575169.25.
+[2025-01-17 06:18:23,372][INFO] Test set accuracy 0.9717.
+[2025-01-17 06:18:23,372][INFO] repair set accuracy 1.0.
+[2025-01-17 06:18:23,372][INFO] attacked test set accuracy 1.0.
+[2025-01-17 06:18:23,373][INFO] 
+[0m 4s (4.496 seconds)] Starting epoch 9:
+[2025-01-17 06:18:23,713][INFO] [0m 4s (4.836 seconds)] After epoch 9:
+[2025-01-17 06:18:23,713][INFO] Loaded 100 points for repair.
+[2025-01-17 06:18:23,713][INFO] Loaded 1000 points for attack test.
+[2025-01-17 06:18:23,713][INFO] Loaded 10000 points for training.
+[2025-01-17 06:18:23,714][INFO] Loaded 100 abstractions for training.
+[2025-01-17 06:18:23,865][INFO] min loss 75328.65625, max loss 569896.6875.
+[2025-01-17 06:18:23,909][INFO] Test set accuracy 0.9717.
+[2025-01-17 06:18:23,909][INFO] repair set accuracy 1.0.
+[2025-01-17 06:18:23,910][INFO] attacked test set accuracy 1.0.
+[2025-01-17 06:18:23,979][INFO] Accuracy at every epoch: [0.9717, 0.9717, 0.9717, 0.9717, 0.9717, 0.9717, 0.9717, 0.9717, 0.9717, 0.9717]
+[2025-01-17 06:18:23,979][INFO] After 9 epochs / 0m 5s (5.033 seconds), eventually the trained network got certified? False, with 0.9717 accuracy on test set,with 1.0000 accuracy on repair set,with 1.0000 accuracy on attack test set.
+[2025-01-17 06:18:24,024][INFO] [0m 5s (5.147 seconds)] Start repair part 1: 100
+[2025-01-17 06:18:24,024][INFO] [0m 5s (5.148 seconds)] After epoch 0:
+[2025-01-17 06:18:24,024][INFO] Loaded 100 points for repair.
+[2025-01-17 06:18:24,025][INFO] Loaded 1000 points for attack test.
+[2025-01-17 06:18:24,025][INFO] Loaded 10000 points for training.
+[2025-01-17 06:18:24,025][INFO] Loaded 100 abstractions for training.
+[2025-01-17 06:18:24,176][INFO] min loss 347784.875, max loss 642245.25.
+[2025-01-17 06:18:24,217][INFO] Test set accuracy 0.9717.
+[2025-01-17 06:18:24,217][INFO] repair set accuracy 0.0.
+[2025-01-17 06:18:24,217][INFO] attacked test set accuracy 0.003.
+[2025-01-17 06:18:24,217][INFO] 
+[0m 5s (5.340 seconds)] Starting epoch 1:
+[2025-01-17 06:18:24,577][INFO] [0m 5s (5.700 seconds)] After epoch 1:
+[2025-01-17 06:18:24,577][INFO] Loaded 100 points for repair.
+[2025-01-17 06:18:24,577][INFO] Loaded 1000 points for attack test.
+[2025-01-17 06:18:24,578][INFO] Loaded 10000 points for training.
+[2025-01-17 06:18:24,578][INFO] Loaded 100 abstractions for training.
+[2025-01-17 06:18:24,730][INFO] min loss 329938.46875, max loss 642091.75.
+[2025-01-17 06:18:24,771][INFO] Test set accuracy 0.9717.
+[2025-01-17 06:18:24,771][INFO] repair set accuracy 1.0.
+[2025-01-17 06:18:24,771][INFO] attacked test set accuracy 1.0.
+[2025-01-17 06:18:24,771][INFO] 
+[0m 5s (5.895 seconds)] Starting epoch 2:
+[2025-01-17 06:18:25,125][INFO] [0m 6s (6.248 seconds)] After epoch 2:
+[2025-01-17 06:18:25,125][INFO] Loaded 100 points for repair.
+[2025-01-17 06:18:25,125][INFO] Loaded 1000 points for attack test.
+[2025-01-17 06:18:25,125][INFO] Loaded 10000 points for training.
+[2025-01-17 06:18:25,126][INFO] Loaded 100 abstractions for training.
+[2025-01-17 06:18:25,277][INFO] min loss 304345.4375, max loss 635692.75.
+[2025-01-17 06:18:25,318][INFO] Test set accuracy 0.9717.
+[2025-01-17 06:18:25,318][INFO] repair set accuracy 1.0.
+[2025-01-17 06:18:25,318][INFO] attacked test set accuracy 1.0.
+[2025-01-17 06:18:25,319][INFO] 
+[0m 6s (6.442 seconds)] Starting epoch 3:
+[2025-01-17 06:18:25,671][INFO] [0m 6s (6.794 seconds)] After epoch 3:
+[2025-01-17 06:18:25,671][INFO] Loaded 100 points for repair.
+[2025-01-17 06:18:25,671][INFO] Loaded 1000 points for attack test.
+[2025-01-17 06:18:25,671][INFO] Loaded 10000 points for training.
+[2025-01-17 06:18:25,671][INFO] Loaded 100 abstractions for training.
+[2025-01-17 06:18:25,822][INFO] min loss 275287.25, max loss 625124.625.
+[2025-01-17 06:18:25,863][INFO] Test set accuracy 0.9717.
+[2025-01-17 06:18:25,863][INFO] repair set accuracy 1.0.
+[2025-01-17 06:18:25,863][INFO] attacked test set accuracy 1.0.
+[2025-01-17 06:18:25,864][INFO] 
+[0m 6s (6.987 seconds)] Starting epoch 4:
+[2025-01-17 06:18:26,217][INFO] [0m 7s (7.340 seconds)] After epoch 4:
+[2025-01-17 06:18:26,217][INFO] Loaded 100 points for repair.
+[2025-01-17 06:18:26,217][INFO] Loaded 1000 points for attack test.
+[2025-01-17 06:18:26,217][INFO] Loaded 10000 points for training.
+[2025-01-17 06:18:26,217][INFO] Loaded 100 abstractions for training.
+[2025-01-17 06:18:26,368][INFO] min loss 248529.03125, max loss 618970.625.
+[2025-01-17 06:18:26,409][INFO] Test set accuracy 0.9717.
+[2025-01-17 06:18:26,409][INFO] repair set accuracy 1.0.
+[2025-01-17 06:18:26,409][INFO] attacked test set accuracy 1.0.
+[2025-01-17 06:18:26,409][INFO] 
+[0m 7s (7.533 seconds)] Starting epoch 5:
+[2025-01-17 06:18:26,763][INFO] [0m 7s (7.886 seconds)] After epoch 5:
+[2025-01-17 06:18:26,766][INFO] Loaded 100 points for repair.
+[2025-01-17 06:18:26,766][INFO] Loaded 1000 points for attack test.
+[2025-01-17 06:18:26,766][INFO] Loaded 10000 points for training.
+[2025-01-17 06:18:26,766][INFO] Loaded 100 abstractions for training.
+[2025-01-17 06:18:26,921][INFO] min loss 225677.6875, max loss 615396.25.
+[2025-01-17 06:18:26,962][INFO] Test set accuracy 0.9717.
+[2025-01-17 06:18:26,962][INFO] repair set accuracy 1.0.
+[2025-01-17 06:18:26,962][INFO] attacked test set accuracy 1.0.
+[2025-01-17 06:18:26,962][INFO] 
+[0m 8s (8.086 seconds)] Starting epoch 6:
+[2025-01-17 06:18:27,315][INFO] [0m 8s (8.438 seconds)] After epoch 6:
+[2025-01-17 06:18:27,315][INFO] Loaded 100 points for repair.
+[2025-01-17 06:18:27,315][INFO] Loaded 1000 points for attack test.
+[2025-01-17 06:18:27,315][INFO] Loaded 10000 points for training.
+[2025-01-17 06:18:27,315][INFO] Loaded 100 abstractions for training.
+[2025-01-17 06:18:27,467][INFO] min loss 200248.5, max loss 608959.5.
+[2025-01-17 06:18:27,508][INFO] Test set accuracy 0.9717.
+[2025-01-17 06:18:27,508][INFO] repair set accuracy 1.0.
+[2025-01-17 06:18:27,508][INFO] attacked test set accuracy 1.0.
+[2025-01-17 06:18:27,508][INFO] 
+[0m 8s (8.631 seconds)] Starting epoch 7:
+[2025-01-17 06:18:27,863][INFO] [0m 8s (8.986 seconds)] After epoch 7:
+[2025-01-17 06:18:27,863][INFO] Loaded 100 points for repair.
+[2025-01-17 06:18:27,863][INFO] Loaded 1000 points for attack test.
+[2025-01-17 06:18:27,863][INFO] Loaded 10000 points for training.
+[2025-01-17 06:18:27,863][INFO] Loaded 100 abstractions for training.
+[2025-01-17 06:18:28,016][INFO] min loss 173379.046875, max loss 600704.875.
+[2025-01-17 06:18:28,058][INFO] Test set accuracy 0.9717.
+[2025-01-17 06:18:28,058][INFO] repair set accuracy 1.0.
+[2025-01-17 06:18:28,058][INFO] attacked test set accuracy 1.0.
+[2025-01-17 06:18:28,058][INFO] 
+[0m 9s (9.181 seconds)] Starting epoch 8:
+[2025-01-17 06:18:28,411][INFO] [0m 9s (9.534 seconds)] After epoch 8:
+[2025-01-17 06:18:28,411][INFO] Loaded 100 points for repair.
+[2025-01-17 06:18:28,412][INFO] Loaded 1000 points for attack test.
+[2025-01-17 06:18:28,412][INFO] Loaded 10000 points for training.
+[2025-01-17 06:18:28,412][INFO] Loaded 100 abstractions for training.
+[2025-01-17 06:18:28,563][INFO] min loss 149161.03125, max loss 594880.125.
+[2025-01-17 06:18:28,605][INFO] Test set accuracy 0.9717.
+[2025-01-17 06:18:28,605][INFO] repair set accuracy 1.0.
+[2025-01-17 06:18:28,605][INFO] attacked test set accuracy 1.0.
+[2025-01-17 06:18:28,605][INFO] 
+[0m 9s (9.728 seconds)] Starting epoch 9:
+[2025-01-17 06:18:28,959][INFO] [0m 10s (10.082 seconds)] After epoch 9:
+[2025-01-17 06:18:28,959][INFO] Loaded 100 points for repair.
+[2025-01-17 06:18:28,959][INFO] Loaded 1000 points for attack test.
+[2025-01-17 06:18:28,960][INFO] Loaded 10000 points for training.
+[2025-01-17 06:18:28,960][INFO] Loaded 100 abstractions for training.
+[2025-01-17 06:18:29,111][INFO] min loss 125213.625, max loss 590624.375.
+[2025-01-17 06:18:29,152][INFO] Test set accuracy 0.9717.
+[2025-01-17 06:18:29,152][INFO] repair set accuracy 1.0.
+[2025-01-17 06:18:29,153][INFO] attacked test set accuracy 1.0.
+[2025-01-17 06:18:29,237][INFO] Accuracy at every epoch: [0.9717, 0.9717, 0.9717, 0.9717, 0.9717, 0.9717, 0.9717, 0.9717, 0.9717, 0.9717]
+[2025-01-17 06:18:29,237][INFO] After 9 epochs / 0m 10s (10.276 seconds), eventually the trained network got certified? False, with 0.9717 accuracy on test set,with 1.0000 accuracy on repair set,with 1.0000 accuracy on attack test set.
+[2025-01-17 06:18:29,237][INFO] final test
+[2025-01-17 06:18:29,243][INFO] --Test set accuracy 0.9717
+[2025-01-17 06:18:29,274][INFO] --Test repair set accuracy 1.0
+[2025-01-17 06:18:29,307][INFO] --Test attack test set accuracy 1.0
+[2025-01-17 06:18:29,307][INFO] training time 10.430219206027687s
+[2025-01-17 06:18:29,317][INFO] === Avg <epochs, train_time, certified, accuracy> for pgd attack networks:
+[2025-01-17 06:18:29,317][INFO] tensor([ 9.0000, 10.2758,  0.0000,  0.9717])
+[2025-01-17 06:18:29,318][INFO] Total Cost Time: 13.521949749439955s.
+
+
+

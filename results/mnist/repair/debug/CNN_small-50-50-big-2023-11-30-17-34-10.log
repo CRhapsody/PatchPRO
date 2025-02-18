@@ -1,0 +1,89 @@
+[2023-11-30 17:34:10,352][INFO] 
+===== CNN_small-50-50-big-2023-11-30-17-34-10 configuration =====
+  exp_fn: test_goal_repair
+  seed: None
+  dom: deeppoly
+  start_abs_cnt: 500
+  max_abs_cnt: 1000
+  refine_top_k: 50
+  tiny_width: 5e-06
+  lr: 10
+  batch_size: 50
+  min_epochs: 15
+  max_epochs: 100
+  use_scheduler: True
+  no_pts: False
+  no_abs: False
+  no_refine: True
+  quiet: False
+  debug: False
+  net: CNN_small
+  no_repair: False
+  repair_number: 50
+  repair_batchsize: 1
+  patch_size: big
+  repair_radius: 0.05
+  divided_repair: 1
+  weight_decay: 0.0
+  k_coeff: 0.001
+  accuracy_loss: <function MnistArgParser.setup_rest.<locals>.ce_loss at 0x7f83213caf70>
+  support_loss: MSELoss()
+  sample_amount: 5000
+  reset_params: False
+  train_datasize: 10000
+  test_datasize: 500
+  max_verifier_sec: 300
+  verifier_timeout_as_safe: True
+  repair_batch_size: 50
+  scheduler_fn: <function ExpArgParser.setup_rest.<locals>.<lambda> at 0x7f832da41790>
+===== end of CNN_small-50-50-big-2023-11-30-17-34-10 configuration =====
+
+[2023-11-30 17:34:10,353][INFO] ===== start repair ======
+[2023-11-30 17:34:10,353][INFO] For pgd attack net
+[2023-11-30 17:34:19,523][INFO] --Test repair set accuracy 0.0
+[2023-11-30 17:34:19,625][INFO] --big patch network: --- PatchNet ---
+Name: big patch network 49
+--- End of PatchNet ---
+[2023-11-30 17:34:19,728][INFO] [0m 0s (0.092 seconds)] Start repair part 0: 0
+[2023-11-30 17:34:19,728][INFO] [0m 0s (0.092 seconds)] After epoch 0:
+[2023-11-30 17:34:19,728][INFO] Loaded 50 points for repair.
+[2023-11-30 17:34:19,728][INFO] Loaded 500 points for attack test.
+[2023-11-30 17:34:19,728][INFO] Loaded 10000 points for training.
+[2023-11-30 17:34:19,728][INFO] Loaded 50 abstractions for training.
+[2023-11-30 17:34:20,163][INFO] min loss 983.8369140625, max loss 1837.9549560546875.
+[2023-11-30 17:34:20,165][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0], device='cuda:2', dtype=torch.uint8).
+[2023-11-30 17:34:20,209][INFO] Test set accuracy 0.9827.
+[2023-11-30 17:34:20,209][INFO] repair set accuracy 0.0.
+[2023-11-30 17:34:20,209][INFO] train set accuracy 0.9927.
+[2023-11-30 17:34:20,210][INFO] attacked test set accuracy 0.004.
+[2023-11-30 17:34:20,210][INFO] 
+[0m 0s (0.574 seconds)] Starting epoch 1:
+[2023-11-30 17:34:20,805][INFO] [0m 1s (1.169 seconds)] After epoch 1:
+[2023-11-30 17:34:20,805][INFO] Loaded 50 points for repair.
+[2023-11-30 17:34:20,805][INFO] Loaded 500 points for attack test.
+[2023-11-30 17:34:20,805][INFO] Loaded 10000 points for training.
+[2023-11-30 17:34:20,805][INFO] Loaded 50 abstractions for training.
+[2023-11-30 17:34:21,237][INFO] min loss 750.9910888671875, max loss 1614.24365234375.
+[2023-11-30 17:34:21,239][INFO] Max loss at rule: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0], device='cuda:2', dtype=torch.uint8).
+[2023-11-30 17:34:21,284][INFO] Test set accuracy 0.9827.
+[2023-11-30 17:34:21,284][INFO] repair set accuracy 1.0.
+[2023-11-30 17:34:21,284][INFO] train set accuracy 0.9927.
+[2023-11-30 17:34:21,284][INFO] attacked test set accuracy 1.0.
+[2023-11-30 17:34:21,361][INFO] Accuracy at every epoch: [0.9827, 0.9827]
+[2023-11-30 17:34:21,361][INFO] After 1 epochs / 0m 1s (1.649 seconds), eventually the trained network got certified? False, with 0.9827 accuracy on test set,with 1.0000 accuracy on repair set,with 0.9927 accuracy on train set,with 1.0000 accuracy on attack test set.
+[2023-11-30 17:34:21,361][INFO] final test
+[2023-11-30 17:34:21,365][INFO] --Test set accuracy 0.9827
+[2023-11-30 17:34:21,384][INFO] --Test repair set accuracy 1.0
+[2023-11-30 17:34:21,388][INFO] --Test train set accuracy 0.9927
+[2023-11-30 17:34:21,407][INFO] --Test attack test set accuracy 1.0
+[2023-11-30 17:34:21,407][INFO] training time 1.7713438719511032s
+[2023-11-30 17:34:21,414][INFO] === Avg <epochs, train_time, certified, accuracy> for pgd attack networks:
+[2023-11-30 17:34:21,415][INFO] tensor([1.0000, 1.6485, 0.0000, 0.9827])
+[2023-11-30 17:34:21,415][INFO] Total Cost Time: 11.063542865216732s.
+
+
+

@@ -1,0 +1,56 @@
+[2024-07-09 01:43:29,825][INFO] 
+===== vgg19-4-feature-1000-2024-07-09-01-43-29 configuration =====
+  exp_fn: test_goal_test
+  seed: None
+  dom: deeppoly
+  start_abs_cnt: 500
+  max_abs_cnt: 1000
+  refine_top_k: 800
+  tiny_width: 0.001
+  lr: 0.001
+  batch_size: 50
+  min_epochs: 25
+  max_epochs: 45
+  use_scheduler: True
+  no_pts: False
+  no_abs: False
+  no_refine: False
+  quiet: False
+  debug: False
+  net: vgg19
+  no_repair: False
+  repair_number: 1000
+  repair_batchsize: 1
+  repair_location: feature
+  label_repaired: False
+  repair_radius: 4
+  loose_bound: 0.1
+  divided_repair: 1
+  accuracy_loss: <function CifarArgParser.setup_rest.<locals>.ce_loss at 0x7f9673fdc940>
+  reset_params: False
+  train_datasize: 10000
+  test_datasize: 10000
+  patch_size: big
+  repair_batch_size: 1000
+  scheduler_fn: <function ExpArgParser.setup_rest.<locals>.<lambda> at 0x7f9673fdc8b0>
+===== end of vgg19-4-feature-1000-2024-07-09-01-43-29 configuration =====
+
+[2024-07-09 01:43:29,833][INFO] ===== start repair ======
+[2024-07-09 01:43:29,833][INFO] For pgd attack net
+[2024-07-09 01:43:32,245][INFO] --feature patch network: --- feature PatchNet ---
+Name: property patch network 999
+--- End of feature PatchNet ---
+[2024-07-09 01:43:35,034][INFO] --load the trainset and testset as testing set
+[2024-07-09 01:43:35,112][INFO] --evaluate the original net on testset
+[2024-07-09 01:43:35,486][INFO] --For testset, out of 10000 items, ratio 0.9342
+[2024-07-09 01:43:35,845][INFO] --evaluate the repaired net on testset and get the bitmap
+[2024-07-09 01:43:36,205][INFO] --For testset, out of 10000 items, ratio 0.9342
+[2024-07-09 01:43:36,205][INFO] --adv training
+[2024-07-09 01:43:36,572][INFO] --test the defense against autoattack
+[2024-07-09 01:43:36,612][INFO] attack net2 
+[2024-07-09 01:44:04,844][INFO] correct2 9
+[2024-07-09 01:44:04,946][INFO] correct3 0
+[2024-07-09 01:44:04,947][INFO] attack net2 
+[2024-07-09 01:44:33,983][INFO] correct2 10
+[2024-07-09 01:44:34,102][INFO] correct3 0
+[2024-07-09 01:44:34,103][INFO] attack net2 
